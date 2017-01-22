@@ -8,7 +8,7 @@ const store = createStore(reducers,
 
 function wombats () {
   document.getElementById('app').innerHTML = store.getState().wombats.reduce(
-    (list, wombat) => `<li>${wombat}</li>`,
+    (list, wombat) => `${list}<li>${wombat}</li>`,
     ''
   )
 }
