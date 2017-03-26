@@ -1,18 +1,26 @@
 # Redux without React
 
-This repo might help you experiment with Redux without distractions from the extra bits to wire up React. After cloning:
+This repo aims to help you experiment with Redux without distractions from the extra bits to wire up React. After cloning:
 
 ```shell
 npm install
 npm start
 ```
 
-This will start a Webpack dev server. Load up the Redux Chrome dev tools and submit a few `'ADD_WOMBAT'` and `'DEL_WOMBAT'` actions to see what's going on.
+This will start a Webpack dev server. Open [http://localhost:8080](http://localhost:8080) in your browser.
+
+
+## Next steps
+
+Load up the Redux Chrome dev tools and dispatch a few `'ADD_WOMBAT'` and `'DEL_WOMBAT'` actions to see what's going on. This screenshot illustrates how to dispatch actions using the dev tools.
+
+![Dispatching actions using Redux dev tools](./screenshot1.png)
+
 
 
 ## Things to try
 
- - Adding some other actions (`'UPDATE_WOMBAT'`, for example). Add a case to the reducer to handle those actions.
+ - Add some other actions (`'UPDATE_WOMBAT'`, for example). Add a case to the reducer to handle those actions.
  - Add a new reducer for another property on the Redux store. We already have `wombats`; how about `aardvarks`?
  - Add some actions for the new reducer.
  - Add another rendering function in `index.js` to handle the new property on the store, and subscribe it to the store using the same method as `wombats`.
