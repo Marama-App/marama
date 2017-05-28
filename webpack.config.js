@@ -1,16 +1,20 @@
 module.exports = {
   entry: './index.js',
   output: {
-    path: './',
+    path: __dirname + './',
     filename: 'bundle.js'
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel', exclude: /node_modules/ }
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }
     ]
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js']
   },
   devtool: 'source-map'
 }
