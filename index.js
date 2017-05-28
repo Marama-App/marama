@@ -7,10 +7,14 @@ const initialState = {
 const wombatReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_WOMBAT':
-      return [...state, action.wombat]
+      return {
+        wombats: [...state.wombats, action.wombat]
+      }
 
     case 'DEL_WOMBAT':
-      return state.filter(wombat => wombat !== action.wombat)
+      return {
+        wombats: state.wombats.filter(wombat => wombat !== action.wombat)
+      }
 
     default:
       return state
@@ -32,12 +36,25 @@ function render () {
   const state = store.getState()
   const wombats = state.wombats
   document.getElementById('app').innerHTML = renderWombats(wombats)
+  addListeners(wombats)
+}
+
+function addListeners (wombats) {
+  for (const wombat of wombats) {
+    const button = document.getElementById(wombat)
+    button.addEventListener('click', (e) => {
+      store.dispatch({
+        type: 'DEL_WOMBAT',
+        wombat: wombat
+      })
+    })
+  }
 }
 
 function renderWombats (wombats) {
   let output = `<ul>`
   for (const wombat of wombats) {
-    output += `<li>${wombat}</li>`
+    output += `<li>${wombat}<button id="${wombat}">Delete</button></li>`
   }
   output += `</ul>`
   return output
