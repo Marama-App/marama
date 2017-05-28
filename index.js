@@ -10,12 +10,10 @@ const wombatReducer = (state = initialState, action) => {
       return {
         wombats: [...state.wombats, action.wombat]
       }
-
     case 'DEL_WOMBAT':
       return {
-        wombats: state.wombats.filter(wombat => wombat !== action.wombat)
+        wombats: state.wombats.filter((wombat) => wombat !== action.wombat)
       }
-
     default:
       return state
   }
@@ -26,9 +24,7 @@ const store = createStore(wombatReducer,
 )
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initial render once the DOM content has loaded
   render()
-  // Whenever updates are made to the store, run the render function.
   store.subscribe(render)
 })
 
@@ -39,24 +35,31 @@ function render () {
   addListeners(wombats)
 }
 
-function addListeners (wombats) {
-  for (const wombat of wombats) {
-    const button = document.getElementById(wombat)
-    button.addEventListener('click', (e) => {
-      store.dispatch({
-        type: 'DEL_WOMBAT',
-        wombat: wombat
-      })
-    })
-  }
-}
-
 function renderWombats (wombats) {
   let output = `<ul>`
   for (const wombat of wombats) {
-    output += `<li>${wombat}<button id="${wombat}">Delete</button></li>`
+    output += `
+    <li>
+      ${wombat}
+      <button id="${wombat}">Delete</button>
+    </li>`
   }
   output += `</ul>`
   return output
 }
 
+function addListeners (wombats) {
+  for (const wombat of wombats) {
+    const button = document.getElementById(wombat)
+    button.addEventListener('click', (e) => {
+      store.dispatch(deleteWombat(wombat))
+    })
+  }
+}
+
+function deleteWombat (wombat) {
+  return {
+    type: 'DEL_WOMBAT',
+    wombat: wombat
+  }
+}
