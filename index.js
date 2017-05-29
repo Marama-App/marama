@@ -1,41 +1,10 @@
-import { createStore, combineReducers } from 'redux'
+import { createStore } from 'redux'
 
-const ADD_WOMBAT = 'ADD_WOMBAT'
+import reducers from './reducers'
 
-const initialWombatState = ['Gertrude', 'Bartholemew']
+import { addWombat, deleteWombat } from './actions'
 
-const wombatReducer = (state = initialWombatState, action) => {
-  switch (action.type) {
-    case ADD_WOMBAT:
-      return [...state, action.wombat]
-    case 'DEL_WOMBAT':
-      return state.filter((wombat) => wombat !== action.wombat)
-    default:
-      return state
-  }
-}
-
-const initialRhinoState = ['Alexander', 'Tyrone']
-
-const rhinoReducer = (state = initialRhinoState, action) => {
-  switch (action.type) {
-    case 'ADD_RHINO':
-      return [...state, action.rhino]
-    case 'DELETE_RHINO':
-      return state.filter(rhino => rhino !== action.rhino)
-    default:
-      return state
-  }
-}
-
-const reducers = combineReducers({
-  wombats: wombatReducer,
-  rhinos: rhinoReducer
-})
-
-const store = createStore(reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+const store = createStore(reducers)
 
 document.addEventListener('DOMContentLoaded', () => {
   render()
@@ -83,20 +52,5 @@ function addListeners (name, wombats) {
     const text = inputText.value
     store.dispatch(addWombat(text))
   })
-}
-
-
-function addWombat (wombat) {
-  return {
-    type: ADD_WOMBAT,
-    wombat: wombat
-  }
-}
-
-function deleteWombat (wombat) {
-  return {
-    type: 'DEL_WOMBAT',
-    wombat: wombat
-  }
 }
 
