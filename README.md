@@ -9,15 +9,21 @@ npm start
 
 This will start a Webpack dev server. Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-## Use dev tools
+## The Redux DevTool
 
 Install the Redux DevTool Chrome extension from [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
+
+## Excercise
+
+### Using the Redux DevTool
 
 Load up the Redux DevTool and dispatch a few `'ADD_WOMBAT'` and `'DEL_WOMBAT'` actions to see what's going on. This screenshot illustrates how to dispatch actions using the dev tools.
 
 ![Dispatching actions using Redux dev tools](./screenshot1.png)
 
-## Next
+### Write some code
+
+- In your `index.js` have a look at the `renderWombats` function.js. Notice how this function loops through and displays each of the wombats to the DOM?
 
 - Add a delete button next to each of the wombats so they can be deleted.
 - Try adding a wombat using the `'ADD_WOMBAT'` action.
