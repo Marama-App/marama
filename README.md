@@ -25,7 +25,14 @@ Load up the Redux DevTool and dispatch a few `'ADD_WOMBAT'` and `'DEL_WOMBAT'` a
 
 - In your `index.js` have a look at the `renderWombats` function.js. Notice how this function loops through and displays each of the wombats to the DOM?
 
-- Add a delete button next to each of the wombats so they can be deleted.
+#### Step 1. Delete a Wombat
+
+Add a delete button next to each of the wombats so they can be deleted:
+
+- Modify the `renderWombats` function to add a button against each of the wombats.
+- You might need to assign the button an `id` with the wombat's name so you can find the button on the DOM later in order to add an event listener.
+- Add an event listener to handle a `click` event
+
 - Try adding a wombat using the `'ADD_WOMBAT'` action.
 - Add other actions (`'UPDATE_WOMBAT'`, for example). Add a case to the reducer to handle those actions.
 - Add a new reducer for another property on the Redux store. We already have `wombats`; how about `aardvarks`?
