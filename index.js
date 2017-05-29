@@ -1,25 +1,39 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 
-const initialState = {
-  wombats: ['Gertrude', 'Bartholemew']
-}
+const ADD_WOMBAT = 'ADD_WOMBAT'
 
-const wombatReducer = (state = initialState, action) => {
+const initialWombatState = ['Gertrude', 'Bartholemew']
+
+const wombatReducer = (state = initialWombatState, action) => {
   switch (action.type) {
-    case 'ADD_WOMBAT':
-      return {
-        wombats: [...state.wombats, action.wombat]
-      }
+    case ADD_WOMBAT:
+      return [...state, action.wombat]
     case 'DEL_WOMBAT':
-      return {
-        wombats: state.wombats.filter((wombat) => wombat !== action.wombat)
-      }
+      return state.filter((wombat) => wombat !== action.wombat)
     default:
       return state
   }
 }
 
-const store = createStore(wombatReducer,
+const initialRhinoState = ['Alexander', 'Tyrone']
+
+const rhinoReducer = (state = initialRhinoState, action) => {
+  switch (action.type) {
+    case 'ADD_RHINO':
+      return [...state, action.rhino]
+    case 'DELETE_RHINO':
+      return state.filter(rhino => rhino !== action.rhino)
+    default:
+      return state
+  }
+}
+
+const reducers = combineReducers({
+  wombats: wombatReducer,
+  rhinos: rhinoReducer
+})
+
+const store = createStore(reducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
@@ -66,8 +80,17 @@ function addListeners (name, wombats) {
   const inputButton = document.getElementById(`${name}-input-button`)
   inputButton.addEventListener('click', (e) => {
     const inputText = document.getElementById(`${name}-input`)
-    store.dispatch(addWombat(inputText.value))
+    const text = inputText.value
+    store.dispatch(addWombat(text))
   })
+}
+
+
+function addWombat (wombat) {
+  return {
+    type: ADD_WOMBAT,
+    wombat: wombat
+  }
 }
 
 function deleteWombat (wombat) {
@@ -77,9 +100,3 @@ function deleteWombat (wombat) {
   }
 }
 
-function addWombat (wombat) {
-  return {
-    type: 'ADD_WOMBAT',
-    wombat: wombat
-  }
-}
