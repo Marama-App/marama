@@ -1,13 +1,19 @@
 import { createStore } from 'redux'
 
-const initialWombatState = ['Gertrude', 'Bartholemew']
+const initialWombatState = {
+  wombats: ['Gertrude', 'Bartholemew']
+}
 
 const wombatReducer = (state = initialWombatState, action) => {
   switch (action.type) {
     case 'ADD_WOMBAT':
-      return [...state, action.wombat]
+      return {
+        wombats: [...state.wombats, action.wombat]
+      }
     case 'DEL_WOMBAT':
-      return state.filter((wombat) => wombat !== action.wombat)
+      return {
+        wombats: state.wombats.filter((wombat) => wombat !== action.wombat)
+      }
     default:
       return state
   }
