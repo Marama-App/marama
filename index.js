@@ -1,25 +1,42 @@
 import { createStore } from 'redux'
 
-import reducers from './reducers'
+const initialWombatState = ['Gertrude', 'Bartholemew']
 
-const store = createStore(reducers,
+const wombatReducer = (state = initialWombatState, action) => {
+  switch (action.type) {
+    case 'ADD_WOMBAT':
+      return [...state, action.wombat]
+    case 'DEL_WOMBAT':
+      return state.filter((wombat) => wombat !== action.wombat)
+    default:
+      return state
+  }
+}
+
+const store = createStore(wombatReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
 document.addEventListener('DOMContentLoaded', () => {
-  store.subscribe(render)
   render()
+  store.subscribe(render)
 })
 
 function render () {
-  const wombats = renderWombats(store.getState().wombats)
-  document.getElementById('app').innerHTML = wombats
+  const state = store.getState()
+  const wombats = state.wombats
+  document.getElementById('app').innerHTML = renderWombats('wombats', wombats)
 }
 
-function renderWombats (wombats) {
-  return wombats.reduce(
-    (list, wombat) => `${list}<li>${wombat}</li>`,
-    ''
-  )
+function renderWombats (name, wombats) {
+  let output = `<ul>`
+  for (const wombat of wombats) {
+    output += `
+    <li>
+      ${wombat}
+    </li>`
+  }
+  output += `</ul>`
+  return output
 }
 

@@ -42,5 +42,6 @@
       "standard",
       "promise"
     ]
-  }
+  },
+  "dependencies": {}
 }

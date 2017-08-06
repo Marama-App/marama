@@ -9,28 +9,38 @@ npm start
 
 This will start a Webpack dev server. Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-
-## Use dev tools
+## The Redux DevTool
 
 Install the Redux DevTool Chrome extension from [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
+
+## Excercise
+
+### Using the Redux DevTool
 
 Load up the Redux DevTool and dispatch a few `'ADD_WOMBAT'` and `'DEL_WOMBAT'` actions to see what's going on. This screenshot illustrates how to dispatch actions using the dev tools.
 
 ![Dispatching actions using Redux dev tools](./screenshot1.png)
 
+### Write some code
 
-## Next
+- In your `index.js` have a look at the `renderWombats` function.js. Notice how this function loops through and displays each of the wombats to the DOM?
 
- - Add a delete button next to each of the wombats so they can be deleted.
- - Add other actions (`'UPDATE_WOMBAT'`, for example). Add a case to the reducer to handle those actions.
- - Add a new reducer for another property on the Redux store. We already have `wombats`; how about `aardvarks`?
- - Add some actions to the new reducer.
- - Add another rendering function in `index.js` to handle the new property on the store, and subscribe it to the store using the same method as `wombats`.
+#### Step 1. Delete a Wombat
+
+Add a delete button next to each of the wombats so they can be deleted:
+
+- Modify the `renderWombats` function to add a button against each of the wombats.
+- You might need to assign the button an `id` with the wombat's name so you can find the button on the DOM later in order to add an event listener.
+- Add an event listener to handle a `click` event
+
+- Try adding a wombat using the `'ADD_WOMBAT'` action.
+- Add other actions (`'UPDATE_WOMBAT'`, for example). Add a case to the reducer to handle those actions.
+- Add a new reducer for another property on the Redux store. We already have `wombats`; how about `aardvarks`?
+- Add some actions to the new reducer.
+- Add another rendering function in `index.js` to handle the new property on the store, and subscribe it to the store using the same method as `wombats`.
 
 Rinse and repeat as many times as it takes to start to get more familiar with this process.  Once you're comfortable with submitting actions from the dev tools and handling them in your code, research how you might `dispatch` the actions from inside your code instead of the dev tools. The [Redux docs](http://redux.js.org/docs/api/Store.html#dispatch) might be a good place to start.
-
 
 ## See also
 
 When you're starting to get happier with this process, you could try reinforcing it with the [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux) video tutorials from Redux creator Dan Abramov.
-
