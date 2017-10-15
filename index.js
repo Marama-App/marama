@@ -31,18 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
 function render () {
   const state = store.getState()
   const wombats = state.wombats
-  document.getElementById('app').innerHTML = renderWombats('wombats', wombats)
+  document.getElementById('app').innerHTML = renderWombats(wombats)
 }
 
-function renderWombats (name, wombats) {
-  let output = `<ul>`
+function renderWombats (wombats) {
+  let output = '<ul>'
   for (const wombat of wombats) {
-    output += `
-    <li>
-      ${wombat}
-    </li>`
+    output += `<li>${wombat}</li>`
   }
-  output += `</ul>`
+  output += '</ul>'
   return output
 }
 
