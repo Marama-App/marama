@@ -3,17 +3,19 @@
 This repo aims to help you experiment with Redux without distractions from the extra bits to wire up React. After cloning:
 
 ```shell
-npm install
-npm start
+yarn
+yarn start
 ```
 
 This will start a Webpack dev server. Open [http://localhost:8080](http://localhost:8080) in your browser.
+
 
 ## The Redux DevTool
 
 Install the Redux DevTool Chrome extension from [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
 
-## Excercise
+
+## Exercise
 
 ### Using the Redux DevTool
 

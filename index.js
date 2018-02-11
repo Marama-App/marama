@@ -42,4 +42,3 @@ function renderWombats (wombats) {
   output += '</ul>'
   return output
 }
-
