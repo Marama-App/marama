@@ -1,0 +1,16 @@
+{
+  "gaming": {
+    "animation":
+      {
+      "description": "Animation text goes here!"
+      },
+    "coding":
+      {
+      "description": "Coding text goes here!"
+      },
+    "sound":
+      {
+      "description": "Sound text goes here!"
+      }   
+  }
+}
