@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: './index.js',
+  entry: path.join(__dirname, '/client/index.js'),
   output: {
     path: path.join(__dirname, '/'),
     filename: 'bundle.js'
