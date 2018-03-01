@@ -32,14 +32,13 @@ class Home extends React.Component {
     return (
       <div className='home-section'>
         <h1>Mārama</h1>
-        <Link to='/gaming'>
-          <button>Gaming</button>
-        </Link>
-        <ul>
-          {this.state.interests.map(interest =>
-            <li key={interest.id}>{interest.interests}</li>
-          )}
-        </ul>
+        {this.state.interests.map(interest =>
+          <Link key={interest.id}to={`/${interest.interests}`}>
+            <button>
+              {interest.interests}
+            </button>
+          </Link>
+        )}
       </div>
     )
   }
