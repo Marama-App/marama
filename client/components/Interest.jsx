@@ -14,6 +14,7 @@ class Interest extends React.Component {
     return (
       <div className='interest-section'>
         <h1>Gaming</h1>
+        {/* <h1>{interest}</h1> */}
         <Link to='/:id'>
           Animation
           {/* {infotype} */}
