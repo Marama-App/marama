@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import request from 'superagent'
 
 class Interest extends React.Component {
@@ -16,7 +16,7 @@ class Interest extends React.Component {
 
   getTypeInfo () {
     request
-      .get('/api/v1/interests:1')
+      .get('/api/v1/interests/:id')
       .then((res) => {
         this.setState({
           typeInfo: res.body.typeInfo
@@ -32,30 +32,17 @@ class Interest extends React.Component {
     return (
       <div className='interest-section'>
         <h1>Gaming</h1>
-        <Link to='/:id'>
-          Animation
-          {typeInfo}
-        </Link>
-        <p>
-          Blurb about animation
-          {/* {data.animation.description} */}
-        </p>
-        <Link to='/:id'>
-          Coding
-          {/* {infotype} */}
-        </Link>
-        <p>
-          Blurb about Coding
-          {/* {infotype.blurb} */}
-        </p>
-        <Link to='/:id'>
-          Sound
-          {/* {infotype} */}
-        </Link>
-        <p>
-          Blurb about Sound
-          {/* {infotype.blurb} */}
-        </p>
+        {this.state.typeInfo.map(typeInfo => (
+          <div key={typeInfo.id}>
+            <Link to={`/interests/${typeInfo.id}`}>
+              <p>{typeInfo.name}</p>
+            </Link>
+            <div>
+              <p>{typeInfo.description}</p>
+            </div>
+          </div>
+        )
+        )}
       </div>
     )
   }
