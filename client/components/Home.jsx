@@ -1,14 +1,32 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import request from 'superagent'
 
 class Home extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
+  constructor (props) {
+    super(props)
+    this.state = {
+      interests: []
+    }
+  }
 
-  // componentDidMount () {
-  //   this.getInterestInfo()
-  // }
+  componentDidMount () {
+    this.getHome()
+  }
+
+  getHome () {
+    request
+      .get('/api/v1/home')
+      .then((res) => {
+        this.setState({
+          interests: res.body.interests
+        })
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.error(err.message)
+      })
+  }
 
   render () {
     return (
@@ -17,6 +35,11 @@ class Home extends React.Component {
         <Link to='/gaming'>
           <button>Gaming</button>
         </Link>
+        <ul>
+          {this.state.interests.map(interest =>
+            <li key={interest.id}>{interest.interests}</li>
+          )}
+        </ul>
       </div>
     )
   }
