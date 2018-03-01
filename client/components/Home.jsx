@@ -14,7 +14,7 @@ class Home extends React.Component {
     return (
       <div className='home-section'>
         <h1>Mārama</h1>
-        <Link to='/:interest'>
+        <Link to='/gaming'>
           <button>Gaming</button>
         </Link>
       </div>
