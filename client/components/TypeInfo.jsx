@@ -13,33 +13,42 @@ class TypeInfo extends React.Component {
   render () {
     return (
       <div className='typeinfo-section'>
-        <h1> Animation
-        {/* {TypeInfo} */}
-        </h1>
-        <Link to='/study'>
-          Study
-          {/* {infodetail} */}
-        </Link>
-        <p>
+        <div className='header'>
+          <h1> Animation
+          {/* {TypeInfo} */}
+          </h1>
+          <p>Blurb about animation</p>
+        </div>
+        <div className='type'>
+          <h3>Study</h3>
+          <p>
           Blurb about study
-          {/* {data.animation.description} */}
-        </p>
-        <Link to='/jobs'>
-          Jobs
-          {/* {infodetail} */}
-        </Link>
-        <p>
+            {/* {data.animation.description} */}
+          </p>
+          <Link to='/study'>
+            <button>I would like to Study</button>
+          </Link>
+        </div>
+        <div className='type'>
+          <h3>Jobs</h3>
+          <p>
           Blurb about jobs
-          {/* {infodetail.blurb} */}
-        </p>
-        <Link to='/help'>
-          Help
-          {/* {infodetail} */}
-        </Link>
-        <p>
+            {/* {data.animation.description} */}
+          </p>
+          <Link to='/jobs'>
+            <button>Take me to Jobs</button>
+          </Link>
+        </div>
+        <div className='type'>
+          <h3>Help</h3>
+          <p>
           Blurb about Help
-          {/* {infodetail.blurb} */}
-        </p>
+            {/* {data.animation.description} */}
+          </p>
+          <Link to='/help'>
+            <button>Please Help me</button>
+          </Link>
+        </div>
       </div>
     )
   }
