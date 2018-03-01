@@ -2,8 +2,6 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import request from 'superagent'
 
-import Header from './Header'
-
 class Home extends React.Component {
   constructor (props) {
     super(props)
@@ -33,7 +31,6 @@ class Home extends React.Component {
   render () {
     return (
       <div className='home-section'>
-        <Header />
         {this.state.interests.map(interest =>
           <Link key={interest.id}to={`/${interest.interests}`}>
             <button>
