@@ -4,6 +4,7 @@ exports.up = (knex, Promise) => {
     table.string('name')
     table.string('description')
     table.string('link')
+    table.integer('types_id').references('interest_types.id')
   })
 }
 
