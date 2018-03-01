@@ -1,27 +1,25 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import request from 'superagent'
 
-import Header from './Header'
-
-class Home extends React.Component {
+class Grants extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      interests: []
+      grants: []
     }
   }
 
   componentDidMount () {
-    this.getHome()
+    this.getGrants()
   }
 
-  getHome () {
+  getGrants () {
     request
-      .get('/api/v1/home')
+      .get('/api/v1/grants')
       .then((res) => {
         this.setState({
-          interests: res.body.interests
+          grants: res.body.grants
         })
       })
       .catch((err) => {
@@ -32,18 +30,18 @@ class Home extends React.Component {
 
   render () {
     return (
-      <div className='home-section'>
-        <Header />
-        {this.state.interests.map(interest =>
+      <div className='Grants-section'>
+        <h1>Mārama</h1>
+        {/* {this.state.interests.map(interest =>
           <Link key={interest.id}to={`/${interest.interests}`}>
             <button>
               {interest.interests}
             </button>
           </Link>
-        )}
+        )} */}
       </div>
     )
   }
 }
 
-export default Home
+export default Grants
