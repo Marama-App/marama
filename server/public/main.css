@@ -1,0 +1,9 @@
+.type {
+  display: flex;
+  flex-direction: row;
+}
+
+.typebox {
+  display: flex;
+  flex-direction: column;
+}
