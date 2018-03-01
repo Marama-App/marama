@@ -1,0 +1,17 @@
+{
+  "grants": {
+    "animation": 
+      [ 
+        {
+          "name": "Manawa Titi",
+          "description": "A grant for future animators",
+          "link": "https://www.google.com"
+        },
+        {
+          "name": "Whai Rawa",
+          "description": "A bigger grant for future animators",
+          "link": "https://www.google.com"
+        }
+      ]    
+  }
+}

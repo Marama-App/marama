@@ -1,15 +1,15 @@
 import React from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 
 import Home from './Home'
+import Interest from './Interest'
 
 const App = () => {
   return (
-    <Router>
-      <div className='app'>
-        <Route path='/' component={Home} />
-      </div>
-    </Router>
+    <div className='app'>
+      <Route path='/' component={Home} />
+      <Route path='/:interest' component={Interest}/>
+    </div>
   )
 }
 
