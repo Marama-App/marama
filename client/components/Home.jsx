@@ -31,7 +31,6 @@ class Home extends React.Component {
   render () {
     return (
       <div className='home-section'>
-        <h1>Mārama</h1>
         {this.state.interests.map(interest =>
           <Link key={interest.id}to={`/${interest.interests}`}>
             <button>
