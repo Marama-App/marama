@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-class TypeInfo extends React.Component {
+class Type extends React.Component {
   // constructor (props) {
   //   super(props)
   // }
@@ -27,7 +27,7 @@ class TypeInfo extends React.Component {
               {/* {data.animation.description} */}
             </p>
           </div>
-          <Link to='/study'>
+          <Link to='/:interest/:type/:typedetail'>
             <button>I would like to Study</button>
           </Link>
         </div>
@@ -39,7 +39,7 @@ class TypeInfo extends React.Component {
               {/* {data.animation.description} */}
             </p>
           </div>
-          <Link to='/jobs'>
+          <Link to='/:interest/:type/:typedetail'>
             <button>Take me to Jobs</button>
           </Link>
         </div>
@@ -51,7 +51,7 @@ class TypeInfo extends React.Component {
               {/* {data.animation.description} */}
             </p>
           </div>
-          <Link to='/help'>
+          <Link to='/:interest/:type/:typedetail'>
             <button>Please Help me</button>
           </Link>
         </div>
@@ -60,4 +60,4 @@ class TypeInfo extends React.Component {
   }
 }
 
-export default TypeInfo
+export default Type
