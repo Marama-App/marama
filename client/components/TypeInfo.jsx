@@ -20,31 +20,37 @@ class TypeInfo extends React.Component {
           <p>Blurb about animation</p>
         </div>
         <div className='type'>
-          <h3>Study</h3>
-          <p>
-          Blurb about study
-            {/* {data.animation.description} */}
-          </p>
+          <div className='typebox'>
+            <h3>Study</h3>
+            <p>
+              Blurb about study
+              {/* {data.animation.description} */}
+            </p>
+          </div>
           <Link to='/study'>
             <button>I would like to Study</button>
           </Link>
         </div>
         <div className='type'>
-          <h3>Jobs</h3>
-          <p>
-          Blurb about jobs
-            {/* {data.animation.description} */}
-          </p>
+          <div className='typebox'>
+            <h3>Jobs</h3>
+            <p>
+              Blurb about jobs
+              {/* {data.animation.description} */}
+            </p>
+          </div>
           <Link to='/jobs'>
             <button>Take me to Jobs</button>
           </Link>
         </div>
         <div className='type'>
-          <h3>Help</h3>
-          <p>
-          Blurb about Help
-            {/* {data.animation.description} */}
-          </p>
+          <div className='typebox'>
+            <h3>Help</h3>
+            <p>
+              Blurb about Help
+              {/* {data.animation.description} */}
+            </p>
+          </div>
           <Link to='/help'>
             <button>Please Help me</button>
           </Link>
