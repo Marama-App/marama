@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import request from 'superagent'
 
 class Home extends React.Component {
@@ -6,7 +7,6 @@ class Home extends React.Component {
     super(props)
     this.state = {
       interests: []
-
     }
   }
 
@@ -30,14 +30,16 @@ class Home extends React.Component {
 
   render () {
     return (
-      <div className='home section'>
+      <div className='home-section'>
         <h1>Mārama</h1>
+        <Link to='/gaming'>
+          <button>Gaming</button>
+        </Link>
         <ul>
           {this.state.interests.map(interest =>
             <li key={interest.id}>{interest.interests}</li>
           )}
         </ul>
-
       </div>
     )
   }
