@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-class Home extends React.Component {
+class Interest extends React.Component {
   // constructor (props) {
   //   super(props)
   // }
@@ -12,7 +12,7 @@ class Home extends React.Component {
 
   render () {
     return (
-      <div className='home-section'>
+      <div className='interest-section'>
         <h1>Mārama</h1>
         <Link to='/:interest'>
           <button>Gaming</button>
@@ -22,4 +22,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+export default Interest
