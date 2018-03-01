@@ -39,3 +39,5 @@ jspm_packages
 # Webpack bundles
 bundle.js
 bundle.js.map
+
+dev.sqlite
