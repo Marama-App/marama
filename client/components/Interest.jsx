@@ -32,7 +32,8 @@ class Interest extends React.Component {
     return (
       <div className='interest-section'>
         <h1>Gaming</h1>
-        <Link to='/:id'>
+        {/* <h1>{interest}</h1> */}
+        <Link to='/:interest/:type'>
           Animation
           {typeInfo}
         </Link>
@@ -40,7 +41,7 @@ class Interest extends React.Component {
           Blurb about animation
           {/* {data.animation.description} */}
         </p>
-        <Link to='/:id'>
+        <Link to='/:interest/:type'>
           Coding
           {/* {infotype} */}
         </Link>
@@ -48,7 +49,7 @@ class Interest extends React.Component {
           Blurb about Coding
           {/* {infotype.blurb} */}
         </p>
-        <Link to='/:id'>
+        <Link to='/:interest/:type'>
           Sound
           {/* {infotype} */}
         </Link>
