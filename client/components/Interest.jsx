@@ -1,14 +1,32 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import request from 'superagent'
 
 class Interest extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
+  constructor (props) {
+    super(props)
+    this.state = {
+      typeInfo: []
+    }
+  }
 
-  // componentDidMount () {
-  //   this.getInterestInfo()
-  // }
+  componentDidMount () {
+    this.getTypeInfo()
+  }
+
+  getTypeInfo () {
+    request
+      .get('/api/v1/interests:1')
+      .then((res) => {
+        this.setState({
+          typeInfo: res.body.typeInfo
+        })
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.error(err.message)
+      })
+  }
 
   render () {
     return (
@@ -17,7 +35,7 @@ class Interest extends React.Component {
         {/* <h1>{interest}</h1> */}
         <Link to='/:interest/:type'>
           Animation
-          {/* {infotype} */}
+          {typeInfo}
         </Link>
         <p>
           Blurb about animation
