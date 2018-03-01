@@ -6,20 +6,20 @@ class Interest extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      typeInfo: []
+      type: []
     }
   }
 
   componentDidMount () {
-    this.getTypeInfo()
+    this.getType()
   }
 
-  getTypeInfo () {
+  getType () {
     request
       .get('/api/v1/interests:1')
       .then((res) => {
         this.setState({
-          typeInfo: res.body.typeInfo
+          type: res.body.type
         })
       })
       .catch((err) => {
@@ -35,7 +35,7 @@ class Interest extends React.Component {
         {/* <h1>{interest}</h1> */}
         <Link to='/:interest/:type'>
           Animation
-          {typeInfo}
+          {type}
         </Link>
         <p>
           Blurb about animation

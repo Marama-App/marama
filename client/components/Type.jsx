@@ -15,7 +15,7 @@ class Type extends React.Component {
       <div className='typeinfo-section'>
         <div className='header'>
           <h1> Animation
-          {/* {TypeInfo} */}
+          {/* {Type} */}
           </h1>
           <p>Blurb about animation</p>
         </div>
