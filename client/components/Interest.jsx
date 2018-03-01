@@ -13,14 +13,14 @@ class Interest extends React.Component {
   render () {
     return (
       <div className='interest-section'>
-        <h1>Mārama</h1>
+        <h1>Gaming</h1>
         <Link to='/:id'>
           Animation
           {/* {infotype} */}
         </Link>
         <p>
           Blurb about animation
-          {/* {infotype.blurb} */}
+          {/* {data.animation.description} */}
         </p>
         <Link to='/:id'>
           Coding
