@@ -1,44 +1,49 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import request from 'superagent'
 
 class Interest extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
+  constructor (props) {
+    super(props)
+    this.state = {
+      type: []
+    }
+  }
 
-  // componentDidMount () {
-  //   this.getInterestInfo()
-  // }
+  componentDidMount () {
+    this.getType()
+  }
+
+  getType () {
+    request
+      .get('/api/v1/interests/:id')
+      .then((res) => {
+        this.setState({
+          type: res.body.type
+        })
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.error(err.message)
+      })
+  }
 
   render () {
     return (
       <div className='interest-section'>
         <h1>Gaming</h1>
-        {/* <h1>{interest}</h1> */}
-        <Link to='/:id'>
-          Animation
-          {/* {infotype} */}
-        </Link>
-        <p>
-          Blurb about animation
-          {/* {data.animation.description} */}
-        </p>
-        <Link to='/:id'>
-          Coding
-          {/* {infotype} */}
-        </Link>
-        <p>
-          Blurb about Coding
-          {/* {infotype.blurb} */}
-        </p>
-        <Link to='/:id'>
-          Sound
-          {/* {infotype} */}
-        </Link>
-        <p>
-          Blurb about Sound
-          {/* {infotype.blurb} */}
-        </p>
+        {this.state.type.map(type => (
+          <div key={type.id}>
+            <Link to={`/interests/${type.id}`}>
+              <p>{type.name}</p>
+            </Link>
+            <div>
+              <p>{type.description}</p>
+            </div>
+          </div>
+        )
+        )}
+
       </div>
     )
   }

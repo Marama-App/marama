@@ -1,3 +1,5 @@
+*sqlite
+
 # Logs
 logs
 *.log
@@ -39,3 +41,4 @@ jspm_packages
 # Webpack bundles
 bundle.js
 bundle.js.map
+
