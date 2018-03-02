@@ -2,10 +2,10 @@ import React from 'react'
 import {Route} from 'react-router-dom'
 
 import Home from './Home'
-import Interest from './Interest'
 import Type from './Type'
 import TypeDetail from './TypeDetail'
 import About from './About'
+import Interest from './Interest'
 import Contact from './Contact'
 import Header from './Header'
 // import Grants from './Grants'
@@ -17,9 +17,9 @@ const App = () => {
       <Route exact path='/' component={Home} />
       <Route path='/contact' component={Contact} />
       <Route path='/about' component={About} />
-      <Route path='/:interest' component={Interest}/>
-      <Route path='/:interest/:type' component={Type}/>
-      <Route path='/:interest/:type/:typedetail' component={TypeDetail}/>
+      <Route path='/:interests' component={Interest}/>
+      <Route path='/:interests/:type' component={Type}/>
+      <Route path='/:interests/:type/:type-details' component={TypeDetail}/>
     </div>
   )
 }
