@@ -2,15 +2,19 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
+import {getTypeDetail} from '../actions/type-details'
+
 class Type extends React.Component {
   constructor (props) {
     super(props)
-    this.handleClick = this.handleClick.bind(this)
+    this.state = {
+      typeDetail: []
+    }
   }
 
-  // componentDidMount () {
-  //   this.getTypeInfoInfo()
-  // }
+  componentDidMount () {
+    this.dispatch(getTypeDetail())
+  }
 
   render () {
     return (
@@ -64,7 +68,7 @@ class Type extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    questionTag: state.questionTag // change these
+    typeDetails: state.typeDetails
   }
 }
 
