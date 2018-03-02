@@ -15,7 +15,7 @@ function getInterests (testConn) {
 
 function getTypeInfo (testConn) {
   const conn = testConn || connection
-  return conn('type-info').select()
+  return conn('interests').select()
 }
 
 // function getTypeInfo (testConn) {
