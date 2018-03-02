@@ -1,6 +1,7 @@
 import React from 'react'
-import {Link, Route} from 'react-router-dom'
-import request from 'superagent'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { getInterests } from '../actions/interests'
 
 import Interest from './Interest'
 
@@ -13,27 +14,17 @@ class Home extends React.Component {
   }
 
   componentDidMount () {
-    this.getHome()
-  }
-
-  getHome () {
-    request
-      .get('/api/v1/home')
-      .then((res) => {
-        this.setState({
-          interests: res.body.interests
-        })
-      })
-      .catch((err) => {
-        // eslint-disable-next-line no-console
-        console.error(err.message)
-      })
+    this.props.dispatch(getInterests())
   }
 
   render () {
+    const interests = this.props.interests.interests
+    if (!interests) {
+      return null
+    }
     return (
       <div className='home-section'>
-        {this.state.interests.map(interest =>
+        {this.props.interests.interests.map(interest =>
           <Link key={interest.id}to={`/interests/${interest.interests}`}>
             <button>
               {interest.interests}
@@ -46,4 +37,10 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+  return {
+    interests: state.interests
+  }
+}
+
+export default connect(mapStateToProps)(Home)

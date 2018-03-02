@@ -1,14 +1,20 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+
+import {getTypeDetail} from '../actions/type-details'
 
 class Type extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
+  constructor (props) {
+    super(props)
+    this.state = {
+      typeDetail: []
+    }
+  }
 
-  // componentDidMount () {
-  //   this.getTypeInfoInfo()
-  // }
+  componentDidMount () {
+    this.dispatch(getTypeDetail())
+  }
 
   render () {
     return (
@@ -28,7 +34,7 @@ class Type extends React.Component {
             </p>
           </div>
           <Link to='/:interest/:type/:typedetail'>
-            <button>I would like to Study</button>
+            <button onClick={this.handleClick}>I would like to Study</button>
           </Link>
         </div>
         <div className='type'>
@@ -60,4 +66,10 @@ class Type extends React.Component {
   }
 }
 
-export default Type
+const mapStateToProps = (state) => {
+  return {
+    typeDetails: state.typeDetails
+  }
+}
+
+export default connect(mapStateToProps)(Type)
