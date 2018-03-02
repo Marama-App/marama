@@ -24,7 +24,7 @@ class Home extends React.Component {
     }
     return (
       <div className='home-section'>
-        {this.state.interests.map(interest =>
+        {this.props.interests.interests.map(interest =>
           <Link key={interest.id}to={`/interests/${interest.interests}`}>
             <button>
               {interest.interests}
