@@ -1,8 +1,8 @@
-import { FETCH_INTERESTS } from '../actions/interests'
+import { RECEIVE_INTERESTS } from '../actions/interests'
 
 const interests = (state = [], action) => {
   switch (action.type) {
-    case FETCH_INTERESTS:
+    case RECEIVE_INTERESTS:
       return action.interests
     default:
       return state

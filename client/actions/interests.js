@@ -3,11 +3,11 @@ import request from 'superagent'
 import {showError} from './error'
 import baseUrl from '../lib/base-url'
 
-export const FETCH_INTERESTS = 'FETCH_INTERESTS'
+export const RECEIVE_INTERESTS = 'REQUEST_INTERESTS'
 
-export const fetchInterests = (interests) => {
+export const receiveInterests = (interests) => {
   return {
-    type: FETCH_INTERESTS,
+    type: RECEIVE_INTERESTS,
     interests
   }
 }
@@ -16,7 +16,7 @@ export function getInterests () {
   return (dispatch) => {
     request('get', `${baseUrl}/api/v1/interests`)
       .then(res => {
-        dispatch(fetchInterests(res.body))
+        dispatch(receiveInterests(res.body.interests))
       })
       .catch(() => {
         dispatch(showError('An unexpected error in getting information'))
