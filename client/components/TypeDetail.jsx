@@ -1,4 +1,8 @@
 import React from 'react'
+
+import {connect} from 'react-redux'
+
+import {receiveGrants} from '../actions/grants'
 // import {Link} from 'react-router-dom'
 
 class TypeDetail extends React.Component {
@@ -6,9 +10,9 @@ class TypeDetail extends React.Component {
   //   super(props)
   // }
 
-  // componentDidMount () {
-  //   this.getTypeDetailInfo()
-  // }
+  componentDidMount () {
+    this.dispatch(receiveGrants())
+  }
 
   render () {
     return (
@@ -33,4 +37,10 @@ class TypeDetail extends React.Component {
   }
 }
 
-export default TypeDetail
+const mapStateToProps = (state) => {
+  return {
+    grants: state.grants
+  }
+}
+
+export default connect(mapStateToProps)(TypeDetail)
