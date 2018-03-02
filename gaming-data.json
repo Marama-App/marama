@@ -1,0 +1,16 @@
+{
+  "gaming": {
+    "animation":
+      {
+      "description": "Design virtual worlds and breathe life into game characters with design and animation."
+      },
+    "coding":
+      {
+      "description": "Build the structure that makes each part of your favourite game work."
+      },
+    "sound":
+      {
+      "description": "Create conversations between game characters, sound effects for activities and more."
+      }   
+  }
+}
