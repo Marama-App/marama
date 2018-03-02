@@ -1,12 +1,12 @@
 import React from 'react'
+// import { Link } from 'react-router-dom'
+// import {getType} from '../actions/type.js'
+import {connect} from 'react-redux'
 
 class Interest extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      type: []
-    }
-  }
+  // constructor (props) {
+  //   super(props)
+  // }
 
   render () {
     return (
@@ -17,4 +17,11 @@ class Interest extends React.Component {
   }
 }
 
-export default Interest
+const mapStateToProps = (state) => {
+  return {
+    type: state.type
+  }
+}
+
+export default connect(mapStateToProps)(Interest)
+// export default Interest
