@@ -1,8 +1,25 @@
-// import {showError} from './error'
-// import baseUrl from '../lib/base-url'
+import request from 'superagent'
 
-// (`${baseUrl}/api/v1/grants`) imput this into your function
+import {showError} from './error'
+import baseUrl from '../lib/base-url'
 
-// .catch(() => {
-//   dispatch(showError('An unexpected error in getting information'))
-// })
+export const REQUEST_GRANTS = 'FETCH_GRANTS'
+
+export const requestGrants = (grants) => {
+  return {
+    type: REQUEST_GRANTS,
+    grants
+  }
+}
+
+export function receiveGrants () {
+  return (dispatch) => {
+    request('get', `${baseUrl}/api/v1/interests`)
+      .then(res => {
+        dispatch(requestGrants(res.body))
+      })
+      .catch(() => {
+        dispatch(showError('An unexpected error in getting information'))
+      })
+  }
+}
