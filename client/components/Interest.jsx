@@ -31,7 +31,7 @@ class Interest extends React.Component {
   render () {
     return (
       <div className='interest-section'>
-        <h1>Gaming</h1>
+        <h1>{this.props.interest.interests}</h1>
         {this.state.typeInfo.map(typeInfo => (
           <div key={typeInfo.id}>
             <Link to={`/interests/${typeInfo.id}`}>
