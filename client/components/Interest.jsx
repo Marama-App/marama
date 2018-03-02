@@ -6,20 +6,20 @@ class Interest extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      typeInfo: []
+      type: []
     }
   }
 
   componentDidMount () {
-    this.getTypeInfo()
+    this.getType()
   }
 
-  getTypeInfo () {
+  getType () {
     request
       .get('/api/v1/interests/:id')
       .then((res) => {
         this.setState({
-          typeInfo: res.body.typeInfo
+          type: res.body.type
         })
       })
       .catch((err) => {
@@ -31,14 +31,14 @@ class Interest extends React.Component {
   render () {
     return (
       <div className='interest-section'>
-        <h1>{this.props.interest.interests}</h1>
-        {this.state.typeInfo.map(typeInfo => (
-          <div key={typeInfo.id}>
-            <Link to={`/interests/${typeInfo.id}`}>
-              <p>{typeInfo.name}</p>
+        <h1>Gaming</h1>
+        {this.state.type.map(type => (
+          <div key={type.id}>
+            <Link to={`/interests/${type.id}`}>
+              <p>{type.name}</p>
             </Link>
             <div>
-              <p>{typeInfo.description}</p>
+              <p>{type.description}</p>
             </div>
           </div>
         )
