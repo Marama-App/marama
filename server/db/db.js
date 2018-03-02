@@ -4,8 +4,9 @@ const connection = require('knex')(config)
 
 module.exports = {
   getInterests,
-  getTypeInfo,
-  getTypeDetails
+  getType,
+  getTypeDetails,
+  getGrants
 }
 
 function getInterests (testConn) {
@@ -13,9 +14,9 @@ function getInterests (testConn) {
   return conn('interests').select()
 }
 
-function getTypeInfo (testConn) {
+function getType (testConn) {
   const conn = testConn || connection
-  return conn('interests').select()
+  return conn('interest_types').select()
 }
 
 // function getTypeInfo (testConn) {
@@ -27,5 +28,10 @@ function getTypeInfo (testConn) {
 
 function getTypeDetails (testConn) {
   const conn = testConn || connection
-  return conn('interests').select()
+  return conn('jobs').select()
+}
+
+function getGrants (testConn) {
+  const conn = testConn || connection
+  return conn('grants').select()
 }
