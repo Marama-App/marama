@@ -1,6 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Route} from 'react-router-dom'
 import request from 'superagent'
+
+import Interest from './Interest'
 
 class Home extends React.Component {
   constructor (props) {
@@ -32,13 +34,14 @@ class Home extends React.Component {
     return (
       <div className='home-section'>
         {this.state.interests.map(interest =>
-          <Link key={interest.id}to={`/${interest.interests}`}>
+          <Link key={interest.id}to={`/interests/${interest.interests}`}>
             <button>
               {interest.interests}
             </button>
           </Link>
         )}
       </div>
+
     )
   }
 }
