@@ -1,7 +1,7 @@
-// import {combineReducers} from 'redux'
+import {combineReducers} from 'redux'
 
-// // import reducer from './reducerfilename'
+import interestType from './type'
 
-// export default combineReducers({
-
-// })
+export default combineReducers({
+  interestType
+})
