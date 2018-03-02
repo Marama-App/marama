@@ -3,11 +3,11 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getHome,
+  getInterests,
   getTypeInfo
 }
 
-function getHome (testConn) {
+function getInterests (testConn) {
   const conn = testConn || connection
   return conn('interests').select()
 }
