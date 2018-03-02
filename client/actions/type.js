@@ -19,7 +19,7 @@ export function getType () {
           // eslint-disable-next-line no-console
           console.error(err)
         }
-        dispatch(sendType(res.body.typeInfo))
+        dispatch(sendType(res.body.interests))
       })
   }
 }
