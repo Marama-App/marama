@@ -1,10 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 class Type extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
+  constructor (props) {
+    super(props)
+    this.handleClick = this.handleClick.bind(this)
+  }
 
   // componentDidMount () {
   //   this.getTypeInfoInfo()
@@ -28,7 +30,7 @@ class Type extends React.Component {
             </p>
           </div>
           <Link to='/:interest/:type/:typedetail'>
-            <button>I would like to Study</button>
+            <button onClick={this.handleClick}>I would like to Study</button>
           </Link>
         </div>
         <div className='type'>
@@ -60,4 +62,10 @@ class Type extends React.Component {
   }
 }
 
-export default Type
+const mapStateToProps = (state) => {
+  return {
+    questionTag: state.questionTag // change these
+  }
+}
+
+export default connect(mapStateToProps)(Type)
