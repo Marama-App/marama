@@ -1,5 +1,8 @@
 import request from 'superagent'
 
+import {showError} from './error'
+import baseUrl from '../lib/base-url'
+
 export const FETCH_INTERESTS = 'FETCH_INTERESTS'
 
 export const fetchInterests = (interests) => {
@@ -11,13 +14,12 @@ export const fetchInterests = (interests) => {
 
 export function getInterests () {
   return (dispatch) => {
-    request('get', '/api/v1/interests')
+    request('get', `${baseUrl}/api/v1/interests`)
       .then(res => {
         dispatch(fetchInterests(res.body))
       })
       .catch(() => {
-        // eslint-disable-next-line no-console
-        console.log('error')
+        dispatch(showError('An unexpected error in getting information'))
       })
   }
 }
