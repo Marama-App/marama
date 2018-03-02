@@ -1,5 +1,3 @@
-// tian and kimmi
-
 import request from 'superagent'
 
 export const SEND_TYPE = 'SEND_TYPE'
