@@ -9,7 +9,7 @@ module.exports = router
 
 router.use(bodyParser.json())
 
-router.get('/interests/:type', (req, res) => {
+router.get('/', (req, res) => {
   db.getType()
     .then((type) => {
       res.send({type})

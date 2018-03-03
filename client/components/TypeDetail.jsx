@@ -2,8 +2,8 @@ import React from 'react'
 
 import {connect} from 'react-redux'
 
-import {receiveGrants} from '../actions/grants'
-// import {Link} from 'react-router-dom'
+import {getGrants} from '../actions/grants'
+import {Link} from 'react-router-dom'
 
 class TypeDetail extends React.Component {
   // constructor (props) {
@@ -11,27 +11,26 @@ class TypeDetail extends React.Component {
   // }
 
   componentDidMount () {
-    this.dispatch(receiveGrants())
+    this.props.dispatch(getGrants())
   }
 
   render () {
     return (
       <div className='typedetail-section'>
-        <div className='header'>
-          <h1> Study
-          {/* {TypeDetail} */}
-          </h1>
-          <p>Blurb about study</p>
-        </div>
-        <div className='schools'>
-          {/* {this.state.interests.map(interest =>
-              <Link key={study.id}to={`/${study.study}`}>
-                <button>
-                  {study.study}
-                </button>
-              </Link>
-            )} */}
-        </div>
+        <h1>TypeDetail</h1>
+        {this.props.grants.map(grant => (
+          <div key={grant.id}>
+            <Link to={`/interests/${this.props.match.params.detail}/${grant.id}`}>
+              <h3>{grant}</h3>
+              {/* this needs to change to grant.name later (once db is connected) */}
+            </Link>
+            <div>
+              <p>{grant}</p>
+              {/* this needs to change to grant.description later (once db is connected) */}
+            </div>
+          </div>
+        )
+        )}
       </div>
     )
   }

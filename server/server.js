@@ -3,7 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const interestRoutes = require('./routes/interests')
-const typeRoutes = require('./routes/type')
+const typeRoutes = require('./routes/types')
 const typeDetailRoutes = require('./routes/type-details')
 const grantsRoutes = require('./routes/grants')
 
@@ -13,7 +13,7 @@ server.use(bodyParser.json())
 
 // these are the routes we have created
 server.use('/api/v1/interests', interestRoutes)
-server.use('/api/v1/type', typeRoutes)
+server.use('/api/v1/types', typeRoutes)
 server.use('/api/v1/type-details', typeDetailRoutes)
 server.use('/api/v1/grants', grantsRoutes)
 

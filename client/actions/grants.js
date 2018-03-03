@@ -14,7 +14,8 @@ export const receiveGrants = (grants) => {
 
 export function getGrants () {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/interests`)
+    request
+      .get(`${baseUrl}/api/v1/grants`)
       .then(res => {
         dispatch(receiveGrants(res.body.grants))
       })
