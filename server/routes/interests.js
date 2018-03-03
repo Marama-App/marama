@@ -9,7 +9,7 @@ module.exports = router
 
 router.use(bodyParser.json())
 
-router.get('/:interests', (req, res) => {
+router.get('/', (req, res) => {
   db.getInterests()
     .then((interests) => {
       res.send({interests})

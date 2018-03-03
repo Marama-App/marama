@@ -2,7 +2,7 @@ import React from 'react'
 
 import {connect} from 'react-redux'
 
-import {receiveGrants} from '../actions/grants'
+import {getGrants} from '../actions/grants'
 // import {Link} from 'react-router-dom'
 
 class TypeDetail extends React.Component {
@@ -11,12 +11,13 @@ class TypeDetail extends React.Component {
   // }
 
   componentDidMount () {
-    this.dispatch(receiveGrants())
+    this.props.dispatch(getGrants())
   }
 
   render () {
     return (
       <div className='typedetail-section'>
+        <p>hello test</p>
         <div className='header'>
           <h1> Study
           {/* {TypeDetail} */}

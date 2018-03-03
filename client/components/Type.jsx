@@ -13,7 +13,7 @@ class Type extends React.Component {
   }
 
   componentDidMount () {
-    this.dispatch(getTypeDetail())
+    this.props.dispatch(getTypeDetail())
   }
 
   render () {
