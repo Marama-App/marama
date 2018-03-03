@@ -10,8 +10,9 @@ module.exports = router
 router.use(bodyParser.json())
 
 router.get('/', (req, res) => {
-  // console.log('action is here')
-  db.getGrants()
+  // const typeDetail = req.params.typeDetails
+  const typeDetail = 'Diploma in Sound'
+  db.getTypeDetailID(typeDetail)
     .then((grants) => {
       // console.log(grants)
       res.send({grants})

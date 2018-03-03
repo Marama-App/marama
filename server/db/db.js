@@ -6,8 +6,11 @@ module.exports = {
   getInterests,
   getType,
   getTypeDetails,
-  getGrants
+  getGrants,
+  getTypeDetailID
 }
+
+// test using your api route to see if the correct data shows
 
 function getInterests (testConn) {
   const conn = testConn || connection
@@ -25,9 +28,19 @@ function getTypeDetails (testConn) {
 }
 
 // Tian and Emily
-function getGrants (testConn) {
+function getGrants (study, testConn) {
   const conn = testConn || connection
   return conn('grants')
-    .join('grants_id', 'study_id')
+    .join('grants_study_junction', 'grants_study_junction.grants_id', 'grants.id')
+    .join('study', 'study.id', 'grants_study_junction.study_id')
+    .where('study.id', study)
     .select()
+}
+
+function getTypeDetailID (typeDetail, testConn) {
+  const study = 'Diploma in Sound'
+  const conn = testConn || connection
+  return conn('study')
+    .where('study.name', study)
+    .select('study.id')
 }
