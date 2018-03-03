@@ -14,11 +14,11 @@ export function receiveType (interestType) {
 
 export function getType () {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/type`)
+    request('get', `${baseUrl}/api/v1/types`)
       .then(res => {
-        dispatch(receiveType(res.body.interestType))
+        dispatch(receiveType(res.body.type))
       })
-      .catch(() => {
+      .catch((e) => {
         dispatch(showError('An unexpected error in getting information'))
       })
   }

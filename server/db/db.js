@@ -19,13 +19,6 @@ function getType (testConn) {
   return conn('interest_types').select()
 }
 
-// function getTypeInfo (testConn) {
-//   // const conn = testConn || connection
-//   return Promise.resolve([
-//     {id: 1, name: 'Animation', description: 'Design virtual worlds and breathe life into game characters with design and animation.'}
-//   ])
-// }
-
 function getTypeDetails (testConn) {
   const conn = testConn || connection
   return conn('jobs').select()
