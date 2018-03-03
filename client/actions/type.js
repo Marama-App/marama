@@ -14,7 +14,7 @@ export function receiveType (interestType) {
 
 export function getType () {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/interests`)
+    request('get', `${baseUrl}/api/v1/type`)
       .then(res => {
         dispatch(receiveType(res.body.interestType))
       })
