@@ -40,9 +40,9 @@ function getHelp (testConn) {
     .select()
 }
 
-function getJobs () {
+// function getJobs () {
 
-}
+// }
 
 function getInterestTypesID (interestType, testConn) {
   const conn = testConn || connection
