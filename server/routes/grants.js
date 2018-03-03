@@ -9,10 +9,10 @@ module.exports = router
 
 router.use(bodyParser.json())
 
-router.get('/:interests', (req, res) => {
-  db.getInterests()
-    .then((interests) => {
-      res.send({interests})
+router.get('/:interests/:type/:type-details/:grants', (req, res) => {
+  db.getGrants()
+    .then((grants) => {
+      res.send({grants})
     })
     .catch(err => {
       res.status(500).send(err.message)
