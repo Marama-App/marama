@@ -18,13 +18,13 @@ class Home extends React.Component {
   }
 
   render () {
-    const interests = this.props.interests.interests
+    const interests = this.props.interests
     if (!interests) {
       return null
     }
     return (
       <div className='home-section'>
-        {this.props.interests.interests.map(interest =>
+        {this.props.interests.map(interest =>
           <Link key={interest.id}to={`/interests/${interest.interests}`}>
             <button>
               {interest.interests}

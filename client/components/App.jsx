@@ -17,9 +17,9 @@ const App = () => {
       <Route exact path='/' component={Home} />
       <Route path='/contact' component={Contact} />
       <Route path='/about' component={About} />
-      <Route path='/:interests' component={Interest}/>
-      <Route path='/:interests/:type' component={Type}/>
-      <Route path='/:interests/:type/:type-details' component={TypeDetail}/>
+      <Route path='/interests/:interest' component={Interest}/>
+      <Route path='/interests/:interest/:type' component={Type}/>
+      <Route path='/interests/:interest/:type-details' component={TypeDetail}/>
     </div>
   )
 }
