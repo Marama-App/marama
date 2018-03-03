@@ -5,9 +5,12 @@ const connection = require('knex')(config)
 module.exports = {
   getInterests,
   getType,
-  getTypeDetails,
+  getStudy,
+  getHelp,
+  getJobs,
   getGrants,
-  getStudyId
+  getStudyId,
+  getInterestTypesID
 }
 
 function getInterests (interests, testConn) {
@@ -25,10 +28,35 @@ function getType (interests, testConn) {
     .where('interests.name', interests)
     .select()
 }
-
-function getTypeDetails (testConn) {
+// Cat and Kimmi
+function getStudy (testConn) {
   const conn = testConn || connection
-  return conn('jobs').select()
+  return conn('study')
+    .join('types_study_junction', 'types_study_junction.study_id', 'study.id')
+    .join('interest_types', 'interest_types.id', 'types_study_junction.types_id')
+    .select()
+}
+
+function getHelp (testConn) {
+  const conn = testConn || connection
+  return conn('help')
+    .join('interest_types', 'interest_types.id', 'help.types_id')
+    .select()
+}
+
+function getJobs (testConn) {
+  const conn = testConn || connection
+  return conn('jobs')
+    .join('types_jobs_junction', 'types_jobs_junction.jobs_id', 'jobs.id')
+    .join('interest_types', 'interest_types.id', 'types_jobs_junction.types_id')
+    .select()
+}
+
+function getInterestTypesID (interestType, testConn) {
+  const conn = testConn || connection
+  return conn('interest_types')
+    .where('interest_types.id', interestType)
+    .select('interest_types.id')
 }
 
 // Tian and Emily
@@ -39,7 +67,7 @@ function getGrants (testConn) {
     .join('study', 'study.id', 'grants_study_junction.study_id')
     .select()
 }
-
+// Tian and Emily
 function getStudyId (typeDetail, testConn) {
   const conn = testConn || connection
   return conn('study')
