@@ -10,7 +10,7 @@ module.exports = {
   getJobs,
   getGrants,
   getStudyId,
-  getInterestTypesID
+  getInterestTypesName
 }
 
 function getInterests (interests, testConn) {
@@ -25,37 +25,40 @@ function getType (interests, testConn) {
   return conn('interest_types')
     .join('interests_to_types_junction', 'interests_to_types_junction.type_id', 'interest_types.id')
     .join('interests', 'interests_to_types_junction.interest_id', 'interests.id')
-    .where('interests.name', interests)
+    .where('interests.interests', interests)
     .select()
 }
 // Cat and Kimmi
-function getStudy (testConn) {
+function getStudy (typeId, testConn) {
   const conn = testConn || connection
   return conn('study')
     .join('types_study_junction', 'types_study_junction.study_id', 'study.id')
     .join('interest_types', 'interest_types.id', 'types_study_junction.types_id')
+    .where('interest_types.name', typeId)
     .select()
 }
 
-function getHelp (testConn) {
+function getHelp (typeId, testConn) {
   const conn = testConn || connection
   return conn('help')
     .join('interest_types', 'interest_types.id', 'help.types_id')
+    .where('interest_types.name', typeId)
     .select()
 }
 
-function getJobs (testConn) {
-  const conn = testConn || connection
-  return conn('jobs')
-    .join('types_jobs_junction', 'types_jobs_junction.jobs_id', 'jobs.id')
-    .join('interest_types', 'interest_types.id', 'types_jobs_junction.types_id')
-    .select()
-}
-
-function getInterestTypesID (interestType, testConn) {
+function getJobs (typeName, testConn) {
   const conn = testConn || connection
   return conn('interest_types')
-    .where('interest_types.id', interestType)
+    .join('types_jobs_junction', 'types_jobs_junction.types_id', 'interest_types.id')
+    .where('interest_types.name', typeName)
+    .join('jobs', 'jobs.id', 'types_jobs_junction.jobs_id')
+    .select('jobs.name as job_name', 'jobs.link', 'interest_types.name', 'types_jobs_junction.jobs_id', 'types_jobs_junction.types_id')
+}
+
+function getInterestTypesName (interestType, testConn) {
+  const conn = testConn || connection
+  return conn('interest_types')
+    .where('interest_types.name', interestType)
     .select('interest_types.id')
 }
 
