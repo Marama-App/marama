@@ -16,7 +16,7 @@ export function getType () {
   return (dispatch) => {
     request('get', `${baseUrl}/api/v1/types`)
       .then(res => {
-        dispatch(receiveType(res.body.type))
+        dispatch(receiveType(res.body))
       })
       .catch((e) => {
         dispatch(showError('An unexpected error in getting information'))
