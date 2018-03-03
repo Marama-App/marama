@@ -14,6 +14,7 @@ function getInterests (testConn) {
   return conn('interests').select()
 }
 
+// stina and elyse
 function getType (testConn) {
   const conn = testConn || connection
   return conn('interest_types').select()
@@ -26,11 +27,13 @@ function getType (testConn) {
 //   ])
 // }
 
+// kimmi and cat
 function getTypeDetails (testConn) {
   const conn = testConn || connection
   return conn('jobs').select()
 }
 
+// tian and emily
 function getGrants (testConn) {
   const conn = testConn || connection
   return conn('grants').select()
