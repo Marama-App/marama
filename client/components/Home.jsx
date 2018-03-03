@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getInterests } from '../actions/interests'
 
-import Interest from './Interest'
+// import Interest from './Interest'
 
 class Home extends React.Component {
   constructor (props) {
