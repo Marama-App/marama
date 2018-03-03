@@ -8,7 +8,7 @@ module.exports = {
   getStudy,
   getHelp,
   getGrants,
-  getTypeDetailID,
+  getStudyId,
   getInterestTypesID
 }
 
@@ -40,6 +40,10 @@ function getHelp (testConn) {
     .select()
 }
 
+function getJobs () {
+
+}
+
 function getInterestTypesID (interestType, testConn) {
   const conn = testConn || connection
   return conn('interest_types')
@@ -56,9 +60,9 @@ function getGrants (testConn) {
     .select()
 }
 // Tian and Emily
-function getTypeDetailID (typeDetail, testConn) {
+function getStudyId (typeDetail, testConn) {
   const conn = testConn || connection
   return conn('study')
-    .where('study.id', typeDetail)
+    .where('study.name', typeDetail)
     .select('study.id')
 }
