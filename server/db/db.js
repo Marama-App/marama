@@ -5,9 +5,11 @@ const connection = require('knex')(config)
 module.exports = {
   getInterests,
   getType,
-  getTypeDetails,
+  getStudy,
+  getHelp,
   getGrants,
-  getTypeDetailID
+  getTypeDetailID,
+  getInterestTypesID
 }
 
 // test using your api route to see if the correct data shows
@@ -22,26 +24,41 @@ function getType (testConn) {
   const conn = testConn || connection
   return conn('interest_types').select()
 }
-
-function getTypeDetails (testConn) {
+// Cat and Kimmi
+function getStudy (testConn) {
   const conn = testConn || connection
-  return conn('jobs').select()
+  return conn('study')
+    .join('types_study_junction', 'types_study_junction.study_id', 'study.id')
+    .join('interest_types', 'interest_types.id', 'types_study_junction.types_id')
+    .select()
+}
+
+function getHelp (testConn) {
+  const conn = testConn || connection
+  return conn('help')
+    .join('interest_types', 'interest_types.id', 'help.types_id')
+    .select()
+}
+
+function getInterestTypesID (interestType, testConn) {
+  const conn = testConn || connection
+  return conn('interest_types')
+    .where('interest_types.id', interestType)
+    .select('interest_types.id')
 }
 
 // Tian and Emily
-function getGrants (study, testConn) {
+function getGrants (testConn) {
   const conn = testConn || connection
   return conn('grants')
     .join('grants_study_junction', 'grants_study_junction.grants_id', 'grants.id')
     .join('study', 'study.id', 'grants_study_junction.study_id')
-    .where('study.id', study)
     .select()
 }
-
+// Tian and Emily
 function getTypeDetailID (typeDetail, testConn) {
-  const study = 'Diploma in Sound'
   const conn = testConn || connection
   return conn('study')
-    .where('study.name', study)
+    .where('study.id', typeDetail)
     .select('study.id')
 }
