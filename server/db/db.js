@@ -13,17 +13,20 @@ module.exports = {
   getInterestTypesID
 }
 
-// test using your api route to see if the correct data shows
-
-function getInterests (testConn) {
+function getInterests (interests, testConn) {
   const conn = testConn || connection
-  return conn('interests').select()
+  return conn('interests')
+    .select()
 }
 
-// stina and elyse
-function getType (testConn) {
+function getType (interests, testConn) {
   const conn = testConn || connection
-  return conn('interest_types').select()
+  // console.log(interests)
+  return conn('interest_types')
+    .join('interests_to_types_junction', 'interests_to_types_junction.type_id', 'interest_types.id')
+    .join('interests', 'interests_to_types_junction.interest_id', 'interests.id')
+    .where('interests.name', interests)
+    .select()
 }
 // Cat and Kimmi
 function getStudy (testConn) {
