@@ -12,6 +12,7 @@ router.use(bodyParser.json())
 router.get('/', (req, res) => {
   db.getType()
     .then((type) => {
+      // console.log(type)
       res.send({type})
     })
     .catch(err => {
