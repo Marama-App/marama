@@ -10,9 +10,9 @@ module.exports = router
 router.use(bodyParser.json())
 
 router.get('/', (req, res) => {
-  db.getType()
+  // const interests = req.match.params.interest
+  db.getType('Gaming')
     .then((type) => {
-      // console.log(type)
       res.send({type})
     })
     .catch(err => {
