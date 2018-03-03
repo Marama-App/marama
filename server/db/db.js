@@ -24,7 +24,10 @@ function getTypeDetails (testConn) {
   return conn('jobs').select()
 }
 
+// Tian and Emily
 function getGrants (testConn) {
   const conn = testConn || connection
-  return conn('grants').select()
+  return conn('grants')
+    .join('grants_id', 'study_id')
+    .select()
 }
