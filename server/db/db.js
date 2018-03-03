@@ -7,6 +7,7 @@ module.exports = {
   getType,
   getStudy,
   getHelp,
+  getJobs,
   getGrants,
   getStudyId,
   getInterestTypesID
@@ -40,9 +41,13 @@ function getHelp (testConn) {
     .select()
 }
 
-// function getJobs () {
-
-// }
+function getJobs (testConn) {
+  const conn = testConn || connection
+  return conn('jobs')
+    .join('types_jobs_junction', 'types_jobs_junction.jobs_id', 'jobs.id')
+    .join('interest_types', 'interest_types.id', 'types_jobs_junction.types_id')
+    .select()
+}
 
 function getInterestTypesID (interestType, testConn) {
   const conn = testConn || connection

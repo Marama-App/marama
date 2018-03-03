@@ -14,9 +14,9 @@ export const receiveTypeDetail = (typeDetails) => {
 
 export function getTypeDetail () {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/type-detail`)
+    request('get', `${baseUrl}/api/v1/type-details`)
       .then(res => {
-        dispatch(receiveTypeDetail(res.body.typeDetails))
+        dispatch(receiveTypeDetail(res.body.result))
       })
       .catch(() => {
         dispatch(showError('An unexpected error in getting information'))
