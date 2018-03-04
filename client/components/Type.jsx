@@ -22,7 +22,7 @@ class Type extends React.Component {
         <h1>Study in {this.props.match.params.type}</h1>
         {this.props.typeDetails.study.map(detail => (
           <div key={detail.study_id}>
-            <a href={detail.link}>{detail.course}</a>
+            <a href ={detail.link} target='_blank'>{detail.course}</a>
             <p>{detail.provider}</p>
             <div>
             </div>
@@ -35,7 +35,7 @@ class Type extends React.Component {
         <h1>Jobs in {this.props.match.params.type}</h1>
         {this.props.typeDetails.jobs.map(job => (
           <div key={job.jobs_id}>
-            <a href={job.job_link}>{job.job_name}</a>
+            <a href={job.job_link} target='_blank'>{job.job_name}</a>
           </div>
         )
         )}
@@ -45,9 +45,7 @@ class Type extends React.Component {
         <h1>Help</h1>
         {this.props.typeDetails.help.map(help => (
           <div key={help.id}>
-            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${help.name}`}>
-              <p>{help.help_name}</p>
-            </Link>
+            <a href={help.help_link} target='_blank'>{help.help_name}</a>
           </div>
         ))}
       </div>

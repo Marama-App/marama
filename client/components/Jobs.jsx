@@ -9,7 +9,7 @@ class Jobs extends React.Component {
         <h1>Jobs in {this.props.match.params.type}</h1>
         {this.props.typeDetails.jobs.map(job => (
           <div key={job.jobs_id}>
-            <a href={job.job_link}>{job.job_name}</a>
+            <a href={job.job_link} target='_blank'>{job.job_name}</a>
           </div>
         )
         )}

@@ -11,7 +11,7 @@ class Study extends React.Component {
         <h1>Study in {this.props.match.params.type}</h1>
         {this.props.typeDetails.study.map(detail => (
           <div key={detail.study_id}>
-            <a href={detail.link}>{detail.course}</a>
+            <a href={detail.link} target='_blank'>{detail.course}</a>
             <p>Provider: {detail.provider}</p>
             <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study/${detail.course}`}>
               <button>See Grants for this course</button>
