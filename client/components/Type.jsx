@@ -19,7 +19,7 @@ class Type extends React.Component {
   render () {
     return (
       <div className='type-section'>
-        <h1>Study options</h1>
+        <h1>Study</h1>
         {this.props.typeDetails.study.map(detail => (
           <div key={detail.study_id}>
             <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${detail.course}`}>
@@ -31,8 +31,22 @@ class Type extends React.Component {
           </div>
         )
         )}
-        <h1>Job Options</h1>
-        
+        <h1>Jobs</h1>
+        {this.props.typeDetails.jobs.map(job => (
+          <div key={job.jobs_id}>
+            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${job.name}`}>
+              <p>{job.job_name}</p>
+            </Link>
+          </div>
+        ))}
+        <h1>Help</h1>
+        {this.props.typeDetails.help.map(help => (
+          <div key={help.id}>
+            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${help.name}`}>
+              <p>{help.help_name}</p>
+            </Link>
+          </div>
+        ))}
       </div>
     )
   }
