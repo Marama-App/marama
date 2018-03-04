@@ -1,48 +1,40 @@
 import React from 'react'
-// import {Link} from 'react-router-dom'
-import request from 'superagent'
+
+import {connect} from 'react-redux'
+
+import {getGrants} from '../actions/grants'
 
 class Grants extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      grants: []
-    }
-  }
-
   componentDidMount () {
-    this.getGrants()
-  }
-
-  getGrants () {
-    request
-      .get('/api/v1/grants')
-      .then((res) => {
-        this.setState({
-          grants: res.body.grants
-        })
-      })
-      .catch((err) => {
-        // eslint-disable-next-line no-console
-        console.error(err.message)
-      })
+    this.props.dispatch(getGrants(this.props.match.params.grants))
   }
 
   render () {
     return (
-      <div className='Grants-section'>
-        <h1>Mārama</h1>
-        <h1>Hi!</h1>
-        {/* {this.state.interests.map(interest =>
-          <Link key={interest.id}to={`/${interest.interests}`}>
-            <button>
-              {interest.interests}
+      <div className='typedetail-section'>
+        <h1>Grants for {this.props.match.params.grants}</h1>
+        {this.props.grants.result.map(grant => (
+          <div key={grant.grants_id}>
+            <h3>{grant.name}</h3>
+            <div>
+              <p>{grant.description}</p>
+            </div>
+            <button><a href={grant.link} target='_blank'>
+              take me there
+            </a>
             </button>
-          </Link>
-        )} */}
+          </div>
+        )
+        )}
       </div>
     )
   }
 }
 
-export default Grants
+const mapStateToProps = (state) => {
+  return {
+    grants: state.grants
+  }
+}
+
+export default connect(mapStateToProps)(Grants)
