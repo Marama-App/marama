@@ -12,9 +12,9 @@ export function receiveType (interestType) {
   }
 }
 
-export function getType () {
+export function getType (interest) {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/types`)
+    request('get', `${baseUrl}/api/v1/types/${interest}`)
       .then(res => {
         dispatch(receiveType(res.body))
       })
