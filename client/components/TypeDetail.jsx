@@ -3,7 +3,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {getGrants} from '../actions/grants'
-import {Link} from 'react-router-dom'
 
 class TypeDetail extends React.Component {
   // constructor (props) {
@@ -17,13 +16,12 @@ class TypeDetail extends React.Component {
   render () {
     return (
       <div className='typedetail-section'>
-        <h1>TypeDetail</h1>
+        <h1>Grants for {this.props.match.params.typeDetails}</h1>
         {this.props.grants.result.map(grant => (
           <div key={grant.grants_id}>
-            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${this.props.match.params.typeDetails}/${grant.name}`}>
+            <a href={grant.link} target='_blank'>
               <h3>{grant.name}</h3>
-              {/* this needs to change to grant.name later (once db is connected) */}
-            </Link>
+            </a>
             <div>
               <p>{grant.description}</p>
               {/* this needs to change to grant.description later (once db is connected) */}
