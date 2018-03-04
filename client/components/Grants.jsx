@@ -5,10 +5,6 @@ import {connect} from 'react-redux'
 import {getGrants} from '../actions/grants'
 
 class Grants extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
-
   componentDidMount () {
     this.props.dispatch(getGrants(this.props.match.params.grants))
   }

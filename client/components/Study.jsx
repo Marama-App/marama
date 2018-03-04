@@ -2,8 +2,6 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-// import {getGrants} from '../actions/grants'
-
 class Study extends React.Component {
   render () {
     return (
