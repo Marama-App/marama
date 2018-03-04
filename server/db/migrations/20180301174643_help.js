@@ -1,9 +1,9 @@
 exports.up = (knex, Promise) => {
   return knex.schema.createTableIfNotExists('help', table => {
     table.increments('id').primary()
-    table.string('name')
-    table.string('description')
-    table.string('link')
+    table.string('help_name')
+    table.string('help_description')
+    table.string('help_link')
     table.integer('types_id').references('interest_types.id')
   })
 }
