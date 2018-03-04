@@ -3,10 +3,6 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-<<<<<<< HEAD
-  getHome,
-  getType
-=======
   getInterests,
   getType,
   getStudy,
@@ -14,7 +10,6 @@ module.exports = {
   getJobs,
   getGrants,
   getInterestTypesName
->>>>>>> 0c3509f3c300df2523de47a8ba6af3efa54c9d02
 }
 
 function getInterests (interests, testConn) {
@@ -23,11 +18,6 @@ function getInterests (interests, testConn) {
     .select()
 }
 
-<<<<<<< HEAD
-function getType (testConn) {
-  const conn = testConn || connection
-  return conn('type').select()
-=======
 function getType (interests, testConn) {
   const conn = testConn || connection
   // console.log(interests)
@@ -45,7 +35,6 @@ function getStudy (typeId, testConn) {
     .join('interest_types', 'interest_types.id', 'types_study_junction.types_id')
     .where('interest_types.name', typeId)
     .select()
->>>>>>> 0c3509f3c300df2523de47a8ba6af3efa54c9d02
 }
 
 function getHelp (typeId, testConn) {
