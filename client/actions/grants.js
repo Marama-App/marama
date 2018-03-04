@@ -12,12 +12,12 @@ export const receiveGrants = (grants) => {
   }
 }
 
-export function getGrants () {
+export function getGrants (typeDetail) {
   return (dispatch) => {
     request
-      .get(`${baseUrl}/api/v1/grants`)
+      .get(`${baseUrl}/api/v1/grants/${typeDetail}`)
       .then(res => {
-        dispatch(receiveGrants(res.body.grants))
+        dispatch(receiveGrants(res.body))
       })
       .catch(() => {
         dispatch(showError('An unexpected error in getting information'))

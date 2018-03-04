@@ -18,8 +18,8 @@ const App = () => {
         <Route exact path='/' component={Home} />
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />
-        <Route path='/interests/:interest/:type/:type-details/:grants' component={Grants}/>
-        <Route path='/interests/:interest/:type/:type-details' component={TypeDetail}/>
+        <Route path='/interests/:interest/:type/:typeDetails/:grants' component={Grants}/>
+        <Route path='/interests/:interest/:type/:typeDetails' component={TypeDetail}/>
         <Route path='/interests/:interest/:type' component={Type}/>
         <Route path='/interests/:interest' component={Interest}/>
       </Switch>

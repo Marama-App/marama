@@ -14,7 +14,7 @@ server.use(bodyParser.json())
 // these are the routes we have created
 server.use('/api/v1/interests', interestRoutes)
 server.use('/api/v1/types', typeRoutes)
-server.use('/api/v1/type-details', typeDetailRoutes)
+server.use('/api/v1/typeDetails', typeDetailRoutes)
 server.use('/api/v1/grants', grantsRoutes)
 
 // Default route for non-API requests

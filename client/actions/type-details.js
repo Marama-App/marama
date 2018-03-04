@@ -14,7 +14,7 @@ export const receiveTypeDetail = (typeDetails) => {
 
 export function getTypeDetail (type) {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/type-details/${type}`)
+    request('get', `${baseUrl}/api/v1/typeDetails/${type}`)
       .then(res => {
         dispatch(receiveTypeDetail(res.body))
       })

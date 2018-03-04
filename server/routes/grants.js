@@ -9,18 +9,10 @@ module.exports = router
 
 router.use(bodyParser.json())
 
-router.get('/', (req, res) => {
-  const typeDetail = req.params.typeDetails
-  // const typeDetail = 'Diploma in Sound'
-  const id = db.getStudyId(typeDetail)
-  const grants = db.getGrants()
-
-  Promise.all([id, grants])
-    .then(([studyTable, grantsTable]) => {
-      const result = grantsTable.filter(grants => {
-        return grants.study_id === studyTable[0].id
-      })
-
+router.get('/:typeDetails', (req, res) => {
+  const studyName = req.params.typeDetails
+  db.getGrants(studyName)
+    .then(result => {
       res.send({result})
     })
     .catch(err => {
