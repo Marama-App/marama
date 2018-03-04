@@ -9,7 +9,8 @@ module.exports = {
   getHelp,
   getJobs,
   getGrants,
-  getInterestTypesName
+  getInterestTypesName,
+  getAll
 }
 
 function getInterests (interests, testConn) {
@@ -68,5 +69,11 @@ function getGrants (studyName, testConn) {
     .join('grants_study_junction', 'grants_study_junction.grants_id', 'grants.id')
     .join('study', 'study.id', 'grants_study_junction.study_id')
     .where('study.course', studyName)
+    .select()
+}
+
+function getAll (testConn) {
+  const conn = testConn || connection
+  return conn('study')
     .select()
 }
