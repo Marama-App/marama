@@ -8,7 +8,6 @@ import About from './About'
 import Interest from './Interest'
 import Contact from './Contact'
 import Header from './Header'
-import Grants from './Grants'
 
 const App = () => {
   return (
@@ -18,7 +17,6 @@ const App = () => {
         <Route exact path='/' component={Home} />
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />
-        <Route path='/interests/:interest/:type/:typeDetails/:grants' component={Grants}/>
         <Route path='/interests/:interest/:type/:typeDetails' component={TypeDetail}/>
         <Route path='/interests/:interest/:type' component={Type}/>
         <Route path='/interests/:interest' component={Interest}/>
