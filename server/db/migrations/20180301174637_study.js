@@ -1,7 +1,7 @@
 exports.up = (knex, Promise) => {
   return knex.schema.createTableIfNotExists('study', table => {
     table.increments('id').primary()
-    table.string('name')
+    table.string('course')
     table.string('provider')
     table.string('link')
     table.integer('domestic_price')
