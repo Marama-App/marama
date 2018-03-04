@@ -2,9 +2,9 @@ exports.seed = function (knex, Promise) {
   return knex('help').del()
     .then(function () {
       return knex('help').insert([
-        {id: 1, name: 'Resource 1', description: 'This resource helps you code', link: 'https://www.google.com', types_id: 1},
-        {id: 2, name: 'Resource 2', description: 'This resource helps you animate', link: 'https://www.google.com', types_id: 2},
-        {id: 3, name: 'Resource 3', description: 'This resource helps you sound', link: 'https://www.google.com', types_id: 3}
+        {id: 1, help_name: 'Resource 1', help_description: 'This resource helps you code', help_link: 'https://www.google.com', types_id: 1},
+        {id: 2, help_name: 'Resource 2', help_description: 'This resource helps you animate', help_link: 'https://www.google.com', types_id: 2},
+        {id: 3, help_name: 'Resource 3', help_description: 'This resource helps you sound', help_link: 'https://www.google.com', types_id: 3}
       ])
     })
 }
