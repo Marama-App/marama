@@ -13,54 +13,25 @@ class Type extends React.Component {
   }
 
   componentDidMount () {
-    this.dispatch(getTypeDetail())
+    this.props.dispatch(getTypeDetail(this.props.match.params.type))
   }
 
   render () {
     return (
-      <div className='typeinfo-section'>
-        <div className='header'>
-          <h1> Animation
-          {/* {Type} */}
-          </h1>
-          <p>Blurb about animation</p>
-        </div>
-        <div className='type'>
-          <div className='typebox'>
-            <h3>Study</h3>
-            <p>
-              Blurb about study
-              {/* {data.animation.description} */}
-            </p>
+      <div className='type-section'>
+        <h1>{this.props.match.params.type}</h1>
+        {this.props.typeDetails.study.map(detail => (
+          <div key={detail.study_id}>
+            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${detail.course}`}>
+              <p>{detail.name}</p>
+            </Link>
+            <p>{detail.provider}</p>
+            <p>{detail.description}</p>
+            <div>
+            </div>
           </div>
-          <Link to='/:interest/:type/:typedetail'>
-            <button onClick={this.handleClick}>I would like to Study</button>
-          </Link>
-        </div>
-        <div className='type'>
-          <div className='typebox'>
-            <h3>Jobs</h3>
-            <p>
-              Blurb about jobs
-              {/* {data.animation.description} */}
-            </p>
-          </div>
-          <Link to='/:interest/:type/:typedetail'>
-            <button>Take me to Jobs</button>
-          </Link>
-        </div>
-        <div className='type'>
-          <div className='typebox'>
-            <h3>Help</h3>
-            <p>
-              Blurb about Help
-              {/* {data.animation.description} */}
-            </p>
-          </div>
-          <Link to='/:interest/:type/:typedetail'>
-            <button>Please Help me</button>
-          </Link>
-        </div>
+        )
+        )}
       </div>
     )
   }

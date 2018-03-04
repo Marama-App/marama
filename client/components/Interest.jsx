@@ -1,24 +1,20 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
-import {getType} from '../actions/type.js'
-import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
+import { getType } from '../actions/type.js'
+import { connect } from 'react-redux'
 
 class Interest extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
-
   componentDidMount () {
-    this.props.dispatch(getType())
+    this.props.dispatch(getType(this.props.match.params.interest))
   }
 
   render () {
     return (
       <div className='interest-section'>
-        <h1>Gaming</h1>
-        {/* {this.state.type.map(type => (
-          <div key={type.id}>
-            <Link to={`/interests/${type.id}`}>
+        <h1>{this.props.match.params.interest}</h1>
+        {this.props.interestType.map(type => (
+          <div key={type.type_id}>
+            <Link to={`/interests/${this.props.match.params.interest}/${type.name}`}>
               <p>{type.name}</p>
             </Link>
             <div>
@@ -26,8 +22,7 @@ class Interest extends React.Component {
             </div>
           </div>
         )
-        )} */}
-
+        )}
       </div>
     )
   }
@@ -35,9 +30,8 @@ class Interest extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    type: state.type
+    interestType: state.interestType
   }
 }
 
 export default connect(mapStateToProps)(Interest)
-// export default Interest

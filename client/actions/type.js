@@ -12,13 +12,13 @@ export function receiveType (interestType) {
   }
 }
 
-export function getType () {
+export function getType (interest) {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/interests`)
+    request('get', `${baseUrl}/api/v1/types/${interest}`)
       .then(res => {
-        dispatch(receiveType(res.body.interestType))
+        dispatch(receiveType(res.body))
       })
-      .catch(() => {
+      .catch((e) => {
         dispatch(showError('An unexpected error in getting information'))
       })
   }

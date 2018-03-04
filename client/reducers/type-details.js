@@ -1,6 +1,6 @@
 import {RECEIVE_TYPE_DETAILS} from '../actions/type-details'
 
-const initialState = [1, 2, 3, 4]
+const initialState = {study: [], jobs: [], help: []}
 
 const typeDetails = (state = initialState, action) => {
   switch (action.type) {

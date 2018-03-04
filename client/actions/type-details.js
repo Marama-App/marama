@@ -12,11 +12,11 @@ export const receiveTypeDetail = (typeDetails) => {
   }
 }
 
-export function getTypeDetail () {
+export function getTypeDetail (type) {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/interests`)
+    request('get', `${baseUrl}/api/v1/typeDetails/${type}`)
       .then(res => {
-        dispatch(receiveTypeDetail(res.body.typeDetails))
+        dispatch(receiveTypeDetail(res.body))
       })
       .catch(() => {
         dispatch(showError('An unexpected error in getting information'))

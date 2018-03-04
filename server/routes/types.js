@@ -9,8 +9,9 @@ module.exports = router
 
 router.use(bodyParser.json())
 
-router.get('/interests/:type', (req, res) => {
-  db.getType()
+router.get('/:interest', (req, res) => {
+  const interest = req.params.interest
+  db.getType(interest)
     .then((type) => {
       res.send({type})
     })
