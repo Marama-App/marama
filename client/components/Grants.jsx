@@ -4,28 +4,25 @@ import {connect} from 'react-redux'
 
 import {getGrants} from '../actions/grants'
 
-class TypeDetail extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
-
+class Grants extends React.Component {
   componentDidMount () {
-    this.props.dispatch(getGrants(this.props.match.params.typeDetails))
+    this.props.dispatch(getGrants(this.props.match.params.grants))
   }
 
   render () {
     return (
       <div className='typedetail-section'>
-        <h1>Grants for {this.props.match.params.typeDetails}</h1>
+        <h1>Grants for {this.props.match.params.grants}</h1>
         {this.props.grants.result.map(grant => (
           <div key={grant.grants_id}>
-            <a href={grant.link} target='_blank'>
-              <h3>{grant.name}</h3>
-            </a>
+            <h3>{grant.name}</h3>
             <div>
               <p>{grant.description}</p>
-              {/* this needs to change to grant.description later (once db is connected) */}
             </div>
+            <button><a href={grant.link} target='_blank'>
+              take me there
+            </a>
+            </button>
           </div>
         )
         )}
@@ -40,4 +37,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(TypeDetail)
+export default connect(mapStateToProps)(Grants)

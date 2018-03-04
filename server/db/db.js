@@ -51,7 +51,7 @@ function getJobs (typeName, testConn) {
     .join('types_jobs_junction', 'types_jobs_junction.types_id', 'interest_types.id')
     .where('interest_types.name', typeName)
     .join('jobs', 'jobs.id', 'types_jobs_junction.jobs_id')
-    .select('jobs.name as job_name', 'jobs.link', 'interest_types.name', 'types_jobs_junction.jobs_id', 'types_jobs_junction.types_id')
+    .select('jobs.name as job_name', 'jobs.link as job_link', 'interest_types.name', 'types_jobs_junction.jobs_id', 'types_jobs_junction.types_id')
 }
 
 function getInterestTypesName (interestType, testConn) {

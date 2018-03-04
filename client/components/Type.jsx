@@ -19,32 +19,33 @@ class Type extends React.Component {
   render () {
     return (
       <div className='type-section'>
-        <h1>Study</h1>
+        <h1>Study in {this.props.match.params.type}</h1>
         {this.props.typeDetails.study.map(detail => (
           <div key={detail.study_id}>
-            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${detail.course}`}>
-              <p>{detail.course}</p>
-            </Link>
+            <a href ={detail.link} target='_blank'>{detail.course}</a>
             <p>{detail.provider}</p>
             <div>
             </div>
           </div>
         )
         )}
-        <h1>Jobs</h1>
+        <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study`}>
+          <button>More Study Options</button>
+        </Link>
+        <h1>Jobs in {this.props.match.params.type}</h1>
         {this.props.typeDetails.jobs.map(job => (
           <div key={job.jobs_id}>
-            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${job.name}`}>
-              <p>{job.job_name}</p>
-            </Link>
+            <a href={job.job_link} target='_blank'>{job.job_name}</a>
           </div>
-        ))}
+        )
+        )}
+        <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
+          <button>More Job Options</button>
+        </Link>
         <h1>Help</h1>
         {this.props.typeDetails.help.map(help => (
           <div key={help.id}>
-            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${help.name}`}>
-              <p>{help.help_name}</p>
-            </Link>
+            <a href={help.help_link} target='_blank'>{help.help_name}</a>
           </div>
         ))}
       </div>
