@@ -32,6 +32,7 @@ class Grants extends React.Component {
     return (
       <div className='Grants-section'>
         <h1>Mārama</h1>
+        <h1>Hi!</h1>
         {/* {this.state.interests.map(interest =>
           <Link key={interest.id}to={`/${interest.interests}`}>
             <button>
