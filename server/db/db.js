@@ -9,7 +9,6 @@ module.exports = {
   getHelp,
   getJobs,
   getGrants,
-  getStudyId,
   getInterestTypesName
 }
 
@@ -63,17 +62,11 @@ function getInterestTypesName (interestType, testConn) {
 }
 
 // Tian and Emily
-function getGrants (testConn) {
+function getGrants (studyName, testConn) {
   const conn = testConn || connection
   return conn('grants')
     .join('grants_study_junction', 'grants_study_junction.grants_id', 'grants.id')
     .join('study', 'study.id', 'grants_study_junction.study_id')
+    .where('study.course', studyName)
     .select()
-}
-// Tian and Emily
-function getStudyId (typeDetail, testConn) {
-  const conn = testConn || connection
-  return conn('study')
-    .where('study.name', typeDetail)
-    .select('study.id')
 }

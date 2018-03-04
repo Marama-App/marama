@@ -13,16 +13,16 @@ class Type extends React.Component {
   }
 
   componentDidMount () {
-    this.props.dispatch(getTypeDetail())
+    this.props.dispatch(getTypeDetail(this.props.match.params.type))
   }
 
   render () {
     return (
       <div className='type-section'>
         <h1>{this.props.match.params.type}</h1>
-        {this.props.typeDetails.map(detail => (
-          <div key={detail.id}>
-            <Link to={`/interests/${this.props.match.params.type}/${detail.name}`}>
+        {this.props.typeDetails.study.map(detail => (
+          <div key={detail.study_id}>
+            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/${detail.course}`}>
               <p>{detail.name}</p>
             </Link>
             <p>{detail.provider}</p>

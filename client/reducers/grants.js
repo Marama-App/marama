@@ -1,6 +1,8 @@
 import {RECEIVE_GRANTS} from '../actions/grants'
 
-const grants = (state = [], action) => {
+const initialState = {result: []}
+
+const grants = (state = initialState, action) => {
   switch (action.type) {
     case RECEIVE_GRANTS:
       return action.grants

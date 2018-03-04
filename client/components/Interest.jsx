@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 class Interest extends React.Component {
   componentDidMount () {
-    this.props.dispatch(getType())
+    this.props.dispatch(getType(this.props.match.params.interest))
   }
 
   render () {
@@ -13,7 +13,7 @@ class Interest extends React.Component {
       <div className='interest-section'>
         <h1>{this.props.match.params.interest}</h1>
         {this.props.interestType.map(type => (
-          <div key={type.id}>
+          <div key={type.type_id}>
             <Link to={`/interests/${this.props.match.params.interest}/${type.name}`}>
               <p>{type.name}</p>
             </Link>
