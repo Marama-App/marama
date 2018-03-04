@@ -2,16 +2,20 @@ const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const homeRoutes = require('./routes/home')
 const interestRoutes = require('./routes/interests')
+const typeRoutes = require('./routes/types')
+const typeDetailRoutes = require('./routes/type-details')
+const grantsRoutes = require('./routes/grants')
 
 const server = express()
 server.use(express.static(path.join(__dirname, 'public')))
 server.use(bodyParser.json())
 
 // these are the routes we have created
-server.use('/api/v1/home', homeRoutes)
 server.use('/api/v1/interests', interestRoutes)
+server.use('/api/v1/types', typeRoutes)
+server.use('/api/v1/typeDetails', typeDetailRoutes)
+server.use('/api/v1/grants', grantsRoutes)
 
 // Default route for non-API requests
 server.get('*', (req, res) => {

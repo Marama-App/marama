@@ -9,18 +9,21 @@ module.exports = router
 
 router.use(bodyParser.json())
 
-<<<<<<< HEAD
-router.get('/:interests', (req, res) => {
-  db.getType()
-    .then((type) => {
-      res.send({type})
-=======
-router.get('/', (req, res) => {
-  db.getInterests()
-    .then((interests) => {
-      res.send({interests})
->>>>>>> 0c3509f3c300df2523de47a8ba6af3efa54c9d02
+router.get('/:type', (req, res) => {
+  const type = req.params.type
+  const study = db.getStudy(type)
+  const jobs = db.getJobs(type)
+  const help = db.getHelp(type)
+  Promise.all([study, jobs, help])
+    .then(([study, jobs, help]) => {
+      const result = {
+        study,
+        jobs,
+        help
+      }
+      res.send(result)
     })
+
     .catch(err => {
       res.status(500).send(err.message)
     })
