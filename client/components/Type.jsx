@@ -18,16 +18,23 @@ class Type extends React.Component {
 
   render () {
     return (
+
+    <div>
+      <img src='/images/bg-stars.png' className='stars-background'/>
+      <div className='page-section'>
+
       <div className='type-section'>
-        <h1>{this.props.match.params.type}</h1>
-        <h1>Study</h1>
+        <div className='page-title-font'>{this.props.match.params.type}</div>
+        <div className='page-title-font'>Study</div>
+        <div className='p-class'>Here's what you can study, cool companies hiring, and resources to help you!</div>
+
 
         {this.props.typeDetails.study.filter(course => {
           return (course.study_id < 4)
         }).map(detail => (
           <div key={detail.study_id}>
             <a href ={detail.link} target='_blank'>{detail.course}</a>
-            <p>{detail.provider}</p>
+            <div className='provider-class'>{detail.provider}</div>
             <p>{detail.location}</p>
             <div>
             </div>
@@ -37,7 +44,7 @@ class Type extends React.Component {
         <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study`}>
           <button>More Study Options</button>
         </Link>
-        <h1>Employment Avenues</h1>
+        <div className='h2-class'>Potential Employers</div>
         {this.props.typeDetails.jobs.map(job => (
           <div key={job.job_id}>
             <a href={job.job_link} target='_blank'>{job.job_name}</a>
@@ -47,7 +54,7 @@ class Type extends React.Component {
         <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
           <button>More Job Options</button>
         </Link>
-        <h1>Support Services</h1>
+        <div className='h2-class'>Support Services</div>
 
         {this.props.typeDetails.help.map(help => (
           <div key={help.id}>
@@ -58,6 +65,8 @@ class Type extends React.Component {
           </div>
 
         ))}
+      </div>
+      </div>
       </div>
     )
   }
