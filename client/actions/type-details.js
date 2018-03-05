@@ -3,11 +3,11 @@ import request from 'superagent'
 import {showError} from './error'
 import baseUrl from '../lib/base-url'
 
-export const RECEIVE_TYPE_DETAILS = 'RECEIVE_TYPE_DETAILS'
+export const RECEIVE_TYPE_DETAIL = 'RECEIVE_TYPE_DETAIL'
 
 export const receiveTypeDetail = (typeDetails) => {
   return {
-    type: RECEIVE_TYPE_DETAILS,
+    type: RECEIVE_TYPE_DETAIL,
     typeDetails
   }
 }
