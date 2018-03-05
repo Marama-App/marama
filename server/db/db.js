@@ -10,6 +10,10 @@ module.exports = {
   getJobs,
   getGrants,
   getInterestTypesName,
+  getAll,
+  addStudy,
+  addInterestsToTypesJunction,
+  addTypesStudyJunction,
   getIwiGrants
 }
 
@@ -74,6 +78,35 @@ function getGrants (studyName, testConn) {
     .select()
 }
 
+function getAll (testConn) {
+  const conn = testConn || connection
+  return conn('study')
+    .select()
+}
+
+function addStudy (formData, testConn) {
+  const conn = testConn || connection
+  return conn('study')
+    .insert({course: formData.course, provider: formData.provider, link: formData.link, domestic_price: formData.domestic_price, international_price: formData.international_price, duration: formData.duration, level: formData.level}
+    )
+    .returning('id')
+}
+
+function addInterestsToTypesJunction (formData, testConn) {
+  const conn = testConn || connection
+  return conn('interests_to_types_junction')
+    .insert({interest_id: formData.interestId, type_id: formData.typeId}
+    )
+    .select()
+}
+
+function addTypesStudyJunction (id, formData, testConn) {
+  const conn = testConn || connection
+  return conn('types_study_junction')
+    .insert({study_id: id, types_id: formData.typeId}
+    )
+    .returning('id')
+}
 // stina iwi-grants
 function getIwiGrants (iwiGrants, testConn) {
   const conn = testConn || connection
