@@ -2,6 +2,7 @@ exports.seed = function (knex, Promise) {
   return knex('grants_study_junction').del()
     .then(function () {
       return knex('grants_study_junction').insert([
+       // Gaming Animation Courses (Study_Id)  
         {id: 1, study_id: 1, grants_id: 1},
         {id: 2, study_id: 1, grants_id: 2},
         {id: 3, study_id: 2, grants_id: 1},
@@ -23,6 +24,7 @@ exports.seed = function (knex, Promise) {
         {id: 19, study_id: 4, grants_id: 9},
         {id: 20, study_id: 4, grants_id: 10},
         {id: 21, study_id: 4, grants_id: 2},
+        // Gaming and Coding Courses (Study_Id)
         {id: 22, study_id: 5, grants_id: 3},
         {id: 23, study_id: 5, grants_id: 1},
         {id: 24, study_id: 5, grants_id: 4},
@@ -46,12 +48,28 @@ exports.seed = function (knex, Promise) {
         {id: 42, study_id: 6, grants_id: 8},
         {id: 43, study_id: 7, grants_id: 16},
         {id: 44, study_id: 7, grants_id: 17},
-        {id: 45, study_id: 8, grants_id: 18},
+        // Gaming Sound Courses (Study_Id)
+        {id: 45, study_id: 8, grants_id: 0},
         {id: 46, study_id: 8, grants_id: 19},
         {id: 47, study_id: 8, grants_id: 20},
         {id: 48, study_id: 8, grants_id: 21},
         {id: 49, study_id: 9, grants_id: 22},
-        {id: 50, study_id: 9, grants_id: 23}
+        {id: 50, study_id: 9, grants_id: 23},
+        // Music Musical Instrument Courses
+        {id: 51, study_id: 11, grants_id: 20},
+        {id: 52, study_id: 12, grants_id: 20},
+        {id: 53, study_id: 13, grants_id: 20},
+        // Music Singing/Songwriting Courses
+        {id: 54, study_id: 14, grants_id: 21},
+        {id: 54, study_id: 14, grants_id: 22},
+        {id: 55, study_id: 15, grants_id: 21},
+        {id: 55, study_id: 15, grants_id: 22},
+        {id: 56, study_id: 16, grants_id: 21},
+        {id: 56, study_id: 16, grants_id: 22},
+        // Music DJ/Sound Recording Courses
+        {id: 57, study_id: 17, grants_id: 18},
+        {id: 58, study_id: 18, grants_id: 18},
+        {id: 59, study_id: 19, grants_id: 18}
       ])
     })
 }
