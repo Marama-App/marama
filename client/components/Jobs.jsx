@@ -17,10 +17,8 @@ class Jobs extends React.Component {
             )
             )}
           </div>
+        </div>
 
-
-        )
-        )}
         <div>
           <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
             <button>Previous Page</button>
