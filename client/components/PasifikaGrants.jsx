@@ -11,6 +11,9 @@ class PasifikaGrants extends React.Component {
 
   render () {
     return (
+      <div>
+      <img src='/images/bg-stars.png' className='stars-background'/>
+      <div className='page-section'>
       <div className='typedetail-section'>
         <h1>Pasifika Study</h1>
         <p>Many iwi offer a range of different grants, scholarships and funding to help support their members in areas like education and research. Opportunities like these are often overlooked if you are unaware that they are out there.
@@ -23,6 +26,8 @@ Below are list of iwi that have grants you can apply for which is available for 
           </div>
         ))
         }
+      </div>
+      </div>
       </div>
     )
   }
