@@ -1,6 +1,6 @@
 /* global test expect */
 import {RECEIVE_INTERESTS} from '../../../client/actions/interests'
-import interestsReducer from '../../../client/reducers/interests'
+import interests from '../../../client/reducers/interests'
 
 test('interests receives the interests', () => {
   const beforeState = [{
@@ -18,7 +18,7 @@ test('interests receives the interests', () => {
     interests: 'music'
   }]
 
-  const actualAfterActionState = interestsReducer(beforeState, action)
+  const actualAfterActionState = interests(beforeState, action)
 
   expect(actualAfterActionState).toEqual(afterState)
 })
