@@ -21,7 +21,10 @@ class Type extends React.Component {
       <div className='type-section'>
         <h1>{this.props.match.params.type}</h1>
         <h1>Study</h1>
-        {this.props.typeDetails.study.map(detail => (
+
+        {this.props.typeDetails.study.filter(course => {
+          return (course.study_id < 4)
+        }).map(detail => (
           <div key={detail.study_id}>
             <a href ={detail.link} target='_blank'>{detail.course}</a>
             <p>{detail.provider}</p>
