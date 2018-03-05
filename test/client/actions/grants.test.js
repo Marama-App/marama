@@ -19,3 +19,15 @@ test('receiveGrants returns the correct action', () => {
 
   expect(actual).toEqual(expected)
 })
+
+test('receiveGrants returns the grants', () => {
+  const grants = ['grant1', 'grant2']
+  const expected = {
+    type: 'RECEIVE_GRANTS',
+    grants: ['grant1', 'grant2']
+  }
+
+  const actual = receiveGrants(grants)
+
+  expect(actual).toEqual(expected)
+})
