@@ -18,37 +18,39 @@ class Type extends React.Component {
 
   render () {
     return (
-      <div className='type-section'>
-        <h1>{this.props.match.params.type}</h1>
-        <h1>Study</h1>
-        {this.props.typeDetails.study.map(detail => (
-          <div key={detail.study_id}>
-            <a href ={detail.link} target='_blank'>{detail.course}</a>
-            <p>{detail.provider}</p>
-            <div>
+      <div className='page-section'>
+        <div className='type-section'>
+          <div className='page-title-font'>{this.props.match.params.type}</div>
+          <div className='page-title-font'>Study</div>
+          {this.props.typeDetails.study.map(detail => (
+            <div key={detail.study_id}>
+              <a href ={detail.link} target='_blank'>{detail.course}</a>
+              <div className='p-class'>{detail.provider}</div>
+              <div>
+              </div>
             </div>
-          </div>
-        )
-        )}
-        <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study`}>
-          <button>More Study Options</button>
-        </Link>
-        <h1>Potential Employers</h1>
-        {this.props.typeDetails.jobs.map(job => (
-          <div key={job.jobs_id}>
-            <a href={job.job_link} target='_blank'>{job.job_name}</a>
-          </div>
-        )
-        )}
-        <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
-          <button>More Job Options</button>
-        </Link>
-        <h1>Help</h1>
-        {this.props.typeDetails.help.map(help => (
-          <div key={help.id}>
-            <a href={help.help_link} target='_blank'>{help.help_name}</a>
-          </div>
-        ))}
+          )
+          )}
+          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study`}>
+            <button>More Study Options</button>
+          </Link>
+          <div className='page-title-font'>Potential Employers</div>
+          {this.props.typeDetails.jobs.map(job => (
+            <div key={job.jobs_id}>
+              <a href={job.job_link} target='_blank'>{job.job_name}</a>
+            </div>
+          )
+          )}
+          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
+            <button>More Job Options</button>
+          </Link>
+          <div className='page-title-font'>Help</div>
+          {this.props.typeDetails.help.map(help => (
+            <div key={help.id}>
+              <a href={help.help_link} target='_blank'>{help.help_name}</a>
+            </div>
+          ))}
+        </div>
       </div>
     )
   }

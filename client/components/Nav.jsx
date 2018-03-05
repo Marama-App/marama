@@ -5,12 +5,21 @@ const Nav = () => {
   return (
     <div className='nav-header'>
       <div className='nav-logo'>
-        <div className='marama-logo'>Mārama</div>
+      <Link to='/'>
+        <img src='/images/marama-logo.png' className='marama-logo'/>
+      </Link>
       </div>
       <div className='nav-links'>
-      <Link to='/'>Home</Link>
-      <Link to='/contact'>Contact us</Link>
-      <Link to='/about'>About</Link>
+        {/* <span className='nav-link-individual-styling'>
+          <Link to='/'>Home</Link>
+        </span> */}
+        <span className='nav-link-individual-styling'>
+          <Link to='/about'>about us</Link>
+        </span>
+        <span className='nav-link-individual-styling'>
+          <Link to='/contact'>contact</Link>
+        </span>
+        
       </div>
     </div>
   )

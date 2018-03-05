@@ -1,19 +1,26 @@
-/* This represents our entire site */
+/* This represents our entire site #a556ae */
 body {
   font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: #411284;
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
+
 
 
 /* This div encompasses all components in App */
 .app-box {
-  margin: 20px;
+  margin: 40px 60px;
 }
 
 
-/* This div encompasses the Home component, and isn't doing much */
-.home-section {
-  background-color: purple;
-}
+
+/* HOME STYLING */
+
+/* This div encompasses the Home component, and isn't doing much right now */
+/* .home-section {;
+} */
 
 
 /* This div is the the Home image */
@@ -33,7 +40,7 @@ body {
 /* This encompasses everything in the Nav component */
 .nav-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
   flex-wrap: nowrap;
   justify-content: space-between;
 }
@@ -47,18 +54,52 @@ body {
 
 /* This is our logo div in the Nav component */
 .marama-logo {
-  font-size: 30px;
+  height: 30px;
+}
+
+
+/* This is the box around our navigation links in the Nav component */ 
+ /* .nav-links {
+  /* justify-content: space-between; 
+ } */
+
+
+/* This styles the individual divs around the nav links */
+  .nav-link-individual-styling {
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* This removes formatting from the nav links in the Nav component */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+/* OTHER PAGE STYLING */
+
+/* This is the box encompassing everyting on all content pages */
+.page-section {
+  margin: 50px 60px;
+}
+
+
+/* This is the title font on all content pages */
+.page-title-font {
+  font-size: 70px;
   font-weight: bold;
 }
 
-/* This is the box around our navigation links in the Nav component */
-/* .nav-links {
-} */
 
-
-
-
-
+/* This is the body font on all pages. */
+.p-class {
+  margin: 1px;
+}
 
 
 

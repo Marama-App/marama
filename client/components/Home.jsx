@@ -24,7 +24,7 @@ class Home extends React.Component {
     }
     return (
       <div className='home-section'>
-      <img src='/images/bgArtboard-1-copy-5.jpg' className='home-background'/>
+      <img src='/images/final-bg-more-red.jpg' className='home-background'/>
         {this.props.interests.map(interest =>
           <Link key={interest.id}to={`/interests/${interest.interests}`}>
             <button>
