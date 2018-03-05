@@ -1,26 +1,27 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const router = express.Router()
-// const apiKey = 'YOUR_API_KEY'
-// const DOMAIN = 'YOUR_DOMAIN_NAME'
-// const mailgun = require('mailgun-js')({apiKey: apiKey, domain: DOMAIN})
+const apiKey = process.env.MAILGUN_API_KEY
+const DOMAIN = 'sandbox3c744cc282d64cda9998c505e2785b05.mailgun.org'
+const mailgun = require('mailgun-js')({apiKey: apiKey, domain: DOMAIN})
 
 module.exports = router
 
 router.use(bodyParser.json())
 
 router.post('/', (req, res) => {
-  // console.log(req.body)
-  res.send('okay')
+  const data = {
+    from: req.body.email,
+    to: 'info.marama.app@gmail.com',
+    subject: 'Website Enquiry from ' + req.body.name,
+    text: req.body.message
+  }
+
+  mailgun.messages().send(data, (error, body) => {
+    if (error) {
+      res.status(500).send(error)
+    } else {
+      res.send('okay')
+    }
+  })
 })
-
-// const data = {
-//   from: 'Excited User <me@samples.mailgun.org>',
-//   to: 'bar@example.com, YOU@YOUR_DOMAIN_NAME',
-//   subject: 'Hello',
-//   text: 'Testing some Mailgun awesomness!'
-// }
-
-// mailgun.messages().send(data, (error, body) => {
-// // console.log(body)
-// })

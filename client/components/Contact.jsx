@@ -12,7 +12,7 @@ class Contact extends React.Component {
       submitted: false
     }
     this.handleChange = this.handleChange.bind(this)
-    this.handleClick = this.handleClick.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange (evt) {
@@ -21,7 +21,8 @@ class Contact extends React.Component {
     })
   }
 
-  handleClick (evt) {
+  handleSubmit (evt) {
+    evt.preventDefault()
     request
       .post(`${baseUrl}/api/v1/contact`)
       .send({
@@ -42,20 +43,20 @@ class Contact extends React.Component {
         <div className='contact'>
           <h1>Contact us</h1>
           <p>Blurb about contacting us</p>
-          <form className='submit-form'>
+          <form className='submit-form' onSubmit={this.handleSubmit}>
             <div>
-              <input name='name' onChange={this.handleChange} />
+              <input name='name' onChange={this.handleChange} required/>
             </div>
             <div>
-              <input name='email' onChange={this.handleChange}/>
+              <input type='email' name='email' onChange={this.handleChange} required/>
             </div>
             <div>
-              <textarea name='message' onChange={this.handleChange}/>
+              <textarea name='message' onChange={this.handleChange} required/>
+            </div>
+            <div className='submit-flex'>
+              <button type="submit" value="Submit">Submit</button>
             </div>
           </form>
-          <div className='submit-flex'>
-            <button type="submit" value="Submit" onClick={this.handleClick}>Submit</button>
-          </div>
         </div>
       )
     }
