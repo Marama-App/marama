@@ -12,11 +12,19 @@ export const receiveAll = (all) => {
   }
 }
 
-export function sendAddForm (formDetails) {
+export const RECEIVE_TYPES = 'RECEIVE_TYPES'
+
+export const receiveTypes = (interestTypes) => {
+  return {
+    type: RECEIVE_TYPES,
+    interestTypes
+  }
+}
+
+export function getAll () {
   return (dispatch) => {
     request
-      .post(`${baseUrl}/api/v1/update`)
-      .send(formDetails)
+      .get(`${baseUrl}/api/v1/update`)
       .then(res => {
         dispatch(receiveAll(res.body))
       })
@@ -26,10 +34,25 @@ export function sendAddForm (formDetails) {
   }
 }
 
-export function getAll () {
+export function getTypes (interest) {
   return (dispatch) => {
     request
-      .get(`${baseUrl}/api/v1/update`)
+      .post(`${baseUrl}/api/v1/update`)
+      .send(interest)
+      .then(res => {
+        dispatch(receiveTypes(res.body))
+      })
+      .catch(() => {
+        dispatch(showError('An unexpected error in getting information'))
+      })
+  }
+}
+
+export function sendAddForm (formDetails) {
+  return (dispatch) => {
+    request
+      .post(`${baseUrl}/api/v1/update`)
+      .send(formDetails)
       .then(res => {
         dispatch(receiveAll(res.body))
       })

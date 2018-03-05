@@ -1,6 +1,6 @@
 import {RECEIVE_ALL} from '../actions/update'
 
-const initialState = {result: []}
+const initialState = []
 
 const update = (state = initialState, action) => {
   switch (action.type) {

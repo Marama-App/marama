@@ -9,9 +9,14 @@ module.exports = router
 router.use(bodyParser.json())
 
 router.get('/', (req, res) => {
-  db.getAll()
-    .then((all) => {
-      res.send(all)
+  // const interests = db.getInterests()
+  // Promise.all([interests])
+  db.getInterests()
+    .then((interests) => {
+      const result = {
+        interests
+      }
+      res.send(result.interests)
     })
     .catch(err => {
       res.status(500).send(err.message)
@@ -19,13 +24,24 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const formData = req.body
+  const formData = req.body.interestSelector
   console.log(formData)
-  db.addStudy(formData)
-    .then((all) => {
-      res.send(all)
+  db.getType(formData)
+    .then((type) => {
+      res.send(type)
     })
     .catch(err => {
       res.status(500).send(err.message)
     })
 })
+
+// router.post('/', (req, res) => {
+//   const formData = req.body
+//   db.addStudy(formData)
+//     .then((all) => {
+//       res.send(all)
+//     })
+//     .catch(err => {
+//       res.status(500).send(err.message)
+//     })
+// })

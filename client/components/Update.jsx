@@ -2,14 +2,18 @@ import React from 'react'
 
 import {connect} from 'react-redux'
 
-import {getAll, sendAddForm} from '../actions/update'
+import {getAll, getTypes, sendAddForm} from '../actions/update'
+// import {getType} from '../actions/type'
 
 class Update extends React.Component {
   constructor () {
     super()
-    this.state = {}
+    this.state = {
+      interestSelector: ''
+    }
     this.handleChange = this.handleChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.handleSelect = this.handleSelect.bind(this)
   }
   componentDidMount () {
     this.props.dispatch(getAll())
@@ -25,10 +29,31 @@ class Update extends React.Component {
     })
   }
 
+  handleSelect (e) {
+    const selection = {
+      [e.target.name]: e.target.value
+    }
+
+    this.props.dispatch(getTypes(selection))
+  }
+
   render () {
     return (
       <div className='update-section'>
         <h1>Update</h1>
+        <select name='interestSelector' onChange={this.handleSelect}>
+          {this.props.update.map(interest => (
+            <option key={interest.id}>{interest.interests}</option>
+          )
+          )}
+        </select>
+        <select>
+          {this.props.updateTypes.map(interestType => (
+            <option key={interestType.type_id}>{interestType.name}</option>
+          )
+          )}
+        </select>
+        <br />
         Course Name: <input name='course' placeholder='' onChange={this.handleChange} />
         <br />
         Provider: <input name='provider' placeholder='' onChange={this.handleChange} />
@@ -59,7 +84,8 @@ class Update extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    update: state.update
+    update: state.update,
+    updateTypes: state.updateTypes
   }
 }
 
