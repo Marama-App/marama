@@ -13,9 +13,13 @@ class IwiGrants extends React.Component {
     return (
       <div className='typedetail-section'>
         <h1>Iwi Grants</h1>
+        <p>Many iwi offer a range of different grants, scholarships and funding to help support their members in areas like education and research. Opportunities like these are often overlooked if you are unaware that they are out there.
+Below are list of iwi that have grants you can apply for which is available for those who are registered with the iwi. If you are unsure if you are member, you can contact your iwi directly.
+        </p>
         {this.props.iwiGrants.map(iwiGrant => (
           <div key={iwiGrant.id}>
-            <a href={iwiGrant.link} target='_blank'><h2>{iwiGrant.iwi}</h2></a>
+            <a href={iwiGrant.link} target='_blank'><h3>{iwiGrant.iwi}</h3></a>
+            <h4>{iwiGrant.description}</h4>
           </div>
         ))
         }
