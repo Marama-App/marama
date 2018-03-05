@@ -1,8 +1,8 @@
 import React from 'react'
-
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
-import { getPasifikaGrants } from '../actions/pasifika-grants.js'
+import {getPasifikaGrants} from '../actions/pasifika-grants'
 
 class PasifikaGrants extends React.Component {
   componentDidMount () {
@@ -27,6 +27,13 @@ Below are list of iwi that have grants you can apply for which is available for 
             ))
             }
           </div>
+
+        ))}
+        <div>
+          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
+            <button>Previous Page</button>
+          </Link>
+
         </div>
       </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import request from 'superagent'
+import {Link} from 'react-router-dom'
 import baseUrl from '../lib/base-url'
 
 
@@ -61,6 +62,11 @@ class Contact extends React.Component {
               <button type="submit" value="Submit">Submit</button>
             </div>
           </form>
+          <div>
+            <Link to='/'>
+              <button>Previous Page</button>
+            </Link>
+          </div>
         </div>
         </div>
         </div>

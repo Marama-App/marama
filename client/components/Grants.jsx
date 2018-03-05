@@ -1,6 +1,6 @@
 import React from 'react'
-
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {getGrants} from '../actions/grants'
 
@@ -29,6 +29,18 @@ class Grants extends React.Component {
           )}
         </div>
       </div>
+
+            <button><a href={grant.link} target='_blank'/>
+              take me there
+            </button>
+          </div>
+        ))}
+        <div>
+          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study/`}>
+            <button>Previous Page</button>
+          </Link>
+        </div>
+
       </div>
     )
   }

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { getType } from '../actions/type.js'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+
+import {getType} from '../actions/type'
 
 class Interest extends React.Component {
   componentDidMount () {
@@ -29,6 +30,15 @@ class Interest extends React.Component {
           )}
         </div>
       </div>
+
+          </div>
+        )
+        )}
+        <div>
+          <Link to='/'>
+            <button>Previous Page</button>
+          </Link>
+        </div>
       </div>
     )
   }

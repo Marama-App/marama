@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { getInterests } from '../actions/interests'
+import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
-// import Interest from './Interest'
+import {getInterests} from '../actions/interests'
 
 class Home extends React.Component {
   constructor (props) {
