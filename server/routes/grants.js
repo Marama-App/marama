@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const router = express.Router()
-// const development = require('../db/knexfile').development
 
 const db = require('../db/db.js')
 
