@@ -11,6 +11,7 @@ import Contact from './Contact'
 import Header from './Header'
 import Grants from './Grants'
 import IwiGrants from './IwiGrants'
+import PasifikaGrants from './PasifikaGrants'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />
         <Route path='/iwi-grants' component={IwiGrants} />
+        <Route path='/pasifika-grants' component={PasifikaGrants} />
         <Route path='/interests/:interest/:type/study/:grants' component={Grants}/>
         <Route path='/interests/:interest/:type/study' component={Study}/>
         <Route path='/interests/:interest/:type/jobs' component={Jobs}/>

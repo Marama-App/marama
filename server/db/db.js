@@ -10,7 +10,8 @@ module.exports = {
   getJobs,
   getGrants,
   getInterestTypesName,
-  getIwiGrants
+  getIwiGrants,
+  getPasifikaGrants
 }
 
 function getInterests (interests, testConn) {
@@ -78,5 +79,11 @@ function getGrants (studyName, testConn) {
 function getIwiGrants (iwiGrants, testConn) {
   const conn = testConn || connection
   return conn('iwi_grants')
+    .select()
+}
+// stina pasifika-grants
+function getPasifikaGrants (pasifikaGrants, testConn) {
+  const conn = testConn || connection
+  return conn('pasifika_grants')
     .select()
 }

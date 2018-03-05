@@ -51,7 +51,7 @@ class Type extends React.Component {
             <div><h2>Iwi Grants</h2></div>
             <div><p>Are you eligilbe for an Iwi grant?</p><Link to='/iwi-grants'><button>Iwi Grants</button></Link></div>
             <div><h2>Pasifika Students</h2></div>
-            <div><p>Find out if you are eligile for Pasifika Education grant</p><Link to='/pasifika'><button>Pasifika Grants</button></Link></div>
+            <div><p>Find out if you are eligile for Pasifika Education grant</p><Link to='/pasifika-grants'><button>Pasifika Grants</button></Link></div>
           </div>
 
         ))}
