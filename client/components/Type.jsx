@@ -25,6 +25,7 @@ class Type extends React.Component {
           <div key={detail.study_id}>
             <a href ={detail.link} target='_blank'>{detail.course}</a>
             <p>{detail.provider}</p>
+            <p>{detail.location}</p>
             <div>
             </div>
           </div>
