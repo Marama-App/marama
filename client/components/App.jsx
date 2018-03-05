@@ -10,8 +10,10 @@ import Interest from './Interest'
 import Contact from './Contact'
 import Header from './Header'
 import Grants from './Grants'
+import Update from './Update'
 import IwiGrants from './IwiGrants'
 import PasifikaGrants from './PasifikaGrants'
+import Footer from './Footer'
 
 const App = () => {
   return (
@@ -21,6 +23,7 @@ const App = () => {
         <Route exact path='/' component={Home} />
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />
+        <Route path='/admin' component={Update} />
         <Route path='/iwi-grants' component={IwiGrants} />
         <Route path='/pasifika-grants' component={PasifikaGrants} />
         <Route path='/interests/:interest/:type/study/:grants' component={Grants}/>
@@ -29,6 +32,7 @@ const App = () => {
         <Route path='/interests/:interest/:type' component={Type}/>
         <Route path='/interests/:interest' component={Interest}/>
       </Switch>
+      <Footer />
     </div>
   )
 }

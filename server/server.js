@@ -10,6 +10,9 @@ const iwiGrantRoutes = require('./routes/iwi-grants')
 const contactRoutes = require('./routes/contact')
 const pasifikaRoutes = require('./routes/pasifika-grants')
 
+const updateRoutes = require('./routes/update')
+const updatedbRoutes = require('./routes/updatedb')
+
 const server = express()
 server.use(express.static(path.join(__dirname, 'public')))
 server.use(bodyParser.json())
@@ -22,6 +25,9 @@ server.use('/api/v1/grants', grantsRoutes)
 server.use('/api/v1/iwi-grants', iwiGrantRoutes)
 server.use('/api/v1/contact', contactRoutes)
 server.use('/api/v1/pasifika-grants', pasifikaRoutes)
+
+server.use('/api/v1/update', updateRoutes)
+server.use('/api/v1/updatedb', updatedbRoutes)
 
 // Default route for non-API requests
 server.get('*', (req, res) => {
