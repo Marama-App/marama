@@ -7,3 +7,13 @@
   display: flex;
   flex-direction: column;
 }
+
+.pic {
+  width: 100px;
+  height: 100px;
+}
+
+.about-team {
+  display: flex;
+  flex-direction: row;
+}
