@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 class Jobs extends React.Component {
   render () {
@@ -12,6 +13,11 @@ class Jobs extends React.Component {
           </div>
         )
         )}
+        <div>
+          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
+            <button>Previous Page</button>
+          </Link>
+        </div>
       </div>
     )
   }
