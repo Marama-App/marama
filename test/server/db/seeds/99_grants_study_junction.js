@@ -2,7 +2,7 @@ exports.seed = function (knex, Promise) {
   return knex('grants_study_junction').del()
     .then(function () {
       return knex('grants_study_junction').insert([
-       // Gaming Animation Courses (Study_Id)  
+        // Gaming Animation Courses (Study_Id)
         {id: 1, study_id: 1, grants_id: 1},
         {id: 2, study_id: 1, grants_id: 2},
         {id: 3, study_id: 2, grants_id: 1},
@@ -49,7 +49,7 @@ exports.seed = function (knex, Promise) {
         {id: 43, study_id: 7, grants_id: 16},
         {id: 44, study_id: 7, grants_id: 17},
         // Gaming Sound Courses (Study_Id)
-        {id: 45, study_id: 8, grants_id: 0},
+        {id: 45, study_id: 8, grants_id: 23},
         {id: 46, study_id: 8, grants_id: 19},
         {id: 47, study_id: 8, grants_id: 20},
         {id: 48, study_id: 8, grants_id: 21},
@@ -61,15 +61,15 @@ exports.seed = function (knex, Promise) {
         {id: 53, study_id: 13, grants_id: 20},
         // Music Singing/Songwriting Courses
         {id: 54, study_id: 14, grants_id: 21},
-        {id: 54, study_id: 14, grants_id: 22},
-        {id: 55, study_id: 15, grants_id: 21},
-        {id: 55, study_id: 15, grants_id: 22},
-        {id: 56, study_id: 16, grants_id: 21},
-        {id: 56, study_id: 16, grants_id: 22},
+        {id: 55, study_id: 14, grants_id: 22},
+        {id: 56, study_id: 15, grants_id: 21},
+        {id: 57, study_id: 15, grants_id: 22},
+        {id: 58, study_id: 16, grants_id: 21},
+        {id: 59, study_id: 16, grants_id: 22},
         // Music DJ/Sound Recording Courses
-        {id: 57, study_id: 17, grants_id: 18},
-        {id: 58, study_id: 18, grants_id: 18},
-        {id: 59, study_id: 19, grants_id: 18}
+        {id: 60, study_id: 17, grants_id: 18},
+        {id: 61, study_id: 18, grants_id: 18},
+        {id: 62, study_id: 19, grants_id: 18}
       ])
     })
 }
