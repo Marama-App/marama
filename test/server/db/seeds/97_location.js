@@ -13,7 +13,8 @@ exports.seed = function (knex, Promise) {
         { id: 9, location: 'Palmerston North' },
         { id: 10, location: 'Wanganui' },
         { id: 11, location: 'Masterton' },
-        { id: 12, location: 'Northland' }
+        { id: 12, location: 'Northland' },
+        { id: 13, location: 'Otago' }
       ])
     })
 }
