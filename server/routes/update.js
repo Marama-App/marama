@@ -25,7 +25,6 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const formData = req.body.interestSelector
-  console.log(formData)
   db.getType(formData)
     .then((type) => {
       res.send(type)
