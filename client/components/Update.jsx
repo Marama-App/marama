@@ -9,11 +9,13 @@ class Update extends React.Component {
   constructor () {
     super()
     this.state = {
-      interestSelector: ''
+      interestSelector: '',
+      typeSelector: ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.handleSelect = this.handleSelect.bind(this)
+    this.handleTypeSelect = this.handleTypeSelect.bind(this)
   }
   componentDidMount () {
     this.props.dispatch(getAll())
@@ -30,11 +32,31 @@ class Update extends React.Component {
   }
 
   handleSelect (e) {
+    for (let interest in this.props.update) {
+      if (this.props.update[interest].interests === e.target.value) {
+        this.setState({
+          interestId: this.props.update[interest].id
+        })
+      }
+    }
     const selection = {
       [e.target.name]: e.target.value
     }
-
     this.props.dispatch(getTypes(selection))
+  }
+
+  handleTypeSelect (e) {
+    for (let type in this.props.updateTypes) {
+      if (this.props.updateTypes[type].name === e.target.value) {
+        this.setState({
+          typeId: this.props.updateTypes[type].id
+        })
+      }
+    }
+    const selection = {
+      [e.target.name]: e.target.value
+    }
+    this.setState(selection)
   }
 
   render () {
@@ -47,7 +69,7 @@ class Update extends React.Component {
           )
           )}
         </select>
-        <select>
+        <select name='typeSelector' onChange={this.handleTypeSelect}>
           {this.props.updateTypes.map(interestType => (
             <option key={interestType.type_id}>{interestType.name}</option>
           )

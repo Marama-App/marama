@@ -33,14 +33,3 @@ router.post('/', (req, res) => {
       res.status(500).send(err.message)
     })
 })
-
-// router.post('/', (req, res) => {
-//   const formData = req.body
-//   db.addStudy(formData)
-//     .then((all) => {
-//       res.send(all)
-//     })
-//     .catch(err => {
-//       res.status(500).send(err.message)
-//     })
-// })

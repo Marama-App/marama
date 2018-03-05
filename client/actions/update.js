@@ -51,10 +51,10 @@ export function getTypes (interest) {
 export function sendAddForm (formDetails) {
   return (dispatch) => {
     request
-      .post(`${baseUrl}/api/v1/update`)
+      .post(`${baseUrl}/api/v1/updatedb`)
       .send(formDetails)
       .then(res => {
-        dispatch(receiveAll(res.body))
+        res.send(res.body)
       })
       .catch(() => {
         dispatch(showError('An unexpected error in getting information'))
