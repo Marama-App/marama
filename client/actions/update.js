@@ -12,6 +12,20 @@ export const receiveAll = (all) => {
   }
 }
 
+export function sendAddForm (formDetails) {
+  return (dispatch) => {
+    request
+      .post(`${baseUrl}/api/v1/update`)
+      .send(formDetails)
+      .then(res => {
+        dispatch(receiveAll(res.body))
+      })
+      .catch(() => {
+        dispatch(showError('An unexpected error in getting information'))
+      })
+  }
+}
+
 export function getAll () {
   return (dispatch) => {
     request

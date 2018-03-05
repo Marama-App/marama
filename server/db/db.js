@@ -10,7 +10,8 @@ module.exports = {
   getJobs,
   getGrants,
   getInterestTypesName,
-  getAll
+  getAll,
+  addStudy
 }
 
 function getInterests (interests, testConn) {
@@ -75,5 +76,13 @@ function getGrants (studyName, testConn) {
 function getAll (testConn) {
   const conn = testConn || connection
   return conn('study')
+    .select()
+}
+
+function addStudy (formData, testConn) {
+  const conn = testConn || connection
+  return conn('study')
+    .insert({course: formData.course, provider: formData.provider, link: formData.link, domestic_price: formData.domestic_price, international_price: formData.international_price, duration: formData.duration, level: formData.level}
+    )
     .select()
 }
