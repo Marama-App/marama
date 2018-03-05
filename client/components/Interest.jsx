@@ -16,7 +16,7 @@ class Interest extends React.Component {
           {this.props.interestType.map(type => (
             <div key={type.type_id}>
               <Link to={`/interests/${this.props.match.params.interest}/${type.name}`}>
-                <div className='p-class'>{type.name}</div>
+                <div className='h2-class'>{type.name}</div>
               </Link>
               <div>
                 <div className='p-class'>{type.description}</div>

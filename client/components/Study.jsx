@@ -7,13 +7,13 @@ class Study extends React.Component {
     return (
       <div className='page-section'>
         <div className='study'>
-          <div className='page-title-font'>Study in {this.props.match.params.type}</div>
+          <div className='page-title-font'>Study {this.props.match.params.type}</div>
           {this.props.typeDetails.study.map(detail => (
             <div key={detail.study_id}>
               <a href={detail.link} target='_blank'>{detail.course}</a>
-              <div className='p-class'>Provider: {detail.provider}</div>
+              <div className='provider-class'>{detail.provider}</div>
               <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study/${detail.course}`}>
-                <button>See Grants for this course</button>
+                <button>Available Grants</button>
               </Link>
               <div>
               </div>
