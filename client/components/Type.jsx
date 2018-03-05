@@ -18,9 +18,12 @@ class Type extends React.Component {
 
   render () {
     return (
+      <div>
+      <img src='/images/bg-stars.png' className='stars-background'/>
       <div className='page-section'>
         <div className='type-section'>
           <div className='page-title-font'>{this.props.match.params.type}</div>
+          <div className='p-class'>Here's what you can study, cool companies hiring, and resources to help you!</div>
           <div className='h2-class'>Study</div>
           {this.props.typeDetails.study.map(detail => (
             <div key={detail.study_id}>
@@ -50,6 +53,7 @@ class Type extends React.Component {
             </div>
           ))}
         </div>
+      </div>
       </div>
     )
   }

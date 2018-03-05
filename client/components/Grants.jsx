@@ -11,6 +11,8 @@ class Grants extends React.Component {
 
   render () {
     return (
+      <div>
+      <img src='/images/bg-stars.png' className='stars-background'/>
       <div className='page-section'>
         <div className='typedetail-section'>
           <div className='page-title-font'>Grants for {this.props.match.params.grants}</div>
@@ -26,6 +28,7 @@ class Grants extends React.Component {
           )
           )}
         </div>
+      </div>
       </div>
     )
   }
