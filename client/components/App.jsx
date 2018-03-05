@@ -11,6 +11,7 @@ import Contact from './Contact'
 import Header from './Header'
 import Grants from './Grants'
 import IwiGrants from './IwiGrants'
+import Footer from './Footer'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/interests/:interest/:type' component={Type}/>
         <Route path='/interests/:interest' component={Interest}/>
       </Switch>
+      <Footer />
     </div>
   )
 }
