@@ -9,7 +9,8 @@ module.exports = {
   getHelp,
   getJobs,
   getGrants,
-  getInterestTypesName
+  getInterestTypesName,
+  getIwiGrants
 }
 
 function getInterests (interests, testConn) {
@@ -53,7 +54,7 @@ function getJobs (typeName, testConn) {
     .join('types_jobs_junction', 'types_jobs_junction.types_id', 'interest_types.id')
     .where('interest_types.name', typeName)
     .join('jobs', 'jobs.id', 'types_jobs_junction.jobs_id')
-    .select('jobs.name as job_name', 'jobs.link as job_link', 'interest_types.name', 'types_jobs_junction.jobs_id', 'types_jobs_junction.types_id')
+    .select('jobs.id as job_id', 'jobs.name as job_name', 'jobs.link as job_link', 'interest_types.name', 'types_jobs_junction.jobs_id', 'types_jobs_junction.types_id')
 }
 
 function getInterestTypesName (interestType, testConn) {
@@ -70,5 +71,12 @@ function getGrants (studyName, testConn) {
     .join('grants_study_junction', 'grants_study_junction.grants_id', 'grants.id')
     .join('study', 'study.id', 'grants_study_junction.study_id')
     .where('study.course', studyName)
+    .select()
+}
+
+// stina iwi-grants
+function getIwiGrants (iwiGrants, testConn) {
+  const conn = testConn || connection
+  return conn('iwi_grants')
     .select()
 }
