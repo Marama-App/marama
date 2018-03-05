@@ -18,6 +18,12 @@ class Type extends React.Component {
 
   render () {
     return (
+
+
+      <div>
+        <img src='/images/bg-stars.png' className='stars-background'/>
+        <div className='page-section'>
+
       <div className='type-section'>
         <h1>{this.props.match.params.type}</h1>
 
@@ -68,6 +74,7 @@ class Type extends React.Component {
           <Link to={`/interests/${this.props.match.params.interest}/`}>
             <button>Previous Page</button>
           </Link>
+
         </div>
       </div>
     )

@@ -1,19 +1,196 @@
-.type {
-  display: flex;
-  flex-direction: row;
+/* This represents our entire site #a556ae */
+body {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  background: linear-gradient(#5b0367, #5b0367, #8f1e74, #f1a89e) no-repeat;
+  background-repeat: no-repeat;
+  background-size: auto 100%; 
+  height: 100%;
 }
 
-.typebox {
+
+
+/* This div encompasses all components in App */
+.app-box {
+  margin: 40px 60px;
+}
+
+
+
+/* HOME & NAV STYLING */
+
+/* This div encompasses the Home component, and isn't doing much right now */
+/* .home-section {;
+} */
+
+
+/* This div is the the Home image */
+.home-background {
+  z-index: -1;
+  min-height: 0px;
+  min-width: 0px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-color: purple;
+}
+
+
+/* This encompasses everything in the Nav component */
+.nav-header {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+/* This is the box around just the logo div in the Nav component*/
+.nav-logo {
+  display: flex;
+}
+
+
+/* This is our logo div in the Nav component */
+.marama-logo {
+  height: 22px;
+}
+
+
+/* This is the box around our navigation links in the Nav component */ 
+ /* .nav-links {
+  /* justify-content: space-between; 
+ } */
+
+
+/* This styles the individual divs around the nav links */
+  .nav-link-individual-styling {
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* This removes formatting from the nav links in the Nav component */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* This encompasses the home-blurb and buttons on the home page in the Home component */
+.home-content-box {
+  padding: 50px;
+  align-content: center;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.pic {
-  width: 100px;
-  height: 100px;
+
+/* This is the heading on the home page in the Home component */
+.home-blurb {
+  font-size: 40px;
+  margin: 60px 0px 20px 0px;
+  text-shadow: 0 0 10px #7d018d;
 }
 
-.about-team {
+
+/* This is the sentence below the heading on the home page */
+.home-sentence {
+  text-shadow: 0 0 10px #7d018d;
+}
+
+
+/* This is the container surrounding all buttons on the home page */
+.home-button-container {
+  margin: 20px;
+  max-width: 500px;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  justify-content: center;
+  /* align-items: center; */
 }
+
+
+/* Currently default styling for all buttons */
+button {
+  color: white;
+  background-color: #ff5753;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 35px;
+  padding: 15px 25px;
+  text-align: center;
+  
+}
+
+.home-buttons {
+  box-shadow: 0 0 2px #7d018d;
+  margin: 10px;
+  justify-content: center;
+  width: 125px;
+}
+
+
+
+
+
+
+
+/* OTHER PAGE STYLING */
+
+/* This is the box encompassing everyting on all content pages */
+.page-section {
+  margin: 50px 60px;
+}
+
+
+/* This is the title font on all content pages */
+.page-title-font {
+  font-size: 70px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This is the secondary heading font */
+.h2-class {
+  font-size: 30px;
+  margin: 70px 0px 10px 0px;
+}
+
+/* This is the body font on all pages. */
+.p-class {
+  margin: 1px;
+}
+
+/* This styles the study provider on the breakdown page */
+.provider-class {
+  font-size: 13px;
+  color: grey;
+}
+
+.stars-background {
+  width: 100%; 
+    z-index: -1;
+    min-height: 0px;
+    min-width: 0px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+
+

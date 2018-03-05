@@ -3,6 +3,7 @@ import request from 'superagent'
 import {Link} from 'react-router-dom'
 import baseUrl from '../lib/base-url'
 
+
 class Contact extends React.Component {
   constructor (props) {
     super(props)
@@ -41,9 +42,12 @@ class Contact extends React.Component {
   render () {
     if (!this.state.submitted) {
       return (
+        <div>
+         <img src='/images/bg-stars.png' className='stars-background'/>
+        <div className='page-section'>
         <div className='contact'>
-          <h1>Contact us</h1>
-          <p>Blurb about contacting us</p>
+        <div className='page-title-font'>Contact us</div>
+        <div className='p-class'>Need to contact us? Reach out here.</div>
           <form className='submit-form' onSubmit={this.handleSubmit}>
             <div>
               <input name='name' onChange={this.handleChange} required/>
@@ -64,11 +68,13 @@ class Contact extends React.Component {
             </Link>
           </div>
         </div>
+        </div>
+        </div>
       )
     }
     if (this.state.submitted) {
       return (
-        <p>Thanks for submitting</p>
+        <div className='p-class'>Thanks for submitting!</div>
       )
     }
   }
