@@ -25,6 +25,7 @@ class Type extends React.Component {
           <div key={detail.study_id}>
             <a href ={detail.link} target='_blank'>{detail.course}</a>
             <p>{detail.provider}</p>
+            <p>{detail.location}</p>
             <div>
             </div>
           </div>
@@ -33,7 +34,7 @@ class Type extends React.Component {
         <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study`}>
           <button>More Study Options</button>
         </Link>
-        <h1>Potential Employers</h1>
+        <h1>Employment Avenues</h1>
         {this.props.typeDetails.jobs.map(job => (
           <div key={job.job_id}>
             <a href={job.job_link} target='_blank'>{job.job_name}</a>
@@ -44,11 +45,15 @@ class Type extends React.Component {
           <button>More Job Options</button>
         </Link>
         <h1>Support Services</h1>
+
         {this.props.typeDetails.help.map(help => (
           <div key={help.id}>
-            <a href={help.help_link} target='_blank'>{help.help_name}</a>
-            <div><Link to='/iwi-grants'>See Iwi Grants</Link></div>
+            <div><h2>Iwi Grants</h2></div>
+            <div><p>Are you eligilbe for an Iwi grant?</p><Link to='/iwi-grants'><button>Iwi Grants</button></Link></div>
+            <div><h2>Pasifika Students</h2></div>
+            <div><p>Find out if you are eligile for Pasifika Education grant</p><Link to='/pasifika'><button>Pasifika Grants</button></Link></div>
           </div>
+
         ))}
       </div>
     )
