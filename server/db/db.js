@@ -10,11 +10,12 @@ module.exports = {
   getJobs,
   getGrants,
   getInterestTypesName,
+  getIwiGrants,
+  getPasifikaGrants,
   getAll,
   addStudy,
   addInterestsToTypesJunction,
-  addTypesStudyJunction,
-  getIwiGrants
+  addTypesStudyJunction
 }
 
 function getInterests (interests, testConn) {
@@ -111,5 +112,11 @@ function addTypesStudyJunction (id, formData, testConn) {
 function getIwiGrants (iwiGrants, testConn) {
   const conn = testConn || connection
   return conn('iwi_grants')
+    .select()
+}
+// stina pasifika-grants
+function getPasifikaGrants (pasifikaGrants, testConn) {
+  const conn = testConn || connection
+  return conn('pasifika_grants')
     .select()
 }
