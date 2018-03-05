@@ -43,10 +43,11 @@ class Type extends React.Component {
         <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
           <button>More Job Options</button>
         </Link>
-        <h1>Help</h1>
+        <h1>Support Services</h1>
         {this.props.typeDetails.help.map(help => (
           <div key={help.id}>
             <a href={help.help_link} target='_blank'>{help.help_name}</a>
+            <div><Link to='/iwi-grants'>See Iwi Grants</Link></div>
           </div>
         ))}
       </div>

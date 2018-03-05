@@ -10,6 +10,7 @@ import Interest from './Interest'
 import Contact from './Contact'
 import Header from './Header'
 import Grants from './Grants'
+import IwiGrants from './IwiGrants'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route exact path='/' component={Home} />
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />
+        <Route path='/iwi-grants' component={IwiGrants} />
         <Route path='/interests/:interest/:type/study/:grants' component={Grants}/>
         <Route path='/interests/:interest/:type/study' component={Study}/>
         <Route path='/interests/:interest/:type/jobs' component={Jobs}/>
