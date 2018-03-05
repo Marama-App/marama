@@ -1,6 +1,8 @@
 import { RECEIVE_INTERESTS } from '../actions/interests'
 
-const interests = (state = [], action) => {
+const initialState = []
+
+const interestsReducer = (state = initialState, action) => {
   switch (action.type) {
     case RECEIVE_INTERESTS:
       return action.interests
@@ -9,4 +11,4 @@ const interests = (state = [], action) => {
   }
 }
 
-export default interests
+export default interestsReducer
