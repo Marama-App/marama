@@ -1,4 +1,73 @@
-.type {
+/* This represents our entire site */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+/* This div encompasses all components in App */
+.app-box {
+  margin: 20px;
+}
+
+
+/* This div encompasses the Home component, and isn't doing much */
+.home-section {
+  background-color: purple;
+}
+
+
+/* This div is the the Home image */
+.home-background {
+  z-index: -1;
+  min-height: 0px;
+  min-width: 0px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-color: purple;
+}
+
+
+/* This encompasses everything in the Nav component */
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+/* This is the box around just the logo div in the Nav component*/
+.nav-logo {
+  display: flex;
+}
+
+
+/* This is our logo div in the Nav component */
+.marama-logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* This is the box around our navigation links in the Nav component */
+/* .nav-links {
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* Not sure what these were doing */
+
+/* .type {
   display: flex;
   flex-direction: row;
 }
@@ -6,8 +75,5 @@
 .typebox {
   display: flex;
   flex-direction: column;
-}
+} */
 
-.body {
-  display: flex;
-}

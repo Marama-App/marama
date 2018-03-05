@@ -14,6 +14,7 @@ import Grants from './Grants'
 const App = () => {
   return (
     <div className='app'>
+      <div className='app-box'>
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='/interests/:interest/:type' component={Type}/>
         <Route path='/interests/:interest' component={Interest}/>
       </Switch>
+      </div>
     </div>
   )
 }

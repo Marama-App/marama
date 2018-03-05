@@ -4,8 +4,7 @@ import Nav from './Nav'
 
 const Header = () => {
   return (
-    <div className='header'>
-      <h1>Mārama</h1>
+    <div>
       <Nav />
     </div>
   )
