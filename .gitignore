@@ -1,5 +1,6 @@
 *sqlite
 
+
 # Logs
 logs
 *.log
@@ -42,3 +43,4 @@ jspm_packages
 bundle.js
 bundle.js.map
 
+.env

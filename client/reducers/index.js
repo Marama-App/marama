@@ -5,6 +5,7 @@ import typeDetails from './type-details'
 import grants from './grants'
 import update from './update'
 import updateTypes from './update-types'
+import iwiGrants from './iwi-grants'
 
 export default combineReducers({
   interests,
@@ -12,5 +13,6 @@ export default combineReducers({
   typeDetails,
   grants,
   update,
-  updateTypes
+  updateTypes,
+  iwiGrants
 })

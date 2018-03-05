@@ -13,7 +13,8 @@ module.exports = {
   getAll,
   addStudy,
   addInterestsToTypesJunction,
-  addTypesStudyJunction
+  addTypesStudyJunction,
+  getIwiGrants
 }
 
 function getInterests (interests, testConn) {
@@ -37,6 +38,8 @@ function getStudy (typeId, testConn) {
   return conn('study')
     .join('types_study_junction', 'types_study_junction.study_id', 'study.id')
     .join('interest_types', 'interest_types.id', 'types_study_junction.types_id')
+    .join('location_study_junction', 'location_study_junction.study_id', 'study.id')
+    .join('location', 'location.id', 'location_study_junction.location_id')
     .where('interest_types.name', typeId)
     .select()
 }
@@ -55,7 +58,7 @@ function getJobs (typeName, testConn) {
     .join('types_jobs_junction', 'types_jobs_junction.types_id', 'interest_types.id')
     .where('interest_types.name', typeName)
     .join('jobs', 'jobs.id', 'types_jobs_junction.jobs_id')
-    .select('jobs.name as job_name', 'jobs.link as job_link', 'interest_types.name', 'types_jobs_junction.jobs_id', 'types_jobs_junction.types_id')
+    .select('jobs.id as job_id', 'jobs.name as job_name', 'jobs.link as job_link', 'interest_types.name', 'types_jobs_junction.jobs_id', 'types_jobs_junction.types_id')
 }
 
 function getInterestTypesName (interestType, testConn) {
@@ -103,4 +106,10 @@ function addTypesStudyJunction (id, formData, testConn) {
     .insert({study_id: id, types_id: formData.typeId}
     )
     .returning('id')
+}
+// stina iwi-grants
+function getIwiGrants (iwiGrants, testConn) {
+  const conn = testConn || connection
+  return conn('iwi_grants')
+    .select()
 }
