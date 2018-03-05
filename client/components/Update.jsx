@@ -1,6 +1,6 @@
 import React from 'react'
-
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {getAll, getTypes, sendAddForm} from '../actions/update'
 // import {getType} from '../actions/type'
@@ -99,6 +99,11 @@ class Update extends React.Component {
         <p>Something for the employers</p>
         <p>Something for the help</p>
         <p>Something for the junction tables</p> {/* dropdown? */}
+        <div>
+          <Link to='/'>
+            <button>Finished</button>
+          </Link>
+        </div>
       </div>
     )
   }
