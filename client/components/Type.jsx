@@ -36,7 +36,7 @@ class Type extends React.Component {
         </Link>
         <h1>Potential Employers</h1>
         {this.props.typeDetails.jobs.map(job => (
-          <div key={job.jobs_id}>
+          <div key={job.job_id}>
             <a href={job.job_link} target='_blank'>{job.job_name}</a>
           </div>
         )
