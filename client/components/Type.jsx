@@ -27,12 +27,16 @@ class Type extends React.Component {
           </div>
           <h1>Study</h1>
           {this.props.typeDetails.study.filter(course => {
-            return (course.study_id < 4)
-          }).map(detail => (
-            <div key={detail.study_id}>
-              <a href={detail.link} target='_blank'>{detail.course}</a>
-              <p>{detail.provider}</p>
-              <p>{detail.location}</p>
+            return (course === this.props.typeDetails.study[0] || this.props.typeDetails.study[1] || this.props.typeDetails.study[2])
+          }).map(study => (
+            <div key={study.study_id}>
+              <a href={study.link} target='_blank'>{study.course}</a>
+              <p>{study.provider}</p>
+              {this.props.typeDetails.location.filter(location => {
+                return (location.study_id === study.study_id)
+              }).map(location => (
+                <span key = {location.location_id}>{location.location} </span>
+              ))}
             </div>
           ))}
           <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study`}>
