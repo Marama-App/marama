@@ -71,7 +71,6 @@ body {
   height: auto;
   top: 0;
   left: 0;
-  background-color: red;
 }
 
 /* .blue-home {
@@ -172,7 +171,7 @@ button {
   margin-top: 35px;
   padding: 15px 25px;
   text-align: center;
-  
+  cursor: pointer;
 }
 
 /* Home button styling only */
@@ -213,6 +212,8 @@ button {
   width: 100%;
 }
 
+
+/* This box goes around each of the content fields */
 .thumbnails {
   display: flex;
   flex-direction: column;
@@ -222,8 +223,6 @@ button {
   padding: 20px;
   margin: 10px; 
   width: 260px;
-  
-  
 }
 
 
@@ -398,7 +397,37 @@ align-items: center; */
   margin: 1px;
 }
 
+.center-text {
+  align-content: center;
+  text-align: justify;
+  font-size: 18px;
+}
 
+.selfie-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 20px;
+
+}
+
+.selfcard {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  flex-direction: column;
+  margin: 28px;
+}
+
+
+.pic {
+  border-radius: 85px;
+  width: 125px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+
+}
 /* This styles the study provider on the breakdown page */
 .provider-class {
   font-size: 13px;
@@ -408,5 +437,138 @@ align-items: center; */
 
 
 
+/* TYPE PAGE*/
+
+/* STUDY */
+
+/* Container around the study section of Type page
+.type-container-study {
+} */
+
+
+/* Container around the study heading and button on the Type page */
+.type-title-study {
+  display: flex;
+  justify-content: space-between;
+} 
+
+
+/* Container around the 3 boxes on the interest page */
+.type-section-study {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+
+/* These boxes go around each of the content fields */
+.type-section-thumbnails {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 30px 0px 30px 0px; 
+  width: 260px;
+}
+
+
+/* This styles the study provider in the thumbnail */
+.type-section-study-provider {
+  color: #c7c2c2;
+  font-size: 13px;
+}
+
+
+/* This styles the study location in the thumbnail */
+.type-section-study-location {
+  color: white;
+  font-size: 13px;
+}
+
+
+/* Clear button styling */
+.button-clear {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  letter-spacing: 1px;
+  border: 2px solid white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 50px;
+  margin-top: 0px;
+  padding: 10px 30px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+
+
+
+
+
+/* EMPLOYMENT */
+
+
+/* This block goes around Employment on the Type page */
+.type-container-employment {
+  margin: 70px 0 70px 0;
+} 
+
+.type-container-employment-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 0 0px 0;
+}
+
+/* This block will surround the thumbnails */
+.type-section-employment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-content: center; */
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 50px;
+  /* margin-bottom: 20px; */
+}
+
+.type-section-employment-thumbnail {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  /* margin: 5px;  */
+  /* width: 260px;  */
+}
+
+.employment-thumbnail {
+  height: 140px;
+  width: 240px;
+}
+
+.type-container-support {
+  margin: 70px 0 70px 0;
+}
+
+.type-container-support-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 0 0px 0;
+}
+
+
+/* JOBS */
+
+.jobs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 

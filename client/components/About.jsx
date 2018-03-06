@@ -16,14 +16,14 @@ const About = () => {
           Mārama’s primary focus is tech-based fields of study, as Māori and Pasifika perspectives are specifically underrepresented in the growing technology sector. We’re working on collating study options, funding opportunities and potential employment information with a wider focus in the near future.</div>
         <div className='p-class'>Our aim for Mārama is to inform and empower students to seek broader study and employment pathways, and to make available financial assistance more transparent. The outcome being more graduates moving into fields where their voices matter most.</div>
         <p><i>Te kete Mārama — to understand, to learn</i></p>
-        <div className='page-title-font'>About our Team</div>
-        <div className='p-class'>Something about our team.</div>
+        <div className='page-title-font'>Our Team</div>
+        <div className='p-class'>Class of Harakeke 2018 - Enspiral Dev Academy</div>
         <div className='about-team'>
 
           <div className='selfcard'>
             <img className='pic' src='/icons/stina-about.png' />
-            <h5>Stina Muller</h5>
-            <div className='p-class'>Master of the Universe</div>
+            <h3>Stina Muller</h3>
+            <div className='p-class'>Chief Creative Officer<br/>(Master)</div>
             <div className='icon' src='/icons/linkedin.png' />
             <div className='icon'>
               <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
@@ -37,8 +37,8 @@ const About = () => {
 
           <div className='selfcard'>
             <img className='pic' src='/icons/cat-about.png' />
-            <h5>Catherine Fromont</h5>
-            <div className='p-class'>Web Developer</div>
+            <h3>Catherine Fromont</h3>
+            <div className='p-class'>Git Master</div>
             <div className='icon'>
               <a href='https://github.com/catherinefromont' target='_blank' rel="noopener noreferrer">
                 <img src='/icons/github.png' height='40px' />
@@ -51,8 +51,8 @@ const About = () => {
 
           <div className='selfcard'>
             <img className='pic' src='/icons/elyse-about.png' />
-            <h5>Elyse Wyatt</h5>
-            <div className='p-class'>Web Developer</div>
+            <h3>Elyse Wyatt</h3>
+            <div className='p-class'>Styling Master</div>
             <div className='icon'>
               <a href='https://github.com/ElyseWyatt' target='_blank' rel="noopener noreferrer">
                 <img src='/icons/github.png' height='40px' />
@@ -62,10 +62,9 @@ const About = () => {
               </a>
             </div>
           </div>
-
           <div className='selfcard'>
             <img className='pic' src='/icons/emily-about.png' />
-            <h5>Emily Parkes</h5>
+            <h3>Emily Parkes</h3>
             <div className='p-class'>Web Developer</div>
             <div className='icon'>
               <a href='https://github.com/emilyparkes' target='_blank' rel="noopener noreferrer">
@@ -79,8 +78,8 @@ const About = () => {
 
           <div className='selfcard'>
             <img className='pic' src='/icons/tian-about.png' />
-            <h5>Tian Du Toit</h5>
-            <div className='p-class'>Web Developer</div>
+            <h3>Tian Du Toit</h3>
+            <div className='p-class'>Scrum Master</div>
             <div className='icon'>
               <a href='https://github.com/tian-dutoit' target='_blank' rel="noopener noreferrer">
                 <img src='/icons/github.png' height='40px' />
@@ -93,8 +92,8 @@ const About = () => {
 
           <div className='selfcard'>
             <img className='pic' src='/icons/kimmi-about.png' />
-            <h5>Kimmi Rindel</h5>
-            <div className='p-class'>Web Developer</div>
+            <h3>Kimmi Rindel</h3>
+            <div className='p-class'>Master of Some</div>
             <div className='icons'>
               <a href='https://github.com/rkimmi' target='_blank' rel="noopener noreferrer">
                 <img src='/icons/github.png' height='40px' />
@@ -104,12 +103,11 @@ const About = () => {
               </a>
             </div>
           </div>
-
-          <div>
-            <Link to='/'>
-              <button className='previous-button'>Previous Page</button>
-            </Link>
-          </div>
+        </div>
+        <div>
+          <Link to='/'>
+            <button className='previous-button'>Previous</button>
+          </Link>
         </div>
       </div>
     </div>

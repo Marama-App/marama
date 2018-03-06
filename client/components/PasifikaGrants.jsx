@@ -18,8 +18,7 @@ class PasifikaGrants extends React.Component {
             <div className='page-title-font'>Pasifika Grants</div>
             <div className='page-title-blurb'>All available grants.</div>
           </div>
-          <p>Many iwi offer a range of different grants, scholarships and funding to help support their members in areas like education and research. Opportunities like these are often overlooked if you are unaware that they are out there.
-  Below are list of iwi that have grants you can apply for which is available for those who are registered with the iwi. If you are unsure if you are member, you can contact your iwi directly.
+          <p>There are many scholarships, grants and funding available to Pasifika students, sometimes the biggest barriers can be just knowing where to look. We have listed some really good resources on where and how to apply for scholarships and grants. 
           </p>
           {this.props.pasifikaGrants.map(pasifikaGrant => (
             <div key={pasifikaGrant.id}>
@@ -31,7 +30,7 @@ class PasifikaGrants extends React.Component {
         </div>
         <div>
           <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
-            <button className='previous-button'>Previous Page</button>
+            <button className='previous-button'>Previous</button>
           </Link>
         </div>
       </div>

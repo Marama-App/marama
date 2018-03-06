@@ -32,7 +32,7 @@ Below are list of iwi that have grants you can apply for which is available for 
         }
         <div>
           <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
-            <button className='previous-button'>Previous Page</button>
+            <button className='previous-button'>Previous</button>
           </Link>
         </div>
       </div>
