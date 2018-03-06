@@ -58,7 +58,7 @@ class Type extends React.Component {
           {this.props.typeDetails.help.map(help => (
             <div key={help.id}>
               <div><h2>Iwi Grants</h2></div>
-              <div><p>Are you eligilbe for an Iwi grant?</p><Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/iwi-grants`}><button>Iwi Grants</button></Link></div>
+              <div><p>Are you eligible for an Iwi grant?</p><Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/iwi-grants`}><button>Iwi Grants</button></Link></div>
               <div><h2>Pasifika Students</h2></div>
               <div><p>Find out if you are eligile for Pasifika Education grant</p><Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/pasifika-grants`}><button>Pasifika Grants</button></Link></div>
             </div>
