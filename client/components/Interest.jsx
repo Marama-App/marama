@@ -20,7 +20,7 @@ class Interest extends React.Component {
               <div key={type.type_id} className='thumbnails'>
                 <div className='h2-class'>{type.name}</div>
                 <div>
-                  <div className='p-class'>{type.description}</div>
+                  <p>{type.description}</p>
                 </div>
                 <Link to={`/interests/${this.props.match.params.interest}/${type.name}`}>
                   <button className='interest-buttons'>

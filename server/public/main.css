@@ -143,20 +143,20 @@ button {
 
 /*Interest page styling*/
 .container {
-  display: flex; /* or inline-flex */
+  /* display: flex; /* or inline-flex */
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .interest-section {
   display: flex;
-  flex-flow: row wrap;
   flex-direction: row;
   text-align: center;
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .thumbnails {
@@ -165,10 +165,10 @@ button {
   text-align: center;
   align-content: center;
   justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px;
-  margin: 10px;
-  width: 450px;
+  padding: 20px;
+  margin: 20px; 
+  width: 250px;
+  
   
 }
 
