@@ -18,8 +18,8 @@ const About = () => {
         <p><i>Te kete Mārama — to understand, to learn</i></p>
         <div className='page-title-font'>About our Team</div>
         <div className='p-class'>Something about our team.</div>
-        <div className='about-team'>
-
+        <div className='p-class'> </div>
+        <div>
           <div className='selfcard'>
             <img className='pic' src='/icons/cat-about.png' />
             <h5>Catherine Fromont</h5>
