@@ -410,7 +410,6 @@ align-items: center; */
   flex-wrap: wrap;
   align-content: center;
   margin: 20px;
-
 }
 
 .selfcard {
@@ -418,7 +417,22 @@ align-items: center; */
   text-align: center;
   font-size: 14px;
   flex-direction: column;
-  margin: 28px;
+  margin: 40px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin: 8px;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+
 }
 
 .iwi-container {
@@ -464,12 +478,13 @@ align-items: center; */
   justify-content: center;
   align-content: center
 }
+
 .pic {
   border-radius: 85px;
   width: 125px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
-
 }
+
 /* This styles the study provider on the breakdown page */
 .provider-class {
   font-size: 13px;
