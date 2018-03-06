@@ -7,7 +7,7 @@ exports.up = (knex, Promise) => {
         table.string('description')
         table.string('link')
         table.text('conditions')
-        table.integer('amount')
+        table.float('amount')
       })
     }
   })

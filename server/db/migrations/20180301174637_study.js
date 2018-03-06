@@ -8,7 +8,7 @@ exports.up = (knex, Promise) => {
         table.string('link')
         table.float('domestic_price')
         table.float('international_price')
-        table.integer('duration')
+        table.float('duration')
         table.integer('level')
       })
     }
