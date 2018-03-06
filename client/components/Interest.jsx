@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { getType } from '../actions/type.js'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+
+import {getType} from '../actions/type'
 
 class Interest extends React.Component {
   componentDidMount () {
@@ -11,18 +12,19 @@ class Interest extends React.Component {
   render () {
     return (
       <div>
-      <img src='/images/bg-stars.png' className='stars-background'/>
-      <div className='page-section'>
-        <div className='page-heading-section'>
+        <img src='/images/bg-stars.png' className='stars-background'/>
+        <div className='page-section'>
+          <div className='page-heading-section'>
             <div className='page-title-font'>{this.props.match.params.interest}</div>
-            <div className='page-title-blurb'>If you love this, why not help create it?! Here's what you can do to become the builder of your favourite hobby.</div>
-        </div>
+            <div className='page-title-blurb'>If you love this, why not help create it? Here&apos;s what you can do to become the builder of your favourite hobby.</div>
+          </div>
 
-        <div className='container'>
-        <div className='interest-section'>
-          {this.props.interestType.map(type => (
+          <div className='three-container'>
+            <div className='interest-section'>
+
+              {this.props.interestType.map(type => (
                 <div key={type.type_id} className='thumbnails'>
-                  <div className='h2-class'>{type.name}</div>
+                  <div className='h3-class'>{type.name}</div>
                   <div>
                     <p>{type.description}</p>
                   </div>
@@ -35,7 +37,10 @@ class Interest extends React.Component {
               )
               )}
             </div>
-            </div>
+          </div>
+          <Link to='/'>
+            <button className='previous-button'>Previous Page</button>
+          </Link>
         </div>
       </div>
     )

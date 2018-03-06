@@ -1,7 +1,7 @@
 import React from 'react'
 import request from 'superagent'
+import {Link} from 'react-router-dom'
 import baseUrl from '../lib/base-url'
-
 
 class Contact extends React.Component {
   constructor (props) {
@@ -42,31 +42,34 @@ class Contact extends React.Component {
     if (!this.state.submitted) {
       return (
         <div>
-         <img src='/images/bg-stars.png' className='stars-background'/>
-        <div className='page-section'>
-        
-          <div className='page-heading-section'>
-            <div className='page-title-font'>Contact us</div>
-            <div className='page-title-blurb'>Need to contact us? Reach out here.</div>
-          </div>
+          <img src='/images/bg-stars.png' className='stars-background'/>
+          <div className='page-section'>
+            <div className='page-heading-section'>
+              <div className='page-title-font'>Contact us</div>
+              <div className='page-title-blurb'>Need to contact us? Reach out here.</div>
+            </div>
 
-          <form className='submit-form' onSubmit={this.handleSubmit}>
+            <form className='submit-form' onSubmit={this.handleSubmit}>
+              <div>
+                <input name='name' onChange={this.handleChange} required/>
+              </div>
+              <div>
+                <input type='email' name='email' onChange={this.handleChange} required/>
+              </div>
+              <div>
+                <textarea name='message' onChange={this.handleChange} required/>
+              </div>
+              <div className='submit-flex'>
+                <button type="submit" value="Submit">Submit</button>
+              </div>
+            </form>
             <div>
-              <input name='name' onChange={this.handleChange} required/>
+              <Link to='/'>
+                <button className='previous-button'>Previous Page</button>
+              </Link>
             </div>
-            <div>
-              <input type='email' name='email' onChange={this.handleChange} required/>
-            </div>
-            <div>
-              <textarea name='message' onChange={this.handleChange} required/>
-            </div>
-            <div className='submit-flex'>
-              <button type="submit" value="Submit">Submit</button>
-            </div>
-          </form>
+          </div>
         </div>
-        </div>
-      
       )
     }
     if (this.state.submitted) {

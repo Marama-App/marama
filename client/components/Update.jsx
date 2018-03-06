@@ -1,6 +1,6 @@
 import React from 'react'
-
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {getAll, getTypes, sendAddForm} from '../actions/update'
 // import {getType} from '../actions/type'
@@ -65,46 +65,51 @@ class Update extends React.Component {
         <img src='/images/bg-stars.png' className='stars-background'/>
         <div className='page-section'>
           <div className='page-heading-section'>
-          <div className='page-title-font'>Update</div>
-          <select name='interestSelector' onChange={this.handleSelect}>
-            {this.props.update.map(interest => (
-              <option key={interest.id}>{interest.interests}</option>
-            )
-            )}
-          </select>
-          <select name='typeSelector' onChange={this.handleTypeSelect}>
-            {this.props.updateTypes.map(interestType => (
-              <option key={interestType.type_id}>{interestType.name}</option>
-            )
-            )}
-          </select>
-          <br />
+            <div className='page-title-font'>Update</div>
+            <select name='interestSelector' onChange={this.handleSelect}>
+              {this.props.update.map(interest => (
+                <option key={interest.id}>{interest.interests}</option>
+              )
+              )}
+            </select>
+            <select name='typeSelector' onChange={this.handleTypeSelect}>
+              {this.props.updateTypes.map(interestType => (
+                <option key={interestType.type_id}>{interestType.name}</option>
+              )
+              )}
+            </select>
+            <br />
           Course Name: <input name='course' placeholder='' onChange={this.handleChange} />
-          <br />
+            <br />
           Provider: <input name='provider' placeholder='' onChange={this.handleChange} />
-          <br />
+            <br />
           Website: <input name='link' placeholder='' onChange={this.handleChange} />
-          <br />
+            <br />
           Course Location: <input name='location' placeholder='' onChange={this.handleChange} />
-          <br />
+            <br />
           Domestic Price: <input name='domestic_price' placeholder='' onChange={this.handleChange} />
-          <br />
+            <br />
           International Price: <input name='international_price' placeholder='' onChange={this.handleChange} />
-          <br />
+            <br />
           Course Duration: <input name='duration' placeholder='' onChange={this.handleChange} />
-          <br />
+            <br />
           Level: <input name='level' placeholder='' onChange={this.handleChange} />
-          <br />
-          <button type='submit' onClick={this.handleClick}>Press Me</button>
-          <br />
-          <br />
-          <p>Something for the grants</p>  {/* dropdown? */}
-          <p>Something for the employers</p>
-          <p>Something for the help</p>
-          <p>Something for the junction tables</p> {/* dropdown? */}
-        </div>
-        </div>
+            <br />
+            <button type='submit' onClick={this.handleClick}>Press Me</button>
+            <br />
+            <br />
+            <p>Something for the grants</p>  {/* dropdown? */}
+            <p>Something for the employers</p>
+            <p>Something for the help</p>
+            <p>Something for the junction tables</p> {/* dropdown? */}
           </div>
+        </div>
+        <div>
+          <Link to='/'>
+            <button className='previous-button'>Finished</button>
+          </Link>
+        </div>
+      </div>
     )
   }
 }
