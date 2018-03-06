@@ -14,12 +14,14 @@ router.get('/:type', (req, res) => {
   const study = db.getStudy(type)
   const jobs = db.getJobs(type)
   const help = db.getHelp(type)
-  Promise.all([study, jobs, help])
-    .then(([study, jobs, help]) => {
+  const location = db.getLocation()
+  Promise.all([study, jobs, help, location])
+    .then(([study, jobs, help, location]) => {
       const result = {
         study,
         jobs,
-        help
+        help,
+        location
       }
       res.send(result)
     })

@@ -1,5 +1,6 @@
 *sqlite
 
+
 # Logs
 logs
 *.log
@@ -32,9 +33,6 @@ build/Release
 node_modules
 jspm_packages
 
-.env
-
-
 # Optional npm cache directory
 .npm
 
@@ -45,3 +43,4 @@ jspm_packages
 bundle.js
 bundle.js.map
 
+.env
