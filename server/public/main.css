@@ -279,7 +279,37 @@ align-items: center; */
   margin: 1px;
 }
 
+.center-text {
+  align-content: center;
+  text-align: justify;
+  font-size: 18px;
+}
 
+.selfie-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 20px;
+
+}
+
+.selfcard {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  flex-direction: column;
+  margin: 28px;
+}
+
+
+.pic {
+  border-radius: 85px;
+  width: 125px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+
+}
 /* This styles the study provider on the breakdown page */
 .provider-class {
   font-size: 13px;

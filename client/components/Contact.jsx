@@ -51,13 +51,13 @@ class Contact extends React.Component {
 
             <form className='submit-form' onSubmit={this.handleSubmit}>
               <div>
-                <input name='name' onChange={this.handleChange} required/>
+                Full Name:<input name='name' onChange={this.handleChange} required/>
               </div>
               <div>
-                <input type='email' name='email' onChange={this.handleChange} required/>
+                Email:<input type='email' name='email' onChange={this.handleChange} required/>
               </div>
               <div>
-                <textarea name='message' onChange={this.handleChange} required/>
+                Your message to us:<textarea name='message' onChange={this.handleChange} required/>
               </div>
               <div className='submit-flex'>
                 <button type="submit" value="Submit">Submit</button>
@@ -65,7 +65,7 @@ class Contact extends React.Component {
             </form>
             <div>
               <Link to='/'>
-                <button>Previous Page</button>
+                <button>Finished</button>
               </Link>
             </div>
           </div>
