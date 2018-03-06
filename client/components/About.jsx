@@ -39,7 +39,7 @@ const About = () => {
           <div className='selfcard'>
             <img className='pic' src='/icons/cat-about.png' />
             <h3>Catherine Fromont</h3>
-            Git Master
+            GitHub Master
             <div className='icons'>
               <a href='https://github.com/catherinefromont' target='_blank' rel="noopener noreferrer">
                 <img className='icon' src='/icons/github-icon.png' height='40px' />
