@@ -235,7 +235,7 @@ button {
   width: 125px;
 }
 
-/*Contact page styling*/
+/*CONTACT page styling*/
 
 form {
   width: 100%;
@@ -287,6 +287,13 @@ input {
   width: 50%;
   border-radius: 4px;
 }
+
+/*ABOUT  page styling*/
+
+/* .icon {
+ height: 2em;
+ width: 2em; 
+} */
 
 /* OTHER PAGE STYLING */
 
