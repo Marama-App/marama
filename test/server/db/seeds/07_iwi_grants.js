@@ -13,6 +13,6 @@ exports.seed = (knex, Promise) => {
     {id: 11, iwi: 'Te Arawa', link: 'http://www.terarawa.co.nz', description: 'Funding for Te Rarawa decendants for tertiary education, in areas related iwi development'},
     {id: 12, iwi: 'Te Arawa Fisheries', link: 'http://www.tearawafisheries.maori.nz', description: '$1000 scholarship for decendants of Te Arawa for any recognised education provider'},
     {id: 13, iwi: 'Te Aupouri', link: 'http://www.teaupouri.iwi.nz/tangata-funding-december-2017/', description: 'Funding for Te Aupouri Decendants for Study'},
-    {id: 14, iwi: 'Tuwharetoa', link: 'https://www.tuwharetoa.co.nz/education/', description: 'Scholarships for members of Tuwharetoa '}
+    {id: 14, iwi: 'Tuwharetoa', link: 'https://www.tuwharetoa.co.nz/education/', description: 'Scholarships for members of Tuwharetoa'}
   ])
 }
