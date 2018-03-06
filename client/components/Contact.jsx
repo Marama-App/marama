@@ -1,5 +1,6 @@
 import React from 'react'
 import request from 'superagent'
+import {Link} from 'react-router-dom'
 import baseUrl from '../lib/base-url'
 
 class Contact extends React.Component {
@@ -40,14 +41,14 @@ class Contact extends React.Component {
   render () {
     if (!this.state.submitted) {
       return (
-        <div className='page-section'>
-          <div className='contact-section'>
-            <div className='page-title-font'>
-              <h1>Contact us</h1>
+        <div>
+          <img src='/images/bg-stars.png' className='stars-background'/>
+          <div className='page-section'>
+            <div className='page-heading-section'>
+              <div className='page-title-font'>Contact us</div>
+              <div className='page-title-blurb'>Need to contact us? Reach out here.</div>
             </div>
-            <div className='p-class'>
-              <p>Please email the team at Mārama with any questions or queries you have. We will do our best to get back to you as soon as we can!</p>
-            </div>
+
             <form className='submit-form' onSubmit={this.handleSubmit}>
               <div>
                 <input name='name' onChange={this.handleChange} required>Full Name:</input>
@@ -62,13 +63,18 @@ class Contact extends React.Component {
                 <button type="submit" value="Submit">Submit</button>
               </div>
             </form>
+            <div>
+              <Link to='/'>
+                <button>Finished</button>
+              </Link>
+            </div>
           </div>
         </div>
       )
     }
     if (this.state.submitted) {
       return (
-        <p>Thanks for submitting</p>
+        <div className='p-class'>Thanks for submitting!</div>
       )
     }
   }
