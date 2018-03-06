@@ -15,7 +15,7 @@ const About = () => {
         <div className='self-card-blurb'>
           Mārama’s primary focus is tech-based fields of study, as Māori and Pasifika perspectives are specifically underrepresented in the growing technology sector. We’re working on collating study options, funding opportunities and potential employment information with a wider focus in the near future.</div>
         <div className='self-card-blurb'>Our aim for Mārama is to inform and empower students to seek broader study and employment pathways, and to make available financial assistance more transparent. The outcome being more graduates moving into fields where their voices matter most.</div>
-        <p><i>Te kete Mārama — to understand, to learn</i></p>
+        <br></br><div className='page-title-blurb'>Te kete Mārama — to understand, to learn</div>
 
         <div className='page-title-font'>Our Team</div>
         <div className='page-title-blurb'> Class of Harakeke 2018 - Enspiral Dev Academy </div>
