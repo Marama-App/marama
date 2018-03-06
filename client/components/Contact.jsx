@@ -1,5 +1,6 @@
 import React from 'react'
 import request from 'superagent'
+import {Link} from 'react-router-dom'
 import baseUrl from '../lib/base-url'
 
 class Contact extends React.Component {
@@ -40,29 +41,40 @@ class Contact extends React.Component {
   render () {
     if (!this.state.submitted) {
       return (
-        <div className='contact'>
-          <h1>Contact us</h1>
-          <p>Blurb about contacting us</p>
-          <form className='submit-form' onSubmit={this.handleSubmit}>
+        <div>
+          <img src='/images/bg-stars.png' className='stars-background'/>
+          <div className='page-section'>
+            <div className='page-heading-section'>
+              <div className='page-title-font'>Contact us</div>
+              <div className='page-title-blurb'>Need to contact us? Reach out here.</div>
+            </div>
+
+            <form className='submit-form' onSubmit={this.handleSubmit}>
+              <div>
+                <input name='name' onChange={this.handleChange} required/>
+              </div>
+              <div>
+                <input type='email' name='email' onChange={this.handleChange} required/>
+              </div>
+              <div>
+                <textarea name='message' onChange={this.handleChange} required/>
+              </div>
+              <div className='submit-flex'>
+                <button type="submit" value="Submit">Submit</button>
+              </div>
+            </form>
             <div>
-              <input name='name' onChange={this.handleChange} required/>
+              <Link to='/'>
+                <button>Previous Page</button>
+              </Link>
             </div>
-            <div>
-              <input type='email' name='email' onChange={this.handleChange} required/>
-            </div>
-            <div>
-              <textarea name='message' onChange={this.handleChange} required/>
-            </div>
-            <div className='submit-flex'>
-              <button type="submit" value="Submit">Submit</button>
-            </div>
-          </form>
+          </div>
         </div>
       )
     }
     if (this.state.submitted) {
       return (
-        <p>Thanks for submitting</p>
+        <div className='p-class'>Thanks for submitting!</div>
       )
     }
   }

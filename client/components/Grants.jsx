@@ -1,6 +1,6 @@
 import React from 'react'
-
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {getGrants} from '../actions/grants'
 
@@ -11,21 +11,30 @@ class Grants extends React.Component {
 
   render () {
     return (
-      <div className='typedetail-section'>
-        <h1>Grants for {this.props.match.params.grants}</h1>
-        {this.props.grants.result.map(grant => (
-          <div key={grant.grants_id}>
-            <h3>{grant.name}</h3>
-            <div>
-              <p>{grant.description}</p>
-            </div>
-            <button><a href={grant.link} target='_blank'>
-              take me there
-            </a>
-            </button>
+      <div>
+        <img src='/images/bg-stars.png' className='stars-background'/>
+        <div className='page-section'>
+          <div className='page-heading-section'>
+            <div className='page-title-font'>Grants for {this.props.match.params.grants}</div>
+            <div className='page-title-blurb'>Take a look at all available grants for this course.</div>
           </div>
-        )
-        )}
+          {this.props.grants.result.map(grant => (
+            <div key={grant.grants_id}>
+              <h3>{grant.name}</h3>
+              <div>
+                <div className='p-class'>{grant.description}</div>
+              </div>
+              <button><a href={grant.link} target='_blank'>Full Grant Info</a>
+              </button>
+            </div>
+          )
+          )}
+          <div>
+            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study/`}>
+              <button>Previous Page</button>
+            </Link>
+          </div>
+        </div>
       </div>
     )
   }

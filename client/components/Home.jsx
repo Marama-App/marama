@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { getInterests } from '../actions/interests'
+import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
-// import Interest from './Interest'
+import {getInterests} from '../actions/interests'
 
 class Home extends React.Component {
   constructor (props) {
@@ -24,15 +23,25 @@ class Home extends React.Component {
     }
     return (
       <div className='home-section'>
-        {this.props.interests.map(interest =>
-          <Link key={interest.id}to={`/interests/${interest.interests}`}>
-            <button>
-              {interest.interests}
-            </button>
-          </Link>
-        )}
+        <img src='/images/final-bg-more-red.jpg' className='home-background' />
+        <div className='home-content-box'>
+          <div className='home-blurb'>Hey! What do you <br /> love doing?</div>
+          <div className='home-sentence'>Tell us what you&apos;re into, and we&apos;ll tell you how to get there.</div>
+          <div className='home-button-container'>
+            {this.props.interests.map(interest =>
+              <Link key={interest.id} to={`/interests/${interest.interests}`}>
+                <button className='home-buttons'>
+                  {interest.interests}
+                </button>
+              </Link>
+            )}
+            <div>
+              <Link to='/not-sure'><button className='home-buttons'>Not sure?</button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-
     )
   }
 }
