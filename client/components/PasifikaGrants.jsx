@@ -24,16 +24,13 @@ Below are list of iwi that have grants you can apply for which is available for 
                 <a href={pasifikaGrant.link} target='_blank'><h3>{pasifikaGrant.name}</h3></a>
                 <h4>{pasifikaGrant.description}</h4>
               </div>
-            ))
-            }
+            ))}
           </div>
-
-        ))}
-        <div>
-          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
-            <button>Previous Page</button>
-          </Link>
-
+          <div>
+            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
+              <button>Previous Page</button>
+            </Link>
+          </div>
         </div>
       </div>
     )
