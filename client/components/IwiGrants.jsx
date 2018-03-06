@@ -24,15 +24,15 @@ Below are list of iwi that have grants you can apply for which is available for 
           </div>
         </div>
         <div className='iwi-container'>
-        {this.props.iwiGrants.map(iwiGrant => (
-          <div key={iwiGrant.id}>
-          <div className='iwi-box'>
-            <a href={iwiGrant.link} target='_blank'><h3>{iwiGrant.iwi}</h3></a>
-            <h4>{iwiGrant.description}</h4>
-          </div>
-          </div>
-        ))
-        }
+          {this.props.iwiGrants.map(iwiGrant => (
+            <div key={iwiGrant.id}>
+              <div className='iwi-box'>
+                <a href={iwiGrant.link} target='_blank'><h3>{iwiGrant.iwi}</h3></a>
+                <h4>{iwiGrant.description}</h4>
+              </div>
+            </div>
+          ))
+          }
         </div>
         <div>
           <Link to='/support'>

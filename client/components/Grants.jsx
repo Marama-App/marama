@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {getGrants} from '../actions/grants'
 
@@ -14,8 +15,9 @@ class Grants extends React.Component {
       <div>
         <img src='/images/bg-stars.png' className='stars-background'/>
         <div className='page-section'>
-          <div className='typedetail-section'>
+          <div className='page-heading-section'>
             <div className='page-title-font'>Grants for {this.props.match.params.grants}</div>
+            <div className='page-title-blurb'>Take a look at all available grants for this course.</div>
             {this.props.grants.result.map(grant => (
               <div key={grant.grants_id}>
                 <h3>{grant.name}</h3>
@@ -27,6 +29,11 @@ class Grants extends React.Component {
               </div>
             )
             )}
+            <div>
+              <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study/`}>
+                <button className='previous-button'>Previous</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

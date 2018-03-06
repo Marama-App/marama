@@ -31,7 +31,7 @@ class Study extends React.Component {
           )}
           <div>
             <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
-              <button>Previous Page</button>
+              <button className='previous-button'>Previous</button>
             </Link>
           </div>
         </div>
