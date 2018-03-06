@@ -25,7 +25,7 @@ class Type extends React.Component {
             <div className='page-title-font'>Break Into {this.props.match.params.type}</div>
             <div className='page-title-blurb'>Here&apos;s what you can study, cool companies hiring, and resources to help you!</div>
           </div>
-          <h1>Study</h1>
+          <div className='h3-class'>Study</div>
           {this.props.typeDetails.study.filter(course => {
             return (course.study_id < 4)
           }).map(detail => (
@@ -39,7 +39,7 @@ class Type extends React.Component {
             <button>More Study Options</button>
           </Link>
 
-          <h1>Employment Avenues</h1>
+          <div className='h3-class'>Employment Avenues</div>
           {this.props.typeDetails.jobs.map(job => (
             <div key={job.job_id}>
               <a href={job.job_link} target='_blank'>{job.job_name}</a>
@@ -49,7 +49,7 @@ class Type extends React.Component {
             <button>More Job Options</button>
           </Link>
 
-          <h1>Support Services</h1>
+          <div class='h3-class'>Support Services</div>
           {this.props.typeDetails.help.map(help => (
             <div key={help.id}>
               <div><h2>Iwi Grants</h2></div>
@@ -70,7 +70,7 @@ class Type extends React.Component {
           ))}
           <div>
             <Link to={`/interests/${this.props.match.params.interest}/`}>
-              <button>Previous Page</button>
+              <button className='previous-button'>Previous Page</button>
             </Link>
 
           </div>

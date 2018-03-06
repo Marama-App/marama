@@ -106,7 +106,7 @@ class Update extends React.Component {
         </div>
         <div>
           <Link to='/'>
-            <button>Finished</button>
+            <button className='previous-button'>Finished</button>
           </Link>
         </div>
       </div>

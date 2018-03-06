@@ -70,7 +70,9 @@ class Contact extends React.Component {
             </form>
             <div>
               <Link to='/'>
+
                 <button className='previous-button'>Home</button>
+
               </Link>
             </div>
           </div>
