@@ -10,7 +10,7 @@ const noInterest = () => {
         <div className='type-section'>
           {/* <div className='page-title-font'>{this.props.match.params.type}</div> */}
           <div className='page-title-font'>Not sure what you want to do?</div>
-          <div className='p-class'>No worries! We've got you covered. Check out these awesome resources that can help you decide what it is you are passionate about.</div>
+          <div className='p-class'>No worries! We&apos;ve got you covered. Check out these awesome resources that can help you decide what it is you are passionate about.</div>
 
           <div className='h2-class'>Careers New Zealand</div>
           {/* {this.props.typeDetails.help.map(help => (

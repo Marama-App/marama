@@ -10,9 +10,6 @@ const Nav = () => {
         </Link>
       </div>
       <div className='nav-links'>
-        {/* <span className='nav-link-individual-styling'>
-          <Link to='/'>Home</Link>
-        </span> */}
         <span className='nav-link-individual-styling'>
           <Link to='/about'>about us</Link>
         </span>
