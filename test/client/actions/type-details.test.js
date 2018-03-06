@@ -3,7 +3,7 @@
 import { receiveTypeDetail } from '../../../client/actions/type-details'
 
 test('receiveTypeDetail returns the correct action type', () => {
-  const expected = 'RECEIVE_TYPE_DETAIL'
+  const expected = 'RECEIVE_TYPE_DETAILS'
 
   const actual = receiveTypeDetail()
 
@@ -12,7 +12,7 @@ test('receiveTypeDetail returns the correct action type', () => {
 
 test('receiveTypeDetail returns the correct action', () => {
   const expected = {
-    type: 'RECEIVE_TYPE_DETAIL'
+    type: 'RECEIVE_TYPE_DETAILS'
   }
 
   const actual = receiveTypeDetail()
@@ -23,7 +23,7 @@ test('receiveTypeDetail returns the correct action', () => {
 test('receiveTypeDetail returns the typeDetails', () => {
   const typeDetails = ['typeDetail1', 'typeDetail2']
   const expected = {
-    type: 'RECEIVE_TYPE_DETAIL',
+    type: 'RECEIVE_TYPE_DETAILS',
     typeDetails: ['typeDetail1', 'typeDetail2']
   }
 
