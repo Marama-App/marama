@@ -13,7 +13,8 @@ router.get('/:interest', (req, res) => {
   const interest = req.params.interest
   db.getType(interest)
     .then((type) => {
-      res.send({type})
+      console.log(type)
+      res.send(type)
     })
     .catch(err => {
       res.status(500).send(err.message)
