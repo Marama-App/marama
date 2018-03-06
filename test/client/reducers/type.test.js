@@ -21,4 +21,3 @@ test('interestType receives the interestType', () => {
 
   expect(actualAfterActionState).toEqual(afterState)
 })
-// ISSUE WITH THIS TEST AND THE .type IN REDUCER FILE
