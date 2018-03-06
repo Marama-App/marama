@@ -65,7 +65,7 @@ class Contact extends React.Component {
             </form>
             <div>
               <Link to='/'>
-                <button>Previous Page</button>
+                <button className='previous-button'>Previous Page</button>
               </Link>
             </div>
           </div>

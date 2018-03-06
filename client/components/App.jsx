@@ -37,7 +37,9 @@ const App = () => {
           <Route path='/interests/:interest' component={Interest}/>
         </Switch>
       </div>
-      <Footer />
+      <div className='sticky-footer'>
+        <Footer />
+      </div>
     </div>
   )
 }
