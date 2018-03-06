@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 import {getTypeDetail} from '../actions/type-details'
 
-class Type extends React.Component {
+export class Type extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
