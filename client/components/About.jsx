@@ -49,7 +49,7 @@ const About = () => {
 
           <div className='selfcard'>
             <img className='pic' src='/icons/tian-about.png' />
-            <h3>Tian Du Toit</h3>
+            <h3>Tian du Toit</h3>
             <div className='p-class'>Scrum Master</div>
           </div>
 
