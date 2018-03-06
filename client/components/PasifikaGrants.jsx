@@ -1,8 +1,8 @@
 import React from 'react'
-
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
-import { getPasifikaGrants } from '../actions/pasifika-grants.js'
+import {getPasifikaGrants} from '../actions/pasifika-grants'
 
 class PasifikaGrants extends React.Component {
   componentDidMount () {
@@ -12,16 +12,15 @@ class PasifikaGrants extends React.Component {
   render () {
     return (
       <div>
-      <img src='/images/bg-stars.png' className='stars-background'/>
-      <div className='page-section'>
-        <div className='page-heading-section'>
+        <img src='/images/bg-stars.png' className='stars-background'/>
+        <div className='page-section'>
+          <div className='page-heading-section'>
             <div className='page-title-font'>Pasifika Grants</div>
             <div className='page-title-blurb'>All available grants.</div>
-        </div>
+          </div>
           <p>Many iwi offer a range of different grants, scholarships and funding to help support their members in areas like education and research. Opportunities like these are often overlooked if you are unaware that they are out there.
   Below are list of iwi that have grants you can apply for which is available for those who are registered with the iwi. If you are unsure if you are member, you can contact your iwi directly.
           </p>
-          
           {this.props.pasifikaGrants.map(pasifikaGrant => (
             <div key={pasifikaGrant.id}>
               <a href={pasifikaGrant.link} target='_blank'><h3>{pasifikaGrant.name}</h3></a>
@@ -30,7 +29,12 @@ class PasifikaGrants extends React.Component {
           ))
           }
         </div>
+        <div>
+          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
+            <button>Previous Page</button>
+          </Link>
         </div>
+      </div>
     )
   }
 }

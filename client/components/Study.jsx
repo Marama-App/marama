@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 class Study extends React.Component {
   render () {
@@ -11,7 +11,7 @@ class Study extends React.Component {
         <div className='page-section'>
           <div className='page-heading-section'>
             <div className='page-title-font'>Study {this.props.match.params.type}</div>
-            <div className='page-title-blurb'>Guess what? We've picked out the top courses in New Zealand, and their available grants!</div>
+            <div className='page-title-blurb'>Guess what? We&apos;ve picked out the top courses in New Zealand, and their available grants!</div>
           </div>
           {this.props.typeDetails.study.map(detail => (
             <div key={detail.study_id}>
@@ -29,6 +29,11 @@ class Study extends React.Component {
             </div>
           )
           )}
+          <div>
+            <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
+              <button>Previous Page</button>
+            </Link>
+          </div>
         </div>
       </div>
     )
