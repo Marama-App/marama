@@ -22,12 +22,10 @@ class Type extends React.Component {
     <div>
       <img src='/images/bg-stars.png' className='stars-background'/>
       <div className='page-section'>
-
-      <div className='type-section'>
-        <div className='page-title-font'>{this.props.match.params.type}</div>
-        <div className='page-title-font'>Study</div>
-        <div className='p-class'>Here's what you can study, cool companies hiring, and resources to help you!</div>
-
+      <div className='page-heading-section'>
+        <div className='page-title-font'>Break Into {this.props.match.params.type}</div>
+        <div className='page-title-blurb'>Here's what you can study, cool companies hiring, and resources to help you!</div>
+      </div>
 
         {this.props.typeDetails.study.filter(course => {
           return (course.study_id < 4)
@@ -65,7 +63,6 @@ class Type extends React.Component {
           </div>
 
         ))}
-      </div>
       </div>
       </div>
     )
