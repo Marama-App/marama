@@ -40,23 +40,29 @@ class Contact extends React.Component {
   render () {
     if (!this.state.submitted) {
       return (
-        <div className='contact'>
-          <h1>Contact us</h1>
-          <p>Blurb about contacting us</p>
-          <form className='submit-form' onSubmit={this.handleSubmit}>
-            <div>
-              <input name='name' onChange={this.handleChange} required/>
+        <div className='page-section'>
+          <div className='contact-section'>
+            <div className='page-title-font'>
+              <h1>Contact us</h1>
             </div>
-            <div>
-              <input type='email' name='email' onChange={this.handleChange} required/>
+            <div className='p-class'>
+              <p>Please email the team at Mārama with any questions or queries you have. We will do our best to get back to you as soon as we can!</p>
             </div>
-            <div>
-              <textarea name='message' onChange={this.handleChange} required/>
-            </div>
-            <div className='submit-flex'>
-              <button type="submit" value="Submit">Submit</button>
-            </div>
-          </form>
+            <form className='submit-form' onSubmit={this.handleSubmit}>
+              <div>
+                <input name='name' onChange={this.handleChange} required>Full Name:</input>
+              </div>
+              <div>
+                <input type='email' name='email' onChange={this.handleChange} required>Email:</input>
+              </div>
+              <div>
+                <textarea name='message' onChange={this.handleChange} required>Your message to us:</textarea>
+              </div>
+              <div className='submit-flex'>
+                <button type="submit" value="Submit">Submit</button>
+              </div>
+            </form>
+          </div>
         </div>
       )
     }
