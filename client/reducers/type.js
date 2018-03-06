@@ -5,7 +5,7 @@ const initialState = []
 const type = (state = initialState, action) => {
   switch (action.type) {
     case RECEIVE_TYPE:
-      return action.interestType.type
+      return action.interestType
     default:
       return state
   }

@@ -19,7 +19,6 @@ import NoInterests from './NoInterests'
 const App = () => {
   return (
     <div className='app'>
-
       <div className='app-box'>
         <Header />
         <Switch>
