@@ -261,6 +261,8 @@ align-items: center; */
 .footer-content {
   text-align: center;
   font-size: 11px;
+  /* position: fixed; */
+  bottom: 0;
 }
 
 
