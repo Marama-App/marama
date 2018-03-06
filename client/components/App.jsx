@@ -20,7 +20,6 @@ import Support from './Support'
 const App = () => {
   return (
     <div className='app'>
-
       <div className='app-box'>
         <Header />
         <Switch>
@@ -29,12 +28,8 @@ const App = () => {
           <Route path='/about' component={About} />
           <Route path='/admin' component={Add} />
           <Route path='/support' component={Support} />
-
           <Route path='/iwi-grants' component={IwiGrants} />
           <Route path='/pasifika-grants' component={PasifikaGrants} />
-          
-          {/* <Route path='/interests/:interest/:type/iwi-grants' component={IwiGrants} />
-          <Route path='/interests/:interest/:type/pasifika-grants' component={PasifikaGrants} /> */}
           <Route path='/not-sure' component={NoInterests} />
           <Route path='/interests/:interest/:type/study/:grants' component={Grants}/>
           <Route path='/interests/:interest/:type/study' component={Study}/>
@@ -43,7 +38,9 @@ const App = () => {
           <Route path='/interests/:interest' component={Interest}/>
         </Switch>
       </div>
-      <Footer />
+      <div className='sticky-footer'>
+        <Footer />
+      </div>
     </div>
   )
 }

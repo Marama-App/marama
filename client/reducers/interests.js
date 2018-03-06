@@ -1,6 +1,8 @@
 import { RECEIVE_INTERESTS } from '../actions/interests'
 
-const interests = (state = [], action) => {
+const initialState = []
+
+const interests = (state = initialState, action) => {
   switch (action.type) {
     case RECEIVE_INTERESTS:
       return action.interests
