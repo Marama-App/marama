@@ -29,7 +29,7 @@ class PasifikaGrants extends React.Component {
           }
         </div>
         <div>
-          <Link to='/pasifika-grants'>
+          <Link to='/support'>
             <button>Previous Page</button>
           </Link>
         </div>
