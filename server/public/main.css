@@ -247,7 +247,65 @@ button:hover {
   width: 125px;
 }
 
+/*CONTACT page styling*/
 
+form {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.submit-flex {
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+}
+
+.name-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.form-name {
+  display: flex;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.form-email {
+  display: flex;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+textarea {
+  margin: 0px;
+  height: 8em;
+  width: 50%;
+  border-radius: 4px;
+}
+
+input {
+  height: 2em;
+  width: 50%;
+  border-radius: 4px;
+}
+
+/*ABOUT  page styling*/
+
+/* .icon {
+ height: 2em;
+ width: 2em; 
+} */
 
 /* OTHER PAGE STYLING */
 
@@ -351,7 +409,79 @@ align-items: center; */
   margin: 1px;
 }
 
+.center-text {
+  align-content: center;
+  text-align: justify;
+  font-size: 18px;
+}
 
+.selfie-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 20px;
+
+}
+
+.selfcard {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  flex-direction: column;
+  margin: 28px;
+}
+
+.iwi-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: auto;;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+}
+.iwi-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin: 20px; 
+  width: 250px;
+  height: 300px;
+  border: white;
+  border-style: solid;
+  border-radius: 25px;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.iwi-box:hover {
+  background-color: #8f1e74;
+  border-color: #ffffff;
+}
+
+.iwi-logos-wrapper {
+  display: flex;
+  
+}
+.iwi-logos {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  justify-content: center;
+  align-content: center
+}
+.pic {
+  border-radius: 85px;
+  width: 125px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+
+}
 /* This styles the study provider on the breakdown page */
 .provider-class {
   font-size: 13px;
@@ -488,7 +618,9 @@ align-items: center; */
   margin: 50px 0 0px 0;
 }
 
-
+.support-img {
+  width: 300px;
+}
 /* JOBS */
 
 .jobs {
