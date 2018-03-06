@@ -146,7 +146,7 @@ button {
   /* display: flex; /* or inline-flex */
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center; */
+  justify-content: center; 
 }
 
 .interest-section {
