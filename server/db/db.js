@@ -15,7 +15,8 @@ module.exports = {
   getAll,
   addStudy,
   addInterestsToTypesJunction,
-  addTypesStudyJunction
+  addTypesStudyJunction,
+  getLocation
 }
 
 function getInterests (interests, testConn) {
@@ -39,10 +40,15 @@ function getStudy (typeId, testConn) {
   return conn('study')
     .join('types_study_junction', 'types_study_junction.study_id', 'study.id')
     .join('interest_types', 'interest_types.id', 'types_study_junction.types_id')
-    .join('location_study_junction', 'location_study_junction.study_id', 'study.id')
-    .join('location', 'location.id', 'location_study_junction.location_id')
     .where('interest_types.name', typeId)
     .select()
+}
+
+function getLocation (testConn) {
+  const conn = testConn || connection
+  return conn('location')
+    .join('location_study_junction', 'location_study_junction.location_id', 'location.id')
+    .join('study', 'study.id', 'location_study_junction.study_id')
 }
 
 function getHelp (typeId, testConn) {
