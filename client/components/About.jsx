@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const About = () => {
   return (
@@ -27,10 +27,10 @@ const About = () => {
           <div className='icon' src='/icons/linkedin.png' />
           <div className='icon'>
             <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/github.png' height='40px' />
+              <img src='/icons/github-icon.png' height='40px' />
             </a>
             <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/linkedin.png' height='40px' />
+              <img src='/icons/linkedin-icon.png' height='40px' />
             </a>
           </div>
         </div>
@@ -41,10 +41,10 @@ const About = () => {
           <div className='self-card-blurb'>Git Master</div>
           <div className='icon'>
             <a href='https://github.com/catherinefromont' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/github.png' height='40px' />
+              <img src='/icons/github-icon.png' height='40px' />
             </a>
             <a href='https://www.linkedin.com/in/catherine-fromont-03199a158/' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/linkedin.png' height='40px' />
+              <img src='/icons/linkedin-icon.png' height='40px' />
             </a>
           </div>
         </div>
@@ -55,10 +55,10 @@ const About = () => {
           <div className='self-card-blurb'>Styling Master</div>
           <div className='icon'>
             <a href='https://github.com/ElyseWyatt' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/github.png' height='40px' />
+              <img src='/icons/github-icon.png' height='40px' />
             </a>
             <a href='https://www.linkedin.com/in/elysewyatt/' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/linkedin.png' height='40px' />
+              <img src='/icons/linkedin-icon.png' height='40px' />
             </a>
           </div>
         </div>
@@ -68,10 +68,10 @@ const About = () => {
           <div className='self-card-blurb'>Quality Control<br/>(Master)</div>
           <div className='icon'>
             <a href='https://github.com/emilyparkes' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/github.png' height='40px' />
+              <img src='/icons/github-icon.png' height='40px' />
             </a>
             <a href='https://www.linkedin.com/in/emilyparkes/' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/linkedin.png' height='40px' />
+              <img src='/icons/linkedin-icon.png' height='40px' />
             </a>
           </div>
         </div>
@@ -82,10 +82,10 @@ const About = () => {
           <div className='self-card-blurb'>Scrum Master</div>
           <div className='icon'>
             <a href='https://github.com/tian-dutoit' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/github.png' height='40px' />
+              <img src='/icons/github-icon.png' height='40px' />
             </a>
             <a href='https://www.linkedin.com/in/tian-du-toit-15785615a/' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/linkedin.png' height='40px' />
+              <img src='/icons/linkedin-icon.png' height='40px' />
             </a>
           </div>
         </div>
@@ -96,17 +96,17 @@ const About = () => {
           <div className='self-card-blurb'>Master of Some</div>
           <div className='icons'>
             <a href='https://github.com/rkimmi' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/github.png' height='40px' />
+              <img src='/icons/github-icon.png' height='40px' />
             </a>
-            <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
-              <img src='/icons/linkedin.png' height='40px' />
+            <a href='https://github.com/rkimmi' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/linkedin-icon.png' height='40px' />
             </a>
           </div>
         </div>
       </div>
       <div>
         <Link to='/'>
-          <button className='previous-button'>Previous</button>
+          <button className='previous-button'>Home</button>
         </Link>
       </div>
     </div>
