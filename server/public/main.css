@@ -141,9 +141,44 @@ button {
   width: 125px;
 }
 
+/*Interest page styling*/
+.container {
+  /* display: flex; /* or inline-flex */
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center; 
+}
 
+.interest-section {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px; 
+  width: 250px;
+  
+  
+}
 
+.interest-buttons {
+  box-shadow: 0 0 2px #7d018d;
+  margin: 20px;
+  font-size: 0.7em;
+  justify-content: center;
+  width: 125px;
+}
 
 
 
