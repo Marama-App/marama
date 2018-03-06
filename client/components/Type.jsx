@@ -19,15 +19,14 @@ class Type extends React.Component {
   render () {
     return (
 
-      <div>
-        <img src='/images/bg-stars.png' className='stars-background' />
-        <div className='page-section'>
 
-          <div className='type-section'>
-            <div className='page-title-font'>{this.props.match.params.type}</div>
-            <div className='page-title-font'>Study</div>
-            <div className='p-class'>Here's what you can study, cool companies hiring, and resources to help you!</div>
-
+    <div>
+      <img src='/images/bg-stars.png' className='stars-background'/>
+      <div className='page-section'>
+      <div className='page-heading-section'>
+        <div className='page-title-font'>Break Into {this.props.match.params.type}</div>
+        <div className='page-title-blurb'>Here's what you can study, cool companies hiring, and resources to help you!</div>
+        </div>
             {this.props.typeDetails.study.filter(course => {
               return (course === this.props.typeDetails.study[0] || this.props.typeDetails.study[1] || this.props.typeDetails.study[2])
             }).map(detail => (
@@ -59,6 +58,7 @@ class Type extends React.Component {
             </Link>
             <div className='h2-class'>Support Services</div>
 
+
             {this.props.typeDetails.help.map(help => (
               <div key={help.id}>
                 <div><h2>Iwi Grants</h2></div>
@@ -69,7 +69,13 @@ class Type extends React.Component {
 
             ))}
           </div>
+
+
+        ))}
+      </div>
+
         </div>
+
       </div>
     )
   }

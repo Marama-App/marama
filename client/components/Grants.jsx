@@ -13,22 +13,25 @@ class Grants extends React.Component {
     return (
       <div>
       <img src='/images/bg-stars.png' className='stars-background'/>
+
       <div className='page-section'>
-        <div className='typedetail-section'>
-          <div className='page-title-font'>Grants for {this.props.match.params.grants}</div>
-          {this.props.grants.result.map(grant => (
-            <div key={grant.grants_id}>
-              <h3>{grant.name}</h3>
-              <div>
-                <div className='p-class'>{grant.description}</div>
-              </div>
-              <button><a href={grant.link} target='_blank'>Full Grant Info</a>
-              </button>
-            </div>
-          )
-          )}
+        <div className='page-heading-section'>
+            <div className='page-title-font'>Grants for {this.props.match.params.grants}</div>
+            <div className='page-title-blurb'>Take a look at all available grants for this course.</div>
         </div>
-      </div>
+        
+            {this.props.grants.result.map(grant => (
+              <div key={grant.grants_id}>
+                <h3>{grant.name}</h3>
+                <div>
+                  <div className='p-class'>{grant.description}</div>
+                </div>
+                <button><a href={grant.link} target='_blank'>Full Grant Info</a>
+                </button>
+              </div>
+            )
+            )}
+          </div>
       </div>
     )
   }

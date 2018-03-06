@@ -44,9 +44,12 @@ class Contact extends React.Component {
         <div>
          <img src='/images/bg-stars.png' className='stars-background'/>
         <div className='page-section'>
-        <div className='contact'>
-        <div className='page-title-font'>Contact us</div>
-        <div className='p-class'>Need to contact us? Reach out here.</div>
+        
+          <div className='page-heading-section'>
+            <div className='page-title-font'>Contact us</div>
+            <div className='page-title-blurb'>Need to contact us? Reach out here.</div>
+          </div>
+
           <form className='submit-form' onSubmit={this.handleSubmit}>
             <div>
               <input name='name' onChange={this.handleChange} required/>
@@ -63,7 +66,7 @@ class Contact extends React.Component {
           </form>
         </div>
         </div>
-        </div>
+      
       )
     }
     if (this.state.submitted) {
