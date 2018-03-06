@@ -18,97 +18,96 @@ const About = () => {
         <p><i>Te kete Mārama — to understand, to learn</i></p>
         <div className='page-title-font'>Our Team</div>
         <div className='self-card-blurb'>Class of Harakeke 2018 - Enspiral Dev Academy</div>
-        <div className='about-team'>
+        <div className='about-team'></div>
 
-          <div className='selfcard'>
-            <img className='pic' src='/icons/stina-about.png' />
-            <h3>Stina Muller</h3>
-            <div className='self-card-blurb'>Chief Creative Officer<br/>(Master)</div>
-            <div className='icon' src='/icons/linkedin.png' />
-            <div className='icon'>
-              <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/github.png' height='40px' />
-              </a>
-              <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/linkedin.png' height='40px' />
-              </a>
-            </div>
-          </div>
-
-          <div className='selfcard'>
-            <img className='pic' src='/icons/cat-about.png' />
-            <h3>Catherine Fromont</h3>
-            <div className='self-card-blurb'>Git Master</div>
-            <div className='icon'>
-              <a href='https://github.com/catherinefromont' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/github.png' height='40px' />
-              </a>
-              <a href='https://www.linkedin.com/in/catherine-fromont-03199a158/' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/linkedin.png' height='40px' />
-              </a>
-            </div>
-          </div>
-
-          <div className='selfcard'>
-            <img className='pic' src='/icons/elyse-about.png' />
-            <h3>Elyse Wyatt</h3>
-            <div className='self-card-blurb'>Styling Master</div>
-            <div className='icon'>
-              <a href='https://github.com/ElyseWyatt' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/github.png' height='40px' />
-              </a>
-              <a href='https://www.linkedin.com/in/elysewyatt/' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/linkedin.png' height='40px' />
-              </a>
-            </div>
-          </div>
-          <div className='selfcard'>
-            <img className='pic' src='/icons/emily-about.png' />
-            <h3>Emily Parkes</h3>
-            <div className='self-card-blurb'>Quality Control<br/>(Master)</div>
-            <div className='icon'>
-              <a href='https://github.com/emilyparkes' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/github.png' height='40px' />
-              </a>
-              <a href='https://www.linkedin.com/in/emilyparkes/' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/linkedin.png' height='40px' />
-              </a>
-            </div>
-          </div>
-
-          <div className='selfcard'>
-            <img className='pic' src='/icons/tian-about.png' />
-            <h3>Tian Du Toit</h3>
-            <div className='self-card-blurb'>Scrum Master</div>
-            <div className='icon'>
-              <a href='https://github.com/tian-dutoit' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/github.png' height='40px' />
-              </a>
-              <a href='https://www.linkedin.com/in/tian-du-toit-15785615a/' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/linkedin.png' height='40px' />
-              </a>
-            </div>
-          </div>
-
-          <div className='selfcard'>
-            <img className='pic' src='/icons/kimmi-about.png' />
-            <h3>Kimmi Rindel</h3>
-            <div className='self-card-blurb'>Master of Some</div>
-            <div className='icons'>
-              <a href='https://github.com/rkimmi' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/github.png' height='40px' />
-              </a>
-              <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
-                <img src='/icons/linkedin.png' height='40px' />
-              </a>
-            </div>
+        <div className='selfcard'>
+          <img className='pic' src='/icons/stina-about.png' />
+          <h3>Stina Muller</h3>
+          <div className='self-card-blurb'>Chief Creative Officer<br/>(Master)</div>
+          <div className='icon' src='/icons/linkedin.png' />
+          <div className='icon'>
+            <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/github.png' height='40px' />
+            </a>
+            <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/linkedin.png' height='40px' />
+            </a>
           </div>
         </div>
-        <div>
-          <Link to='/'>
-            <button className='previous-button'>Previous</button>
-          </Link>
+
+        <div className='selfcard'>
+          <img className='pic' src='/icons/cat-about.png' />
+          <h3>Catherine Fromont</h3>
+          <div className='self-card-blurb'>Git Master</div>
+          <div className='icon'>
+            <a href='https://github.com/catherinefromont' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/github.png' height='40px' />
+            </a>
+            <a href='https://www.linkedin.com/in/catherine-fromont-03199a158/' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/linkedin.png' height='40px' />
+            </a>
+          </div>
         </div>
+
+        <div className='selfcard'>
+          <img className='pic' src='/icons/elyse-about.png' />
+          <h3>Elyse Wyatt</h3>
+          <div className='self-card-blurb'>Styling Master</div>
+          <div className='icon'>
+            <a href='https://github.com/ElyseWyatt' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/github.png' height='40px' />
+            </a>
+            <a href='https://www.linkedin.com/in/elysewyatt/' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/linkedin.png' height='40px' />
+            </a>
+          </div>
+        </div>
+        <div className='selfcard'>
+          <img className='pic' src='/icons/emily-about.png' />
+          <h3>Emily Parkes</h3>
+          <div className='self-card-blurb'>Quality Control<br/>(Master)</div>
+          <div className='icon'>
+            <a href='https://github.com/emilyparkes' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/github.png' height='40px' />
+            </a>
+            <a href='https://www.linkedin.com/in/emilyparkes/' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/linkedin.png' height='40px' />
+            </a>
+          </div>
+        </div>
+
+        <div className='selfcard'>
+          <img className='pic' src='/icons/tian-about.png' />
+          <h3>Tian Du Toit</h3>
+          <div className='self-card-blurb'>Scrum Master</div>
+          <div className='icon'>
+            <a href='https://github.com/tian-dutoit' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/github.png' height='40px' />
+            </a>
+            <a href='https://www.linkedin.com/in/tian-du-toit-15785615a/' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/linkedin.png' height='40px' />
+            </a>
+          </div>
+        </div>
+
+        <div className='selfcard'>
+          <img className='pic' src='/icons/kimmi-about.png' />
+          <h3>Kimmi Rindel</h3>
+          <div className='self-card-blurb'>Master of Some</div>
+          <div className='icons'>
+            <a href='https://github.com/rkimmi' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/github.png' height='40px' />
+            </a>
+            <a href='https://github.com/stina-muller' target='_blank' rel="noopener noreferrer">
+              <img src='/icons/linkedin.png' height='40px' />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Link to='/'>
+          <button className='previous-button'>Previous</button>
+        </Link>
       </div>
     </div>
   )

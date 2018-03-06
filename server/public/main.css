@@ -421,7 +421,49 @@ align-items: center; */
   margin: 28px;
 }
 
+.iwi-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: auto;;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 
+}
+.iwi-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin: 20px; 
+  width: 250px;
+  height: 300px;
+  border: white;
+  border-style: solid;
+  border-radius: 25px;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.iwi-box:hover {
+  background-color: #8f1e74;
+  border-color: #ffffff;
+}
+
+.iwi-logos-wrapper {
+  display: flex;
+  
+}
+.iwi-logos {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  justify-content: center;
+  align-content: center
+}
 .pic {
   border-radius: 85px;
   width: 125px;
@@ -561,7 +603,9 @@ align-items: center; */
   margin: 50px 0 0px 0;
 }
 
-
+.support-img {
+  width: 300px;
+}
 /* JOBS */
 
 .jobs {
