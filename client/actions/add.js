@@ -5,13 +5,6 @@ import baseUrl from '../lib/base-url'
 
 export const RECEIVE_ALL = 'RECEIVE_ALL'
 
-export const receiveAll = (all) => {
-  return {
-    type: RECEIVE_ALL,
-    all
-  }
-}
-
 export const RECEIVE_TYPES = 'RECEIVE_TYPES'
 
 export const receiveTypes = (interestTypes) => {
@@ -21,23 +14,10 @@ export const receiveTypes = (interestTypes) => {
   }
 }
 
-export function getAll () {
-  return (dispatch) => {
-    request
-      .get(`${baseUrl}/api/v1/update`)
-      .then(res => {
-        dispatch(receiveAll(res.body))
-      })
-      .catch(() => {
-        dispatch(showError('An unexpected error in getting information'))
-      })
-  }
-}
-
 export function getTypes (interest) {
   return (dispatch) => {
     request
-      .post(`${baseUrl}/api/v1/update`)
+      .post(`${baseUrl}/api/v1/add`)
       .send(interest)
       .then(res => {
         dispatch(receiveTypes(res.body))
@@ -51,10 +31,10 @@ export function getTypes (interest) {
 export function sendAddForm (formDetails) {
   return (dispatch) => {
     request
-      .post(`${baseUrl}/api/v1/updatedb`)
+      .post(`${baseUrl}/api/v1/adddb`)
       .send(formDetails)
-      .then(res => {
-        res.send(res.body)
+      .end(res => {
+        res.send(res)
       })
       .catch(() => {
         dispatch(showError('An unexpected error in getting information'))
