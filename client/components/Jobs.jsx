@@ -12,16 +12,20 @@ class Jobs extends React.Component {
             <div className='page-title-font'>Potential Employers in {this.props.match.params.type}</div>
             <div className='page-title-blurb'>Interested in a job? Check out what these amazing Kiwi companies are building.</div>
           </div>
-          {this.props.typeDetails.jobs.map(job => (
-            <div key={job.jobs_id}>
-              <a href={job.job_link} target='_blank'>{job.job_name}</a>
+          <div className='jobs'>
+            <div>
+              {this.props.typeDetails.jobs.map(job => (
+                <div key={job.jobs_id}>
+                  <a href={job.job_link} target='_blank'>{job.job_name}</a>
+                </div>
+              )
+              )}
             </div>
-          )
-          )}
+          </div>
         </div>
         <div>
           <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
-            <button className='previous-button'>Previous Page</button>
+            <button className='previous-button'>Previous</button>
           </Link>
         </div>
       </div>

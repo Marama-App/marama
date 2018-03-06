@@ -31,7 +31,7 @@ class Grants extends React.Component {
           )}
           <div>
             <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study/`}>
-              <button className='previous-button'>Previous Page</button>
+              <button className='previous-button'>Previous</button>
             </Link>
           </div>
         </div>
