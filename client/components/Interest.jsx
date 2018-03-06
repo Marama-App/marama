@@ -39,7 +39,7 @@ class Interest extends React.Component {
             </div>
           </div>
           <Link to='/'>
-            <button className='previous-button'>Previous Page</button>
+            <button className='previous-button'>Previous</button>
           </Link>
         </div>
       </div>

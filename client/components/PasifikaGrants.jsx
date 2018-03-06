@@ -31,7 +31,7 @@ class PasifikaGrants extends React.Component {
         </div>
         <div>
           <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
-            <button className='previous-button'>Previous Page</button>
+            <button className='previous-button'>Previous</button>
           </Link>
         </div>
       </div>
