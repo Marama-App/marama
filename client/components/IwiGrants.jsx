@@ -35,7 +35,7 @@ Below are list of iwi that have grants you can apply for which is available for 
         }
         </div>
         <div>
-          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
+          <Link to='/support'>
             <button>Previous Page</button>
           </Link>
         </div>

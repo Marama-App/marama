@@ -29,7 +29,7 @@ class PasifikaGrants extends React.Component {
           }
         </div>
         <div>
-          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
+          <Link to='/pasifika-grants'>
             <button>Previous Page</button>
           </Link>
         </div>

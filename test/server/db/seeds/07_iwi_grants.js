@@ -1,7 +1,7 @@
 exports.seed = (knex, Promise) => {
   return knex('iwi_grants').insert([
     {id: 1, iwi: 'Ngai Tahu', link: 'http://ngaitahu.iwi.nz/whanau/opportunities/', description: 'Multiple funding opportunities for members of Ngai Tahu'},
-    {id: 2, iwi: 'Ngapuhi', link: 'https://www.kahungunu.iwi.nz/scholarships--internships', description: 'Funding and Scholarships for Tertiary Education'},
+    {id: 2, iwi: 'Ngapuhi', link: 'http://www.ngapuhi.iwi.nz/scholarships-and-funding.aspx', description: 'Funding and Scholarships for Tertiary Education'},
     {id: 3, iwi: 'Ngati Kahungungu', link: 'https://www.kahungunu.iwi.nz/scholarships--internships', description: 'Scholarships for members of Ngati Kahungungu during their 3rd year of study'},
     {id: 4, iwi: 'Ngati Mutunga', link: 'http://ngatimutunga.iwi.nz/event/education-grants-semester-one-2018/', description: 'Scholarships for members of Ngati Mutunga for all areas of study'},
     {id: 5, iwi: 'Ngati Toa', link: 'http://www.ngatitoa.iwi.nz/grants/education-grants', description: 'Education grants for members of Ngati Toa'},
