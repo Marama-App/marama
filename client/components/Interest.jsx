@@ -1,52 +1,50 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import request from 'superagent'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+
+import {getType} from '../actions/type'
 
 class Interest extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      type: []
-    }
-  }
-
   componentDidMount () {
-    this.getType()
-  }
-
-  getType () {
-    request
-      .get('/api/v1/interests/:id')
-      .then((res) => {
-        this.setState({
-          type: res.body.type
-        })
-      })
-      .catch((err) => {
-        // eslint-disable-next-line no-console
-        console.error(err.message)
-      })
+    this.props.dispatch(getType(this.props.match.params.interest))
   }
 
   render () {
     return (
-      <div className='interest-section'>
-        <h1>Gaming</h1>
-        {this.state.type.map(type => (
-          <div key={type.id}>
-            <Link to={`/interests/${type.id}`}>
-              <p>{type.name}</p>
-            </Link>
-            <div>
-              <p>{type.description}</p>
-            </div>
+      <div>
+        <img src='/images/bg-stars.png' className='stars-background'/>
+        <div className='page-section'>
+          <div className='interest-section'>
+            <div className='page-title-font'>{this.props.match.params.interest}</div>
+            <div className='p-class'>If you love this, why not help create it?! Here's what you can do to become the builder of your favourite hobby.</div>
+            {this.props.interestType.map(type => (
+              <div key={type.type_id}>
+                <Link to={`/interests/${this.props.match.params.interest}/${type.name}`}>
+                  <div className='h2-class'>{type.name}</div>
+                </Link>
+                <div>
+                  <div className='p-class'>{type.description}</div>
+                </div>
+              </div>
+            )
+            )}
           </div>
-        )
-        )}
+        </div>
 
+        <div>
+          <Link to='/'>
+            <button>Previous Page</button>
+          </Link>
+        </div>
       </div>
     )
   }
 }
 
-export default Interest
+const mapStateToProps = (state) => {
+  return {
+    interestType: state.interestType
+  }
+}
+
+export default connect(mapStateToProps)(Interest)

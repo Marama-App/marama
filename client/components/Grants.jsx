@@ -1,47 +1,48 @@
 import React from 'react'
-// import {Link} from 'react-router-dom'
-import request from 'superagent'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+
+import {getGrants} from '../actions/grants'
 
 class Grants extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      grants: []
-    }
-  }
-
   componentDidMount () {
-    this.getGrants()
-  }
-
-  getGrants () {
-    request
-      .get('/api/v1/grants')
-      .then((res) => {
-        this.setState({
-          grants: res.body.grants
-        })
-      })
-      .catch((err) => {
-        // eslint-disable-next-line no-console
-        console.error(err.message)
-      })
+    this.props.dispatch(getGrants(this.props.match.params.grants))
   }
 
   render () {
     return (
-      <div className='Grants-section'>
-        <h1>Mārama</h1>
-        {/* {this.state.interests.map(interest =>
-          <Link key={interest.id}to={`/${interest.interests}`}>
-            <button>
-              {interest.interests}
-            </button>
+      <div>
+        <img src='/images/bg-stars.png' className='stars-background'/>
+        <div className='page-section'>
+          <div className='typedetail-section'>
+            <div className='page-title-font'>Grants for {this.props.match.params.grants}</div>
+            {this.props.grants.result.map(grant => (
+              <div key={grant.grants_id}>
+                <h3>{grant.name}</h3>
+                <div>
+                  <div className='p-class'>{grant.description}</div>
+                </div>
+                <button>
+                  <a href={grant.link} target='_blank'>Full Grant Info</a>
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study/`}>
+            <button>Previous Page</button>
           </Link>
-        )} */}
+        </div>
       </div>
     )
   }
 }
 
-export default Grants
+const mapStateToProps = (state) => {
+  return {
+    grants: state.grants
+  }
+}
+
+export default connect(mapStateToProps)(Grants)
