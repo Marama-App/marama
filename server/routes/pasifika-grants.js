@@ -8,9 +8,8 @@ module.exports = router
 
 router.use(bodyParser.json())
 
-router.get('/:typeDetails', (req, res) => {
-  const studyName = req.params.typeDetails
-  db.getGrants(studyName)
+router.get('/', (req, res) => {
+  db.getPasifikaGrants()
     .then(result => {
       res.send({result})
     })

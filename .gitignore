@@ -1,5 +1,6 @@
 *sqlite
 
+
 # Logs
 logs
 *.log
@@ -31,7 +32,6 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
-
 
 # Optional npm cache directory
 .npm

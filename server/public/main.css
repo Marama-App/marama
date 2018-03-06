@@ -1,9 +1,305 @@
-.type {
-  display: flex;
-  flex-direction: row;
+/* SITEWIDE STYLING */
+
+/* This represents our entire site */
+body {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  background: linear-gradient(#5b0367, #5b0367, #8f1e74, #f1a89e) no-repeat;
+  background-repeat: no-repeat;
+  background-size: auto 100%; 
+  height: 100%;
 }
 
-.typebox {
+
+/* This div encompasses all components in App */
+.app-box {
+  margin: 40px 60px;
+}
+
+
+
+/* HOME & NAV STYLING */
+
+/* This div encompasses the Home component, and isn't doing much right now */
+/* .home-section {;
+} */
+
+
+/* This div is the the Home image */
+.home-background {
+  z-index: -1;
+  min-height: 0px;
+  min-width: 0px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-color: purple;
+}
+
+
+/* This encompasses everything in the Nav component */
+.nav-header {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+/* This is the box around just the logo div in the Nav component*/
+.nav-logo {
+  display: flex;
+}
+
+
+/* This is our logo div in the Nav component */
+.marama-logo {
+  height: 22px;
+}
+
+
+/* This is the box around our navigation links in the Nav component. Not being used. */ 
+ /* .nav-links {
+  /* justify-content: space-between; 
+ } */
+
+
+/* This styles the individual divs around the nav links */
+  .nav-link-individual-styling {
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* This removes formatting from the nav links in the Nav component */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* This encompasses the home-blurb and buttons on the home page in the Home component */
+.home-content-box {
+  padding: 50px;
+  align-content: center;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+
+/* This is the heading on the home page in the Home component */
+.home-blurb {
+  font-size: 2.8em;
+  margin: 60px 0px 20px 0px;
+  text-shadow: 0 0 10px #7d018d;
+}
+
+
+/* This is the sentence below the heading on the home page */
+.home-sentence {
+  font-size: 1em;
+  text-shadow: 0 0 10px #7d018d;
+}
+
+
+/* This is the container surrounding all buttons on the home page */
+.home-button-container {
+  margin: 20px;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Currently default styling on all buttons */
+button {
+  color: white;
+  background-color: #ff5753;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 35px;
+  padding: 15px 25px;
+  text-align: center;
+  
+}
+
+/* Home button styling only */
+.home-buttons {
+  box-shadow: 0 0 2px #7d018d;
+  margin: 10px;
+  justify-content: center;
+  width: 12em;
+}
+
+/*Interest page styling*/
+.container {
+  /* display: flex; /* or inline-flex */
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center; 
+}
+
+.interest-section {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px; 
+  width: 250px;
+  
+  
+}
+
+.interest-buttons {
+  box-shadow: 0 0 2px #7d018d;
+  margin: 20px;
+  font-size: 0.7em;
+  justify-content: center;
+  width: 125px;
+}
+
+
+
+/* OTHER PAGE STYLING */
+
+/* This is the image of stars on all info pages. */
+.stars-background {
+  width: 100%; 
+    z-index: -1;
+    min-height: 0px;
+    min-width: 0px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+
+/* This is the box encompassing everyting on all content pages */
+.page-section {
+  margin: 4em;
+}
+
+@media only screen and (max-width: 750px) {
+  .page-section {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+  }
+}
+
+
+
+/* This is the box encompassing the header and blurb on each page. */
+.page-heading-section {
+  margin: 6em  0 6em 0;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* This is the title font on all content pages */
+.page-title-font {
+  font-size: 2.8em;
+  text-align: center;
+  margin: 2em 0 0.5em 0;
+  text-shadow: 0 0 10px #7d018d;
+}
+
+.page-title-blurb {
+  text-align: center;
+  font-size: 1em;
+  margin-left: 6em;
+  margin-right: 6em;
+  /* align-items: center;  */
+}
+
+@media only screen and (min-width: 975px) {
+  .page-title-blurb {
+      max-width: 519px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .page-title-blurb {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+
+/* margin: 20px;
+max-width: 500px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+padding: 50px;
+align-content: center;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; */
+
+
+
+/* This is the secondary heading font */
+.h2-class {
+  font-size: 30px;
+  margin: 70px 0px 10px 0px;
+}
+
+
+/* This is the body font on all pages. */
+.p-class {
+  margin: 1px;
+}
+
+
+/* This styles the study provider on the breakdown page */
+.provider-class {
+  font-size: 13px;
+  color: grey;
+}
+
+
+/* This encompasses content in the Footer */
+/* .footer-box {
+} */
+
+
+/* This styles the Footer text */
+.footer-content {
+  text-align: center;
+  font-size: 11px;
+  /* position: fixed; */
+  bottom: 0;
+}
+
+
+
+
