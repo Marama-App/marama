@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 import {getType} from '../actions/type'
 
-class Interest extends React.Component {
+export class Interest extends React.Component {
   componentDidMount () {
     this.props.dispatch(getType(this.props.match.params.interest))
   }
