@@ -680,3 +680,46 @@ align-items: center; */
 .hr-styling-study-page {
   margin-top: 4em;
 }
+
+
+
+
+/* GRANTS PAGE */
+
+/* .grants-section {
+
+} */
+
+.grants-box {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0px;
+}
+
+.grants-box-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.grants-button {
+  color: white;
+  background-color: #ff5753;
+  box-shadow: 0 0 2px #7d018d;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 6px 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 14em;
+  height: 4em;
+}
+
+.grants-page-description {
+  max-width: 60%;
+}
