@@ -24,7 +24,7 @@ class Grants extends React.Component {
                 <div>
                   <div className='p-class'>{grant.description}</div>
                 </div>
-                <button><a href={grant.link} target='_blank'>Full Grant Info</a>
+                <button><a href={grant.grant_link} target='_blank'>Full Grant Info</a>
                 </button>
               </div>
             )
