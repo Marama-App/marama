@@ -18,7 +18,7 @@ export class Study extends React.Component {
               <div key={detail.study_id} className='study-box'>
                 <div className='study-box-title-stuff'>
                   <div className='study-box-title'>
-                    <a href={detail.link} target='_blank'>{detail.course}</a>
+                    <a href={detail.link} target='_blank' className='type-course-link'>{detail.course}</a>
                     <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/study/${detail.course}`}>
                       <button className='study-button'>Available Grants</button>
                     </Link>
