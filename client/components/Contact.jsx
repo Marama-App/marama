@@ -46,7 +46,7 @@ class Contact extends React.Component {
           <div className='page-section'>
             <div className='page-heading-section'>
               <div className='page-title-font'>Contact us</div>
-              <div className='page-title-blurb'>Need to contact us? Reach out here.</div>
+              <div className='page-title-blurb'>Need to get in touch with us? Reach out here.</div>
             </div>
 
             <form className='submit-form' onSubmit={this.handleSubmit}>

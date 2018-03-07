@@ -67,7 +67,7 @@ class Add extends React.Component {
           <div className='page-heading-section'>
             <div className='page-title-font'>Add new course</div>
             <div>
-              <h4>Please select the area of interest the course applies to.</h4>
+              <div className='page-title-blurb'>Please select the area of interest the course applies to.</div>
               <select name='interestSelector' onChange={this.handleSelect}>
                 {this.props.interests.map(interest => (
                   <option key={interest.id}>{interest.interests}</option>
