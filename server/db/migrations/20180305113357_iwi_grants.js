@@ -12,5 +12,5 @@ exports.up = (knex, Promise) => {
 }
 
 exports.down = (knex, Promise) => {
-  return knex.schema.dropTableIfExists('iwi_grants')
+  return knex.schema.dropTable('iwi_grants')
 }

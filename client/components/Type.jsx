@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 import {getTypeDetail} from '../actions/type-details'
 
-class Type extends React.Component {
+export class Type extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -38,7 +38,7 @@ class Type extends React.Component {
                 return (course === this.props.typeDetails.study[0] || course === this.props.typeDetails.study[1] || course === this.props.typeDetails.study[2])
               }).map(study => (
                 <div key={study.study_id} className='type-section-thumbnails'>
-                  <a href={study.link} target='_blank'>{study.course}</a>
+                  <a href={study.link} target='_blank' className='type-course-link'>{study.course}</a>
                   <div className='type-section-study-provider'>{study.provider}</div>
                   {this.props.typeDetails.location.filter(location => {
                     return (location.study_id === study.study_id)
@@ -95,6 +95,7 @@ class Type extends React.Component {
             <div className='p-class'>If you&apos;re of Māori or Pacific Island decent, take a look at the grants, scholarships and support available to you.</div>
           </div>
           <div>
+          <hr/>
             <Link to={`/interests/${this.props.match.params.interest}/`}>
               <button type='transparent' className='previous-button'>Previous</button>
             </Link>

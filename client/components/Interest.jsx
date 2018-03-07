@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 import {getType} from '../actions/type'
 
-class Interest extends React.Component {
+export class Interest extends React.Component {
   componentDidMount () {
     this.props.dispatch(getType(this.props.match.params.interest))
   }
@@ -23,10 +23,10 @@ class Interest extends React.Component {
             <div className='interest-section'>
 
               {this.props.interestType.map(type => (
-                <div key={type.type_id} className='thumbnails'>
+                <div key={type.type_id} className='interest-page-thumbnails'>
                   <div className='h3-class'>{type.name}</div>
                   <div>
-                    <p>{type.description}</p>
+                    <div className='thumbnail-p-text'>{type.description}</div>
                   </div>
                   <Link to={`/interests/${this.props.match.params.interest}/${type.name}`}>
                     <button className='interest-buttons'>
