@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 import {getPasifikaGrants} from '../actions/pasifika-grants'
 
-class PasifikaGrants extends React.Component {
+export class PasifikaGrants extends React.Component {
   componentDidMount () {
     this.props.dispatch(getPasifikaGrants(this.props.match.params.PasifikaGrants))
   }

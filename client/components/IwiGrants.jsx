@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 import {getIwiGrants} from '../actions/iwi-grants'
 
-class IwiGrants extends React.Component {
+export class IwiGrants extends React.Component {
   componentDidMount () {
     this.props.dispatch(getIwiGrants(this.props.match.params.IwiGrants))
   }

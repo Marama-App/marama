@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 import {getGrants} from '../actions/grants'
 
-class Grants extends React.Component {
+export class Grants extends React.Component {
   componentDidMount () {
     this.props.dispatch(getGrants(this.props.match.params.grants))
   }
