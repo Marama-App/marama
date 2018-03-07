@@ -14,7 +14,7 @@ const Support = () => {
       <div className='page-section'>
         <div className='page-heading-section'>
           <div className='page-title-font'>Support Services</div>
-          <div className='page-title-blurb'>Are you eligable for a grant? Find out</div>
+          <div className='page-title-blurb'>Are you eligable for a grant? Find out here.</div>
         </div>
       </div>
 

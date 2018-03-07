@@ -32,6 +32,9 @@ class Grants extends React.Component {
                     <div>
                       <div className='grants-page-description'>{grant.description}</div>
                     </div>
+                    <div className='hr-styling-study-page'>
+                    <hr />
+                  </div>
                     
                   </div>
                 </div>
