@@ -1,9 +1,13 @@
 exports.up = (knex, Promise) => {
-  return knex.schema.createTableIfNotExists('iwi_grants', table => {
-    table.increments('id').primary()
-    table.string('iwi')
-    table.string('link')
-    table.string('description')
+  return knex.schema.hasTable('iwi_grants').then(function (exists) {
+    if (!exists) {
+      return knex.schema.createTable('iwi_grants', (table) => {
+        table.increments('id').primary()
+        table.string('iwi')
+        table.string('link')
+        table.string('description')
+      })
+    }
   })
 }
 

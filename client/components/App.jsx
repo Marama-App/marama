@@ -28,12 +28,8 @@ const App = () => {
           <Route path='/about' component={About} />
           <Route path='/admin' component={Add} />
           <Route path='/support' component={Support} />
-
           <Route path='/iwi-grants' component={IwiGrants} />
           <Route path='/pasifika-grants' component={PasifikaGrants} />
-          
-          {/* <Route path='/interests/:interest/:type/iwi-grants' component={IwiGrants} />
-          <Route path='/interests/:interest/:type/pasifika-grants' component={PasifikaGrants} /> */}
           <Route path='/not-sure' component={NoInterests} />
           <Route path='/interests/:interest/:type/study/:grants' component={Grants}/>
           <Route path='/interests/:interest/:type/study' component={Study}/>
