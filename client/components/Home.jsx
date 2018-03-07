@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 import {getInterests} from '../actions/interests'
 
-class Home extends React.Component {
+export class Home extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -22,6 +22,7 @@ class Home extends React.Component {
       return null
     }
     return (
+      <div className='blue-home'>
       <div className='home-section'>
         <img src='/images/final-bg-more-red.jpg' className='home-background' />
         <div className='home-content-box'>
@@ -41,6 +42,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     )
   }

@@ -1,7 +1,11 @@
 exports.up = (knex, Promise) => {
-  return knex.schema.createTableIfNotExists('location', table => {
-    table.increments('id').primary()
-    table.string('location')
+  return knex.schema.hasTable('location').then(function (exists) {
+    if (!exists) {
+      return knex.schema.createTable('location', (table) => {
+        table.increments('id').primary()
+        table.string('location')
+      })
+    }
   })
 }
 

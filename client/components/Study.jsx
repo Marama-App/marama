@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
-class Study extends React.Component {
+export class Study extends React.Component {
   render () {
     return (
 
@@ -31,7 +31,7 @@ class Study extends React.Component {
           )}
           <div>
             <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}`}>
-              <button>Previous Page</button>
+              <button className='previous-button'>Previous</button>
             </Link>
           </div>
         </div>

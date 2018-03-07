@@ -10,8 +10,8 @@ const noInterest = () => {
         <div className='type-section'>
           {/* <div className='page-title-font'>{this.props.match.params.type}</div> */}
           <div className='page-title-font'>Not sure what you want to do?</div>
-          <div className='p-class'>No worries! We&apos;ve got you covered. Check out these awesome resources that can help you decide what it is you are passionate about.</div>
-
+          <div className='p-class'>No worries! We&apos;ve got you covered. </div>
+          <div><p>We understand it can be hard trying to figure out what it is you want to do, but don&apos;t worry, there are a multitude of avenues that can take you to where you want to be. A great first step can be to find what it is that inspires and excites you and go from there. We&apos;ve put together a few resources that you might find helpful in figuring out what it is you want to study. Get exploring!</p></div>
           <div className='h2-class'>Careers New Zealand</div>
           {/* {this.props.typeDetails.help.map(help => (
               <div key={help.id}> */}

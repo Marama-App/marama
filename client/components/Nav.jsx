@@ -11,6 +11,9 @@ const Nav = () => {
       </div>
       <div className='nav-links'>
         <span className='nav-link-individual-styling'>
+          <Link to='/support'>support</Link>
+        </span>
+        <span className='nav-link-individual-styling'>
           <Link to='/about'>about us</Link>
         </span>
         <span className='nav-link-individual-styling'>

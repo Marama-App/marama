@@ -42,7 +42,7 @@ function getStudy (typeId, testConn) {
     .join('interest_types', 'interest_types.id', 'types_study_junction.types_id')
     .where('interest_types.name', typeId)
     .select()
-}
+} // need to fix
 
 function getLocation (testConn) {
   const conn = testConn || connection

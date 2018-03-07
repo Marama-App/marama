@@ -1,6 +1,11 @@
 /* SITEWIDE STYLING */
 
 /* This represents our entire site */
+
+/* html {
+  height: 100%;
+} */
+
 body {
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -8,13 +13,44 @@ body {
   background-repeat: no-repeat;
   background-size: auto 100%; 
   height: 100%;
+  min-height: 100vh;
 }
 
+ .app {
+  min-height: 720px;
+} 
 
 /* This div encompasses all components in App */
 .app-box {
   margin: 40px 60px;
+  margin-bottom: -30px;
+  min-height: 720px;
 }
+
+.app-box:after {
+  content: "";
+  display: block;
+}
+
+/* This encompasses content in the Footer 
+.footer-box {
+
+} */
+
+.sticky-footer, .app-box:after {
+  height: 30px;
+}
+
+
+/* This styles the Footer text */
+.footer-content {
+  text-align: center;
+  font-size: 11px;
+  /* position: fixed; */
+  bottom: 0;
+}
+
+
 
 
 
@@ -35,9 +71,13 @@ body {
   height: auto;
   top: 0;
   left: 0;
-  background-color: purple;
 }
 
+/* .blue-home {
+  background-color: red;
+  min-height: 100vh;
+  z-index: -10;
+} */
 
 /* This encompasses everything in the Nav component */
 .nav-header {
@@ -121,6 +161,7 @@ a {
 button {
   color: white;
   background-color: #ff5753;
+  box-shadow: 0 0 2px #7d018d;
   letter-spacing: 1px;
   border: none;
   font-weight: 600;
@@ -130,7 +171,7 @@ button {
   margin-top: 35px;
   padding: 15px 25px;
   text-align: center;
-  
+  cursor: pointer;
 }
 
 /* Home button styling only */
@@ -141,14 +182,26 @@ button {
   width: 12em;
 }
 
+.previous-button {
+  background-color: #f2b9ae;
+  box-shadow: 0 0 2px #979597;
+  font-size: 10px;
+  margin-top: 35px;
+  padding: 10px 15px;
+  width: 10em;
+}
+
+
 /*Interest page styling*/
-.container {
+.three-container {
   /* display: flex; /* or inline-flex */
   flex-wrap: wrap;
   align-content: center;
   justify-content: center; 
+  margin: 0 0 100px 0;
 }
 
+/* Container around the 3 boxes on the interest page */
 .interest-section {
   display: flex;
   flex-direction: row;
@@ -159,6 +212,8 @@ button {
   width: 100%;
 }
 
+
+/* This box goes around each of the content fields */
 .thumbnails {
   display: flex;
   flex-direction: column;
@@ -166,11 +221,11 @@ button {
   align-content: center;
   justify-content: center;
   padding: 20px;
-  margin: 20px; 
-  width: 250px;
-  
-  
+  margin: 10px; 
+  width: 260px;
 }
+
+
 
 .interest-buttons {
   box-shadow: 0 0 2px #7d018d;
@@ -180,7 +235,65 @@ button {
   width: 125px;
 }
 
+/*CONTACT page styling*/
 
+form {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.submit-flex {
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+}
+
+.name-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.form-name {
+  display: flex;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.form-email {
+  display: flex;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+textarea {
+  margin: 0px;
+  height: 8em;
+  width: 50%;
+  border-radius: 4px;
+}
+
+input {
+  height: 2em;
+  width: 50%;
+  border-radius: 4px;
+}
+
+/*ABOUT  page styling*/
+
+/* .icon {
+ height: 2em;
+ width: 2em; 
+} */
 
 /* OTHER PAGE STYLING */
 
@@ -269,17 +382,94 @@ align-items: center; */
 
 /* This is the secondary heading font */
 .h2-class {
-  font-size: 30px;
+  font-size: 2em;
   margin: 70px 0px 10px 0px;
 }
 
+/* This is the secondary heading font */
+.h3-class {
+  font-size: 2em;
+  margin: 0px 0px 10px 0px;
+}
 
 /* This is the body font on all pages. */
 .p-class {
   margin: 1px;
 }
 
+.center-text {
+  align-content: center;
+  text-align: justify;
+  font-size: 18px;
+}
 
+.selfie-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 20px;
+
+}
+
+.selfcard {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  flex-direction: column;
+  margin: 28px;
+}
+
+.iwi-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: auto;;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+}
+.iwi-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin: 20px; 
+  width: 250px;
+  height: 300px;
+  border: white;
+  border-style: solid;
+  border-radius: 25px;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.iwi-box:hover {
+  background-color: #8f1e74;
+  border-color: #ffffff;
+}
+
+.iwi-logos-wrapper {
+  display: flex;
+  
+}
+.iwi-logos {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  justify-content: center;
+  align-content: center
+}
+.pic {
+  border-radius: 85px;
+  width: 125px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+
+}
 /* This styles the study provider on the breakdown page */
 .provider-class {
   font-size: 13px;
@@ -287,19 +477,142 @@ align-items: center; */
 }
 
 
-/* This encompasses content in the Footer */
-/* .footer-box {
+
+
+/* TYPE PAGE*/
+
+/* STUDY */
+
+/* Container around the study section of Type page
+.type-container-study {
 } */
 
 
-/* This styles the Footer text */
-.footer-content {
-  text-align: center;
-  font-size: 11px;
-  /* position: fixed; */
-  bottom: 0;
+/* Container around the study heading and button on the Type page */
+.type-title-study {
+  display: flex;
+  justify-content: space-between;
+} 
+
+
+/* Container around the 3 boxes on the interest page */
+.type-section-study {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 
+/* These boxes go around each of the content fields */
+.type-section-thumbnails {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 30px 0px 30px 0px; 
+  width: 260px;
+}
+
+
+/* This styles the study provider in the thumbnail */
+.type-section-study-provider {
+  color: #c7c2c2;
+  font-size: 13px;
+}
+
+
+/* This styles the study location in the thumbnail */
+.type-section-study-location {
+  color: white;
+  font-size: 13px;
+}
+
+
+/* Clear button styling */
+.button-clear {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  letter-spacing: 1px;
+  border: 2px solid white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 50px;
+  margin-top: 0px;
+  padding: 10px 30px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+
+
+
+
+
+/* EMPLOYMENT */
+
+
+/* This block goes around Employment on the Type page */
+.type-container-employment {
+  margin: 70px 0 70px 0;
+} 
+
+.type-container-employment-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 0 0px 0;
+}
+
+/* This block will surround the thumbnails */
+.type-section-employment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-content: center; */
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 50px;
+  /* margin-bottom: 20px; */
+}
+
+.type-section-employment-thumbnail {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  /* margin: 5px;  */
+  /* width: 260px;  */
+}
+
+.employment-thumbnail {
+  height: 140px;
+  width: 240px;
+}
+
+.type-container-support {
+  margin: 70px 0 70px 0;
+}
+
+.type-container-support-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 0 0px 0;
+}
+
+.support-img {
+  width: 300px;
+}
+/* JOBS */
+
+.jobs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 

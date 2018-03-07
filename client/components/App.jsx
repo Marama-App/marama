@@ -10,11 +10,12 @@ import Interest from './Interest'
 import Contact from './Contact'
 import Header from './Header'
 import Grants from './Grants'
-import Update from './Update'
+import Add from './Add'
 import IwiGrants from './IwiGrants'
 import PasifikaGrants from './PasifikaGrants'
 import Footer from './Footer'
 import NoInterests from './NoInterests'
+import Support from './Support'
 
 const App = () => {
   return (
@@ -25,9 +26,14 @@ const App = () => {
           <Route exact path='/' component={Home} />
           <Route path='/contact' component={Contact} />
           <Route path='/about' component={About} />
-          <Route path='/admin' component={Update} />
+          <Route path='/admin' component={Add} />
+          <Route path='/support' component={Support} />
+
           <Route path='/iwi-grants' component={IwiGrants} />
           <Route path='/pasifika-grants' component={PasifikaGrants} />
+          
+          {/* <Route path='/interests/:interest/:type/iwi-grants' component={IwiGrants} />
+          <Route path='/interests/:interest/:type/pasifika-grants' component={PasifikaGrants} /> */}
           <Route path='/not-sure' component={NoInterests} />
           <Route path='/interests/:interest/:type/study/:grants' component={Grants}/>
           <Route path='/interests/:interest/:type/study' component={Study}/>
@@ -36,7 +42,9 @@ const App = () => {
           <Route path='/interests/:interest' component={Interest}/>
         </Switch>
       </div>
-      <Footer />
+      <div className='sticky-footer'>
+        <Footer />
+      </div>
     </div>
   )
 }
