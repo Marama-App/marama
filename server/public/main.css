@@ -84,6 +84,11 @@ button:hover {
     left: 0;
   }
 
+/* This is the box encompassing everyting on all content pages */
+.page-section {
+  margin: 4em 20%;
+}
+
 
 /* HOME */
 
@@ -291,10 +296,7 @@ input {
 
 
 
-/* This is the box encompassing everyting on all content pages */
-.page-section {
-  margin: 4em 5em;
-}
+
 
 @media only screen and (max-width: 750px) {
   .page-section {
