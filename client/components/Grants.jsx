@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 import {getGrants} from '../actions/grants'
 
-class Grants extends React.Component {
+export class Grants extends React.Component {
   componentDidMount () {
     this.props.dispatch(getGrants(this.props.match.params.grants))
   }
@@ -24,7 +24,7 @@ class Grants extends React.Component {
               <div key={grant.grants_id} className='grants-box'>
                 <div className='grants-box-study-stuff'>
                   <div className='grants-box-title'>
-                    <div className='p-class'>{grant.name}</div>
+                    <div className='type-course-link'>{grant.name}</div>
                     <button className='grants-button'>
                       <a href={grant.grant_link} target='_blank'>Full Grant Info</a>
                     </button>

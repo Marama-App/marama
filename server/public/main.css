@@ -84,6 +84,11 @@ button:hover {
     left: 0;
   }
 
+/* This is the box encompassing everyting on all content pages */
+.page-section {
+  margin: 4em 16%;
+}
+
 
 /* HOME */
 
@@ -291,10 +296,7 @@ input {
 
 
 
-/* This is the box encompassing everyting on all content pages */
-.page-section {
-  margin: 4em 5em;
-}
+
 
 @media only screen and (max-width: 750px) {
   .page-section {
@@ -395,6 +397,20 @@ align-items: center; */
   margin: 20px;
 }
 
+.hr-styling-about-page {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.about-page-quote {
+text-align: center;
+line-height: 1.5;
+font-size: 1.05em;
+margin-left: 6em;
+margin-right: 6em;
+margin-bottom: 4em;
+}
+
 .selfcard {
   display: flex;
   text-align: center;
@@ -427,6 +443,16 @@ align-items: center; */
   align-content: center;
 
 }
+
+.iwi-blurb {
+    font-size: 0.95em;
+    font-weight: lighter;
+    line-height: 1.5;
+    margin-bottom: 2.2em;
+    text-align: center;
+    margin-top: -2.2em;
+}
+
 .iwi-box {
   display: flex;
   flex-direction: column;
@@ -481,15 +507,12 @@ align-items: center; */
 
 /* STUDY */
 
-/* Container around the study section of Type page
-.type-container-study {
-} */
-
 
 /* Container around the study heading and button on the Type page */
 .type-title-study {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 } 
 
 
@@ -511,14 +534,22 @@ align-items: center; */
   flex-direction: column;
   padding: 0px;
   margin: 30px 0px 30px 0px; 
-  width: 260px;
+  width: 200px;
 }
 
+.type-course-link {
+  font-size: 1.15em;
+  margin: 8px 0px;
+}
 
 /* This styles the study provider in the thumbnail */
 .type-section-study-provider {
-  color: #c7c2c2;
-  font-size: 13px;
+  color: white;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  font-weight: bold;
+  letter-spacing: 2.2px;
 }
 
 
@@ -550,12 +581,6 @@ align-items: center; */
 }
 
 
-
-
-
-/* EMPLOYMENT */
-
-
 /* This block goes around Employment on the Type page */
 .type-container-employment {
   margin: 70px 0 70px 0;
@@ -565,7 +590,7 @@ align-items: center; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 50px 0 0px 0;
+  margin: 50px 0 40px 0;
 }
 
 /* This block will surround the thumbnails */
@@ -601,7 +626,7 @@ align-items: center; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 50px 0 0px 0;
+  margin: 50px 0 40px 0;
 }
 
 .support-img {
@@ -658,10 +683,21 @@ align-items: center; */
   text-transform: uppercase;
 }
 
+.study-box-provider {
+  color: white;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  font-weight: bold;
+  letter-spacing: 2.2px;
+}
 
 .study-box-location {
-  /* margin-bottom: 50px; */
+  color: white;
+  font-size: 13px;
 }
+
+
 
 .hr-styling-study-page {
   margin-top: 4em;
@@ -708,6 +744,7 @@ align-items: center; */
 
 .grants-page-description {
   max-width: 60%;
+  font-size: 0.9em;
 }
 
 
