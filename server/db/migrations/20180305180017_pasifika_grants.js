@@ -5,7 +5,7 @@ exports.up = (knex, Promise) => {
         table.increments('id').primary()
         table.string('name')
         table.string('link')
-        table.string('description')
+        table.text('description')
       })
     }
   })

@@ -4,7 +4,7 @@ exports.up = (knex, Promise) => {
       return knex.schema.createTable('grants', (table) => {
         table.increments('id').primary()
         table.string('name')
-        table.string('description')
+        table.text('description')
         table.string('link')
         table.text('conditions')
         table.float('amount')
