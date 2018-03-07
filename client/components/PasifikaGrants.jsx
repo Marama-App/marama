@@ -18,8 +18,7 @@ class PasifikaGrants extends React.Component {
             <div className='page-title-font'>Pasifika Grants</div>
             <div className='page-title-blurb'>All available grants.</div>
           </div>
-          <div ClassName='p-class'p>There are many scholarships, grants and funding available to Pasifika students, sometimes the biggest barriers can be just knowing where to look. We have listed some really good resources on where and how to apply for scholarships and grants.
-          </div>
+          <div className='iwi-blurb'>There are many scholarships, grants and funding available to Pasifika students - sometimes the biggest barriers can be just knowing where to look. We have listed some really good resources on where and how to apply for scholarships and grants.</div>
         </div>
         <div className='iwi-container'>
           {this.props.pasifikaGrants.map(pasifikaGrant => (
@@ -34,7 +33,7 @@ class PasifikaGrants extends React.Component {
         </div>
         <div>
           <Link to='/support'>
-            <button>Previous Page</button>
+            <button className='previous-button'>Previous</button>
           </Link>
         </div>
       </div>

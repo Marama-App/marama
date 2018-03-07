@@ -19,9 +19,8 @@ class IwiGrants extends React.Component {
             <div className='page-title-blurb'>All available grants.</div>
           </div>
 
-          <div className='p-class'>Many iwi offer a range of different grants, scholarships and funding to help support their members in areas like education and research. Opportunities like these are often overlooked if you are unaware that they are out there.
-Below are list of iwi that have grants you can apply for which is available for those who are registered with the iwi. If you are unsure if you are member, you can contact your iwi directly.
-          </div>
+          <div className='iwi-blurb'>Many iwi offer a range of different grants, scholarships and funding to help support their members in areas like education and research. If you're an iwi member, and registered, you might qualify for a grant! Unsure if you're an iwi member? We recommend contacting your iwi directly.
+       </div>
         </div>
         <div className='iwi-container'>
           {this.props.iwiGrants.map(iwiGrant => (
@@ -36,7 +35,7 @@ Below are list of iwi that have grants you can apply for which is available for 
         </div>
         <div>
           <Link to='/support'>
-            <button>Previous Page</button>
+            <button className='previous-button'>Previous</button>
           </Link>
         </div>
       </div>
