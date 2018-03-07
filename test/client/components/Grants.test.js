@@ -13,17 +13,17 @@ test('<Grants /> Displays list of grants When route is accessed', () => {
     grants_id: 1,
     name: 'test user 1',
     description: 'description 1',
-    link: 'www.test.com'
+    grant_link: 'www.test.com'
   }, {
     grants_id: 2,
     name: 'test user 2',
     description: 'description 2',
-    link: 'www.test.com'
+    grant_link: 'www.test.com'
   }, {
     grants_id: 3,
     name: 'test user 3',
     description: 'description 3',
-    link: 'www.test.com'
+    grant_link: 'www.test.com'
   }]}
   const match = {params: {
     interest: 'animtion'
@@ -32,5 +32,5 @@ test('<Grants /> Displays list of grants When route is accessed', () => {
     <Router>
       <Grants grants={grants} match={match} />
     </Router>)
-  expect(wrapper.find('h3').length).toBe(3)
+  expect(wrapper.find('button').length).toBe(4)
 })
