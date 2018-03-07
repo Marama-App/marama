@@ -90,6 +90,7 @@ button:hover {
 }
 
 
+
 /* HOME */
 
 /* This div is the the Home image */
@@ -216,6 +217,7 @@ button:hover {
   width: 250px;
 }
 
+/* Text in the thumbnails */
 .thumbnail-p-text {
   font-size: 0.95em;
   font-weight: lighter;
