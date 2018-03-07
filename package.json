@@ -20,7 +20,7 @@
     "test": "jest test/client test/server",
     "test:watch": "yarn test --watchAll",
     "test:assert": "yarn test && yarn assert",
-    "start": "node"
+    "start": "node server"
   },
   "babel": {
     "presets": [
