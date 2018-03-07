@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 import {showError} from './error'
-import baseUrl from '../lib/base-url'
+// import baseUrl from '../lib/base-url'
 
 export const RECEIVE_TYPE = 'RECEIVE_TYPE'
 
@@ -14,7 +14,7 @@ export function receiveType (interestType) {
 
 export function getType (interest) {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/types/${interest}`)
+    request('get', `https://marama-app.herokuapp.com/api/v1/types/${interest}`)
       .then(res => {
         dispatch(receiveType(res.body))
       })
