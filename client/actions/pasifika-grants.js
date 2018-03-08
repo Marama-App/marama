@@ -15,7 +15,7 @@ export const receivePasifikaGrants = (pasifikaGrants) => {
 export function getPasifikaGrants () {
   return (dispatch) => {
     request
-      .get(`https://marama.org.nz/api/v1/pasifika-grants/`)
+      .get(`https://marama-app.herokuapp.com//api/v1/pasifika-grants/`)
       .then(res => {
         dispatch(receivePasifikaGrants(res.body.result))
       })

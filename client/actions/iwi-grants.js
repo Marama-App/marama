@@ -15,7 +15,7 @@ export const receiveIwiGrants = (iwiGrants) => {
 export function getIwiGrants () {
   return (dispatch) => {
     request
-      .get(`https://marama.org.nz/api/v1/iwi-grants/`)
+      .get(`https://marama-app.herokuapp.com//api/v1/iwi-grants/`)
       .then(res => {
         dispatch(receiveIwiGrants(res.body.result))
       })
