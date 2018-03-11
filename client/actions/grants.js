@@ -15,7 +15,7 @@ export const receiveGrants = (grants) => {
 export function getGrants (typeDetail) {
   return (dispatch) => {
     request
-      .get(`https://marama-app.herokuapp.com/api/v1/grants/${typeDetail}`)
+      .get(`http://www.marama.org.nz/api/v1/grants/${typeDetail}`)
       .then(res => {
         dispatch(receiveGrants(res.body))
       })

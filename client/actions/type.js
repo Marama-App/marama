@@ -14,7 +14,7 @@ export function receiveType (interestType) {
 
 export function getType (interest) {
   return (dispatch) => {
-    request('get', `https://marama-app.herokuapp.com/api/v1/types/${interest}`)
+    request('get', `http://www.marama.org.nz/api/v1/types/${interest}`)
       .then(res => {
         dispatch(receiveType(res.body))
       })

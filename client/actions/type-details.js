@@ -14,7 +14,7 @@ export const receiveTypeDetail = (typeDetails) => {
 
 export function getTypeDetail (type) {
   return (dispatch) => {
-    request('get', `https://marama-app.herokuapp.com/api/v1/typeDetails/${type}`)
+    request('get', `http://www.marama.org.nz/api/v1/typeDetails/${type}`)
       .then(res => {
         dispatch(receiveTypeDetail(res.body))
       })
