@@ -5,7 +5,7 @@ exports.up = (knex, Promise) => {
         table.increments('id').primary()
         table.string('name')
         table.text('description')
-        table.string('link')
+        table.string('grant_link')
         table.text('conditions')
         table.float('amount')
       })
@@ -14,5 +14,5 @@ exports.up = (knex, Promise) => {
 }
 
 exports.down = (knex, Promise) => {
-  return knex.schema.dropTableIfExists('grants')
+  return knex.schema.dropTable('grants')
 }

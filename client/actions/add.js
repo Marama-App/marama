@@ -17,7 +17,7 @@ export const receiveTypes = (interestTypes) => {
 export function getTypes (interest) {
   return (dispatch) => {
     request
-      .post(`https://marama-app.herokuapp.com/api/v1/add`)
+      .post(`https://marama.org.nz/api/v1/add`)
       .send(interest)
       .then(res => {
         dispatch(receiveTypes(res.body))

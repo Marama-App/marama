@@ -2,10 +2,6 @@
 
 /* This represents our entire site */
 
-/* html {
-  height: 100%;
-} */
-
 body {
   font-family: "Work Sans", sans-serif;
   color: white;
@@ -32,132 +28,13 @@ body {
   display: block;
 }
 
-/* This encompasses content in the Footer 
-.footer-box {
-
-} */
-
-.sticky-footer, .app-box:after {
-  height: 30px;
-}
-
-
-/* This styles the Footer text */
-.footer-content {
-  text-align: center;
-  font-size: 11px;
-  /* position: fixed; */
-  bottom: 0;
-}
-
-
-
-
-
-/* HOME & NAV STYLING */
-
-/* This div encompasses the Home component, and isn't doing much right now */
-/* .home-section {;
-} */
-
-
-/* This div is the the Home image */
-.home-background {
-  z-index: -1;
-  min-height: 0px;
-  min-width: 0px;
-  position: fixed;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-}
-
-/* .blue-home {
-  background-color: red;
-  min-height: 100vh;
-  z-index: -10;
-} */
-
-/* This encompasses everything in the Nav component */
-.nav-header {
-  display: flex;
-  flex-direction: row; 
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-
-/* This is the box around just the logo div in the Nav component*/
-.nav-logo {
-  display: flex;
-}
-
-
-/* This is our logo div in the Nav component */
-.marama-logo {
-  height: 22px;
-}
-
-
-/* This is the box around our navigation links in the Nav component. Not being used. */ 
- /* .nav-links {
-  /* justify-content: space-between; 
- } */
-
-
-/* This styles the individual divs around the nav links */
-  .nav-link-individual-styling {
-    padding: 15px;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-
-/* This removes formatting from the nav links in the Nav component */
+/* This removes formatting from links */
 a {
   text-decoration: none;
   color: white;
 }
 
-/* This encompasses the home-blurb and buttons on the home page in the Home component */
-.home-content-box {
-  padding: 50px;
-  align-content: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* This is the heading on the home page in the Home component */
-.home-blurb {
-  font-size: 2.8em;
-  margin: 60px 0px 20px 0px;
-  text-shadow: 0 0 10px #7d018d;
-}
-
-
-/* This is the sentence below the heading on the home page */
-.home-sentence {
-  font-size: 1em;
-  text-shadow: 0 0 10px #7d018d;
-}
-
-
-/* This is the container surrounding all buttons on the home page */
-.home-button-container {
-  margin: 20px;
-  max-width: 500px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-
-/* Currently default styling on all buttons */
+/* Default styling on all buttons */
 button {
   color: white;
   background-color: #ff5753;
@@ -174,6 +51,92 @@ button {
   cursor: pointer;
 }
 
+/* Hover colour on generic buttons */
+button:hover {
+  background-color: #d64844;
+}
+
+/* Styles previous buttons */
+.previous-button {
+  background-color: #f2b9ae;
+  box-shadow: 0 0 2px #af9894;
+  font-size: 10px;
+  margin-top: 35px;
+  padding: 10px 15px;
+  width: 10em;
+}
+
+/* Hover colour on previous buttons */
+.previous-button:hover {
+  background-color: #f2a596;
+}
+
+/* Image of stars on all info pages. */
+.stars-background {
+  width: 100%; 
+    z-index: -1;
+    min-height: 0px;
+    min-width: 0px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+/* This is the box encompassing everyting on all content pages */
+.page-section {
+  margin: 4em 16%;
+}
+
+
+/* HOME */
+
+/* This div is the the Home image */
+.home-background {
+  z-index: -1;
+  min-height: 0px;
+  min-width: 0px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+/* Encompasses the home-blurb and buttons on the home page in the Home component */
+.home-content-box {
+  padding: 50px;
+  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading on the home page in the Home component */
+.home-blurb {
+  font-size: 2.8em;
+  margin: 60px 0px 20px 0px;
+  text-shadow: 0 0 10px #7d018d;
+}
+
+/* Sentence below the heading on the home page */
+.home-sentence {
+  font-size: 1em;
+  text-shadow: 0 0 10px #7d018d;
+}
+
+/* This is the container surrounding all buttons on the home page */
+.home-button-container {
+  margin: 20px;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* Home button styling only */
 .home-buttons {
   box-shadow: 0 0 2px #7d018d;
@@ -182,26 +145,54 @@ button {
   width: 12em;
 }
 
-.previous-button {
-  background-color: #f2b9ae;
-  box-shadow: 0 0 2px #979597;
-  font-size: 10px;
-  margin-top: 35px;
-  padding: 10px 15px;
-  width: 10em;
+.home-buttons:hover {
+  background-color: #d64844;
 }
 
 
-/*Interest page styling*/
+/* NAV */
+
+/* Encompasses everything in the Nav component */
+.nav-header {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+/* Box around just the logo div in the Nav component*/
+.nav-logo {
+  display: flex;
+}
+
+
+/* Logo div in the Nav component */
+.marama-logo {
+  height: 22px;
+}
+
+/* Styles the individual divs around the nav links */
+  .nav-link-individual-styling {
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* INTEREST PAGE */
+
+/* Surrounds three boxes on interest page */
 .three-container {
-  /* display: flex; /* or inline-flex */
   flex-wrap: wrap;
   align-content: center;
   justify-content: center; 
   margin: 0 0 100px 0;
 }
 
-/* Container around the 3 boxes on the interest page */
+/* Also surrounds 3 boxes on the interest page - might not be needed */
 .interest-section {
   display: flex;
   flex-direction: row;
@@ -214,17 +205,22 @@ button {
 
 
 /* This box goes around each of the content fields */
-.thumbnails {
+.interest-page-thumbnails {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-content: center;
   justify-content: center;
   padding: 20px;
-  margin: 10px; 
-  width: 260px;
+  margin: 10px 0 50px 0; 
+  width: 250px;
 }
 
+.thumbnail-p-text {
+  font-size: 0.95em;
+  font-weight: lighter;
+  line-height: 1.5;
+}
 
 
 .interest-buttons {
@@ -297,24 +293,10 @@ input {
 
 /* OTHER PAGE STYLING */
 
-/* This is the image of stars on all info pages. */
-.stars-background {
-  width: 100%; 
-    z-index: -1;
-    min-height: 0px;
-    min-width: 0px;
-    position: fixed;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-  }
 
 
-/* This is the box encompassing everyting on all content pages */
-.page-section {
-  margin: 4em;
-}
+
+
 
 @media only screen and (max-width: 750px) {
   .page-section {
@@ -335,15 +317,18 @@ input {
 
 /* This is the title font on all content pages */
 .page-title-font {
-  font-size: 2.8em;
+  font-size: 3.2em;
+  letter-spacing: 2px;
   text-align: center;
-  margin: 2em 0 0.5em 0;
+  margin: 1em 0 0.5em 0;
   text-shadow: 0 0 10px #7d018d;
+  font-weight: bold;
 }
 
 .page-title-blurb {
   text-align: center;
-  font-size: 1em;
+  line-height: 1.5;
+  font-size: 1.05em;
   margin-left: 6em;
   margin-right: 6em;
   /* align-items: center;  */
@@ -412,6 +397,20 @@ align-items: center; */
   margin: 20px;
 }
 
+.hr-styling-about-page {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.about-page-quote {
+text-align: center;
+line-height: 1.5;
+font-size: 1.05em;
+margin-left: 6em;
+margin-right: 6em;
+margin-bottom: 4em;
+}
+
 .selfcard {
   display: flex;
   text-align: center;
@@ -444,6 +443,16 @@ align-items: center; */
   align-content: center;
 
 }
+
+.iwi-blurb {
+    font-size: 0.95em;
+    font-weight: lighter;
+    line-height: 1.5;
+    margin-bottom: 2.2em;
+    text-align: center;
+    margin-top: -2.2em;
+}
+
 .iwi-box {
   display: flex;
   flex-direction: column;
@@ -498,15 +507,12 @@ align-items: center; */
 
 /* STUDY */
 
-/* Container around the study section of Type page
-.type-container-study {
-} */
-
 
 /* Container around the study heading and button on the Type page */
 .type-title-study {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 } 
 
 
@@ -528,14 +534,22 @@ align-items: center; */
   flex-direction: column;
   padding: 0px;
   margin: 30px 0px 30px 0px; 
-  width: 260px;
+  width: 200px;
 }
 
+.type-course-link {
+  font-size: 1.15em;
+  margin: 8px 0px;
+}
 
 /* This styles the study provider in the thumbnail */
 .type-section-study-provider {
-  color: #c7c2c2;
-  font-size: 13px;
+  color: white;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  font-weight: bold;
+  letter-spacing: 2.2px;
 }
 
 
@@ -560,14 +574,11 @@ align-items: center; */
   padding: 10px 30px;
   text-align: center;
   cursor: pointer;
-  
 }
 
-
-
-
-
-/* EMPLOYMENT */
+.button-clear:hover {
+  background-color: #8f1e74;
+}
 
 
 /* This block goes around Employment on the Type page */
@@ -579,7 +590,7 @@ align-items: center; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 50px 0 0px 0;
+  margin: 50px 0 40px 0;
 }
 
 /* This block will surround the thumbnails */
@@ -603,8 +614,9 @@ align-items: center; */
 }
 
 .employment-thumbnail {
-  height: 140px;
-  width: 240px;
+  height: 118px;
+  width: 172px;
+  padding: 5px;
 }
 
 .type-container-support {
@@ -615,7 +627,7 @@ align-items: center; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 50px 0 0px 0;
+  margin: 50px 0 40px 0;
 }
 
 .support-img {
@@ -631,3 +643,175 @@ align-items: center; */
 }
 
 
+
+
+/* STUDY PAGE */
+
+
+/* Has everything in it */
+.study-box {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px;
+}
+
+/* Has just course and button in it */
+.study-box-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Button styling */
+.study-button {
+  color: white;
+  background-color: #ff5753;
+  box-shadow: 0 0 2px #7d018d;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.study-box-provider {
+  text-transform: uppercase;
+}
+
+.study-box-provider {
+  color: white;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  font-weight: bold;
+  letter-spacing: 2.2px;
+}
+
+.study-box-location {
+  color: white;
+  font-size: 13px;
+}
+
+
+
+.hr-styling-study-page {
+  margin-top: 4em;
+}
+
+
+
+
+/* GRANTS PAGE */
+
+/* .grants-section {
+
+} */
+
+.grants-box {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0px;
+}
+
+.grants-box-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.grants-button {
+  color: white;
+  background-color: #ff5753;
+  box-shadow: 0 0 2px #7d018d;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 6px 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 14em;
+  height: 4em;
+}
+
+.grants-page-description {
+  max-width: 60%;
+  font-size: 0.9em;
+}
+
+
+/* NOT SURE PAGE */
+
+.careers-heading {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.careers-blurb {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.05em;
+  margin-left: 6em;
+  margin-right: 6em;
+}
+
+.careers-button {
+  color: white;
+  background-color: #ff5753;
+  box-shadow: 0 0 2px #7d018d;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 6px 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 14em;
+  height: 4em;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  
+  /* width: 40%;
+  margin-left: 30%;
+  margin-right: 30% */
+}
+.careers-button-div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.careers-button-link {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+
+/* FOOTER */
+
+.footer-content {
+  text-align: center;
+  font-size: 11px;
+  bottom: 0;
+}
+
+.sticky-footer, .app-box:after {
+  height: 30px;
+}

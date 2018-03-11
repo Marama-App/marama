@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 import {getInterests} from '../actions/interests'
 
-class Home extends React.Component {
+export class Home extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
