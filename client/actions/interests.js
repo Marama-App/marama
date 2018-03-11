@@ -14,7 +14,7 @@ export const receiveInterests = (interests) => {
 
 export function getInterests () {
   return (dispatch) => {
-    request('get', 'https://marama-app.herokuapp.com//api/v1/interests')
+    request('get', 'https://marama-app.herokuapp.com/api/v1/interests')
       .then(res => {
         dispatch(receiveInterests(res.body.interests))
       })
