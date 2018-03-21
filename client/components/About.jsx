@@ -84,7 +84,7 @@ const About = () => {
 
           <div className='selfcard'>
             <img className='pic' src='/icons/tian-about.png' />
-            <h3>Tian Du Toit</h3>
+            <h3>Tian du Toit</h3>
             Scrum Master
             <div className='icons'>
               <a href='https://github.com/tian-dutoit' target='_blank' rel="noopener noreferrer">
