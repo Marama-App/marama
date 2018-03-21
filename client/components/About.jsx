@@ -90,7 +90,7 @@ const About = () => {
               <a href='https://github.com/tian-dutoit' target='_blank' rel="noopener noreferrer">
                 <img className='icon' src='/icons/github-icon.png' height='40px' />
               </a>
-              <a href='https://www.linkedin.com/in/tian-du-toit-15785615a/' target='_blank' rel="noopener noreferrer">
+              <a href='https://www.linkedin.com/in/tian-du-toit/' target='_blank' rel="noopener noreferrer">
                 <img className='icon' src='/icons/linkedin-icon.png' height='40px' />
               </a>
             </div>
@@ -104,7 +104,7 @@ const About = () => {
               <a href='https://github.com/rkimmi' target='_blank' rel="noopener noreferrer">
                 <img className='icon' src='/icons/github-icon.png' height='40px' />
               </a>
-              <a href='https://github.com/rkimmi' target='_blank' rel="noopener noreferrer">
+              <a href='https://www.linkedin.com/in/kimmi-rindel-59437515b/' target='_blank' rel="noopener noreferrer">
                 <img className='icon' src='/icons/linkedin-icon.png' height='40px' />
               </a>
             </div>
