@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 import {showError} from './error'
-import baseUrl from '../lib/base-url'
+// import baseUrl from '../lib/base-url'
 
 export const RECEIVE_INTERESTS = 'RECEIVE_INTERESTS'
 
@@ -14,7 +14,7 @@ export const receiveInterests = (interests) => {
 
 export function getInterests () {
   return (dispatch) => {
-    request('get', `${baseUrl}/api/v1/interests`)
+    request('get', 'http://www.marama.org.nz/api/v1/interests')
       .then(res => {
         dispatch(receiveInterests(res.body.interests))
       })

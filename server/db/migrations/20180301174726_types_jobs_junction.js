@@ -11,5 +11,5 @@ exports.up = (knex, Promise) => {
 }
 
 exports.down = (knex, Promise) => {
-  return knex.schema.dropTableIfExists('types_jobs_junction')
+  return knex.schema.dropTable('types_jobs_junction')
 }

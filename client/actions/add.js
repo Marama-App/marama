@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 import {showError} from './error'
-import baseUrl from '../lib/base-url'
+// import baseUrl from '../lib/base-url'
 
 export const RECEIVE_ALL = 'RECEIVE_ALL'
 
@@ -17,7 +17,7 @@ export const receiveTypes = (interestTypes) => {
 export function getTypes (interest) {
   return (dispatch) => {
     request
-      .post(`${baseUrl}/api/v1/add`)
+      .post(`https://marama.org.nz/api/v1/add`)
       .send(interest)
       .then(res => {
         dispatch(receiveTypes(res.body))
@@ -31,7 +31,7 @@ export function getTypes (interest) {
 export function sendAddForm (formDetails) {
   return (dispatch) => {
     request
-      .post(`${baseUrl}/api/v1/adddb`)
+      .post(`https://marama-app.herokuapp.com/api/v1/adddb`)
       .send(formDetails)
       .end(res => {
         res.send(res)
