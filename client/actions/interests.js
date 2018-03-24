@@ -1,15 +1,10 @@
 import request from 'superagent'
 
 import {showError} from './error'
-// import baseUrl from '../lib/base-url'
+import baseUrl from '../lib/base-url'
 
 export const RECEIVE_INTERESTS = 'RECEIVE_INTERESTS'
-export let NODE_ENV = 'production'
 let test = process.env.NODE_ENV
-let baseUrl = process.env.NODE_ENV ===
-'production'
-  ? 'http://www.marama.org.nz'
-  : 'http://localhost:3000'
 
 export const receiveInterests = (interests) => {
   return {
