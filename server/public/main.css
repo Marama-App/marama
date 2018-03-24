@@ -268,7 +268,7 @@ button:hover {
 
 
 
-/* INTEREST PAGE */
+/* INTEREST */
 
 /* Surrounds three boxes on interest page */
 .three-container {
@@ -309,7 +309,6 @@ button:hover {
   line-height: 1.5;
 }
 
-
 .interest-buttons {
   box-shadow: 0 0 2px #7d018d;
   margin: 20px;
@@ -325,133 +324,7 @@ button:hover {
 
 
 
-
-
-.center-text {
-  align-content: center;
-  text-align: justify;
-  font-size: 18px;
-}
-
-.selfie-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-  margin: 20px;
-}
-
-.hr-styling-about-page {
-  margin-top: 4em;
-  margin-bottom: 4em;
-}
-
-.about-page-quote {
-text-align: center;
-line-height: 1.5;
-font-size: 1.05em;
-margin-left: 6em;
-margin-right: 6em;
-margin-bottom: 4em;
-}
-
-.selfcard {
-  display: flex;
-  text-align: center;
-  font-size: 14px;
-  flex-direction: column;
-  margin: 40px;
-}
-
-.icons {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  margin: 8px;
-}
-
-.icon {
-  width: 28px;
-  height: 28px;
-  padding: 4px;
-
-}
-
-.iwi-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-self: auto;;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-
-}
-
-.iwi-blurb {
-    font-size: 0.95em;
-    font-weight: lighter;
-    line-height: 1.5;
-    margin-bottom: 2.2em;
-    text-align: center;
-    margin-top: -2.2em;
-}
-
-.iwi-box {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;
-  margin: 20px; 
-  width: 250px;
-  height: 300px;
-  border: white;
-  border-style: solid;
-  border-radius: 25px;
-  align-content: center;
-  justify-content: center;
-
-}
-
-.iwi-box:hover {
-  background-color: #8f1e74;
-  border-color: #ffffff;
-}
-
-.iwi-logos-wrapper {
-  display: flex;
-  
-}
-.iwi-logos {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  background: white;
-  justify-content: center;
-  align-content: center
-}
-
-.pic {
-  border-radius: 85px;
-  width: 125px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
-}
-
-/* This styles the study provider on the breakdown page */
-.provider-class {
-  font-size: 13px;
-  color: grey;
-}
-
-
-
-
-/* TYPE PAGE*/
-
-/* STUDY */
-
+/* TYPE */
 
 /* Container around the study heading and button on the Type page */
 .type-title-study {
@@ -575,23 +448,7 @@ margin-bottom: 4em;
   margin: 50px 0 40px 0;
 }
 
-.support-img {
-  width: 300px;
-}
-/* JOBS */
-
-.jobs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
-
-
-/* STUDY PAGE */
-
+/* STUDY */
 
 /* Has everything in it */
 .study-box {
@@ -624,7 +481,6 @@ margin-bottom: 4em;
   cursor: pointer;
 }
 
-
 .study-box-provider {
   text-transform: uppercase;
 }
@@ -643,11 +499,26 @@ margin-bottom: 4em;
   font-size: 13px;
 }
 
-
-
 .hr-styling-study-page {
   margin-top: 4em;
 }
+
+
+
+
+
+/* JOBS */
+
+.jobs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
 
 
 
@@ -748,6 +619,138 @@ margin-bottom: 4em;
   margin-top: 2em;
 }
 
+
+/* ABOUT  */
+
+.center-text {
+  align-content: center;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.selfie-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 20px;
+}
+
+.hr-styling-about-page {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.about-page-quote {
+text-align: center;
+line-height: 1.5;
+font-size: 1.05em;
+margin-left: 6em;
+margin-right: 6em;
+margin-bottom: 4em;
+}
+
+.selfcard {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin: 8px;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+
+}
+
+.iwi-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: auto;;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.iwi-blurb {
+    font-size: 0.95em;
+    font-weight: lighter;
+    line-height: 1.5;
+    margin-bottom: 2.2em;
+    text-align: center;
+    margin-top: -2.2em;
+}
+
+.iwi-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin: 20px; 
+  width: 250px;
+  height: 300px;
+  border: white;
+  border-style: solid;
+  border-radius: 25px;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.iwi-box:hover {
+  background-color: #8f1e74;
+  border-color: #ffffff;
+}
+
+.iwi-logos-wrapper {
+  display: flex;
+  
+}
+.iwi-logos {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  justify-content: center;
+  align-content: center
+}
+
+.pic {
+  border-radius: 85px;
+  width: 125px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+}
+
+/* This styles the study provider on the breakdown page */
+.provider-class {
+  font-size: 13px;
+  color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*CONTACT page styling*/
 
 form {
@@ -804,3 +807,7 @@ input {
 
 
 
+/* Dont know what this does */
+.support-img {
+  width: 300px;
+}
