@@ -1,0 +1,306 @@
+/* SITEWIDE STYLING */
+
+body {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  background: linear-gradient(#5b0367, #5b0367, #8f1e74, #f1a89e) no-repeat;
+  background-repeat: no-repeat;
+  background-size: auto 100%; 
+  height: 100%;
+  min-height: 100vh;
+}
+
+ .app {
+  min-height: 720px;
+} 
+
+/* Encompasses all components in App */
+.app-box {
+  margin: 40px 60px;
+  margin-bottom: -30px;
+  min-height: 720px;
+}
+
+.app-box:after {
+  content: "";
+  display: block;
+}
+
+/* This removes formatting from links */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Default styling on all buttons */
+button {
+  color: white;
+  background-color: #ff5753;
+  box-shadow: 0 0 2px #7d018d;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 35px;
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Hover colour on generic buttons */
+button:hover {
+  background-color: #d64844;
+}
+
+/* Styles previous buttons */
+.previous-button {
+  background-color: #f2b9ae;
+  box-shadow: 0 0 2px #af9894;
+  font-size: 10px;
+  margin-top: 35px;
+  padding: 10px 15px;
+  width: 10em;
+}
+
+/* Hover colour on previous buttons */
+.previous-button:hover {
+  background-color: #f2a596;
+}
+
+/* Image of stars on all info pages. */
+.stars-background {
+  width: 100%; 
+    z-index: -1;
+    min-height: 0px;
+    min-width: 0px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+/* This is the box encompassing everyting on all content pages */
+.page-section {
+  margin: 4em 16%;
+}
+
+
+@media only screen and (max-width: 750px) {
+  .page-section {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+  }
+}
+
+/* This is the box encompassing the header and blurb on each page. */
+.page-heading-section {
+  margin: 6em  0 6em 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This is the title font on all content pages */
+.page-title-font {
+  font-size: 3.2em;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 1em 0 0.5em 0;
+  text-shadow: 0 0 10px #7d018d;
+  font-weight: bold;
+}
+
+.page-title-blurb {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.05em;
+  margin-left: 6em;
+  margin-right: 6em;
+  /* align-items: center;  */
+}
+
+@media only screen and (min-width: 975px) {
+  .page-title-blurb {
+      max-width: 519px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .page-title-blurb {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+
+/* This is the secondary heading font */
+.h2-class {
+  font-size: 2em;
+  margin: 70px 0px 10px 0px;
+}
+
+/* This is the secondary heading font */
+.h3-class {
+  font-size: 2em;
+  margin: 0px 0px 10px 0px;
+}
+
+/* This is the body font on all pages. */
+.p-class {
+  margin: 1px;
+}
+
+
+
+/* NAV */
+
+/* Encompasses everything in the Nav component */
+.nav-header {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* Box around just the logo div in the Nav component*/
+.nav-logo {
+  display: flex;
+}
+
+/* Logo div in the Nav component */
+.marama-logo {
+  height: 22px;
+}
+
+/* Styles the individual divs around the nav links */
+  .nav-link-individual-styling {
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* FOOTER */
+
+.footer-content {
+  text-align: center;
+  font-size: 11px;
+  bottom: 0;
+}
+
+.sticky-footer, .app-box:after {
+  height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NO INTERESTS PAGE */
+
+.careers-heading {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.careers-blurb {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.05em;
+  margin-left: 6em;
+  margin-right: 6em;
+}
+
+.careers-button {
+  color: white;
+  background-color: #ff5753;
+  box-shadow: 0 0 2px #7d018d;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 6px 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 14em;
+  height: 4em;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30% 
+}
+
+ .careers-button-div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.careers-button-link {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 2em;
+}  
+
+
+/* NOT 100% SURE WHAT THESE DO */
+
+/* Cant find this */
+.support-img {
+  width: 300px;
+}
+
+/* This styles the study provider on the breakdown page */
+.provider-class {
+  font-size: 13px;
+  color: grey;
+} 

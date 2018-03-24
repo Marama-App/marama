@@ -1,0 +1,119 @@
+/* TYPE */
+
+/* Container around the study heading and button on the Type page */
+.type-title-study {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  } 
+  
+  /* Container around the 3 boxes on the interest page */
+  .type-section-study {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  /* These boxes go around each of the content fields */
+  .type-section-thumbnails {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 30px 0px 30px 0px; 
+    width: 200px;
+  }
+  
+  .type-course-link {
+    font-size: 1.15em;
+    margin: 8px 0px;
+  }
+  
+  /* This styles the study provider in the thumbnail */
+  .type-section-study-provider {
+    color: white;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    font-weight: bold;
+    letter-spacing: 2.2px;
+  }
+  
+  /* This styles the study location in the thumbnail */
+  .type-section-study-location {
+    color: white;
+    font-size: 13px;
+  }
+  
+  /* Clear button styling */
+  .button-clear {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    letter-spacing: 1px;
+    border: 2px solid white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 50px;
+    margin-top: 0px;
+    padding: 10px 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .button-clear:hover {
+    background-color: #8f1e74;
+  }
+  
+  /* This block goes around Employment on the Type page */
+  .type-container-employment {
+    margin: 70px 0 70px 0;
+  } 
+  
+  .type-container-employment-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0 40px 0;
+  }
+  
+  /* This block will surround the thumbnails */
+  .type-section-employment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-content: center; */
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+    /* margin-bottom: 20px; */
+  }
+  
+  .type-section-employment-thumbnail {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    /* margin: 5px;  */
+    /* width: 260px;  */
+  }
+  
+  .employment-thumbnail {
+    height: 118px;
+    width: 172px;
+    padding: 5px;
+  }
+  
+  .type-container-support {
+    margin: 70px 0 70px 0;
+  }
+  
+  .type-container-support-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0 40px 0;
+  }
+  
