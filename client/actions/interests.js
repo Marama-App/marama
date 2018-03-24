@@ -8,7 +8,7 @@ export let NODE_ENV = 'production'
 let test = process.env.NODE_ENV
 let baseUrl = process.env.NODE_ENV ===
 'production'
-  ? 'http://marama.org.nz'
+  ? 'http://www.marama.org.nz'
   : 'http://localhost:3000'
 
 export const receiveInterests = (interests) => {
