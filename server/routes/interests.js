@@ -10,6 +10,7 @@ module.exports = router
 router.use(bodyParser.json())
 
 router.get('/', (req, res) => {
+  // console.log(process.env.NODE_ENV, process.env.MAILGUN_API_KEY)
   db.getInterests()
     .then((interests) => {
       res.send({interests})
