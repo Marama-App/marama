@@ -719,12 +719,6 @@ input {
 }
 
 
-
-
-
-
-
-
 /* NOT SURE PAGE */
 
 .careers-heading {
@@ -761,12 +755,12 @@ input {
   align-content: center;
   justify-content: center;
   display: flex;
-  
-  /* width: 40%;
+  width: 40%;
   margin-left: 30%;
-  margin-right: 30% */
+  margin-right: 30% 
 }
-.careers-button-div {
+
+ .careers-button-div {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -777,34 +771,18 @@ input {
   align-content: center;
   justify-content: center;
   margin-top: 2em;
+}  
+
+
+/* NOT 100% SURE WHAT THESE DO */
+
+/* Cant find this */
+.support-img {
+  width: 300px;
 }
-
-
-
 
 /* This styles the study provider on the breakdown page */
 .provider-class {
   font-size: 13px;
   color: grey;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Dont know what this does */
-.support-img {
-  width: 300px;
-}
+} 
