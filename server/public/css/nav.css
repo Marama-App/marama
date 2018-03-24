@@ -1,0 +1,26 @@
+/* NAV */
+
+/* Encompasses everything in the Nav component */
+.nav-header {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  /* Box around just the logo div in the Nav component*/
+  .nav-logo {
+    display: flex;
+  }
+  
+  /* Logo div in the Nav component */
+  .marama-logo {
+    height: 22px;
+  }
+  
+  /* Styles the individual divs around the nav links */
+    .nav-link-individual-styling {
+      padding: 15px;
+      font-size: 13px;
+      letter-spacing: 2.1px;
+  }
