@@ -12,15 +12,15 @@ export class IwiGrants extends React.Component {
   render () {
     return (
       <div>
-        <img src='/images/bg-stars.png' className='stars-background'/>
+        <img src='/images/bg-stars.png' className='stars-background' />
         <div className='page-section'>
           <div className='page-heading-section'>
             <div className='page-title-font'>Iwi Grants</div>
             <div className='page-title-blurb'>All available grants.</div>
           </div>
 
-          <div className='iwi-blurb'>Many iwi offer a range of different grants, scholarships and funding to help support their members in areas like education and research. If you're an iwi member, and registered, you might qualify for a grant! Unsure if you're an iwi member? We recommend contacting your iwi directly.
-       </div>
+          <div className='iwi-blurb'>Many iwi offer a range of different grants, scholarships and funding to help support their members in areas like education and research. If you are an iwi member, and registered, you might qualify for a grant! Unsure if you are an iwi member? We recommend contacting your iwi directly.
+          </div>
         </div>
         <div className='iwi-container'>
           {this.props.iwiGrants.map(iwiGrant => (

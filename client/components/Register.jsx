@@ -1,90 +1,68 @@
 import React from 'react'
-import request from 'superagent'
-import { Link } from 'react-router-dom'
-import baseUrl from '../lib/base-url'
 
-class Contact extends React.Component {
+import AdminRegistration from './registration/Admin'
+import StudentsRegistration from './registration/Students'
+import OrgsRegistration from './registration/Orgs'
+
+const ADMIN = 'ADMIN'
+const STUDENTS = 'STUDENTS'
+const ORGS = 'ORGS'
+
+class Register extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: '',
-      email: '',
-      message: '',
-      submitted: false
+      activeTab: STUDENTS
     }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.getTabSelector = this.getTabSelector.bind(this)
   }
 
-  handleChange (evt) {
-    this.setState({
-      [evt.target.name]: evt.target.value
-    })
-  }
-
-  handleSubmit (evt) {
-    evt.preventDefault()
-    request
-      .post(`${baseUrl}/api/v1/contact`)
-      .send({
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      })
-      .then(res => {
-        this.setState({
-          submitted: true
-        })
-      })
+  getTabSelector (tab) {
+    return () => this.setState({activeTab: tab})
   }
 
   render () {
-    if (!this.state.submitted) {
-      return (
-        <div>
-          <img src='/images/bg-stars.png' className='stars-background' />
-          <div className='page-section'>
-            <div className='page-heading-section'>
-              <div className='page-title-font'>Contact us</div>
-              <div className='page-title-blurb'>Need to get in touch with us? Reach out here.</div>
-            </div>
-
-            <form className='submit-form' onSubmit={this.handleSubmit}>
-              <div className='name-email'>
-                <div className='form-name'>
-                  Full Name: <br />
-                  <input name='name' onChange={this.handleChange} required />
-                </div>
-                <div className='form-email'>
-                  Email: <br />
-                  <input type='email' name='email' onChange={this.handleChange} required />
-                </div>
-              </div>
-              <div className='form-message'>
-                Your message to us: <br />
-                <textarea name='message' onChange={this.handleChange} required />
-              </div>
-              <div className='submit-flex'>
-                <button type="submit" value="Submit">Submit</button>
-              </div>
-            </form>
-            <div>
-              <Link to='/'>
-
-                <button className='previous-button'>Home</button>
-
-              </Link>
-            </div>
+    const adminTab = this.state.activeTab === ADMIN ? 'is-active' : ''
+    const studentsTab = this.state.activeTab === STUDENTS ? 'is-active' : ''
+    const orgsTab = this.state.activeTab === ORGS ? 'is-active' : ''
+    return (
+      <div className='register'>
+        <section className='section'>
+          <div className='content'>
+            <h1>Registration</h1>
           </div>
-        </div>
-      )
-    }
-    if (this.state.submitted) {
-      return (
-        <div className='p-class'>Thanks for submitting!</div>
-      )
-    }
+          <p className='content'>
+            <span className='bold'>IMPORTANT:</span> All registrations must be approved by an admin. If you do not receive a welcome email within 24 hours, please contact us at <a href="mailto:medals@devacademy.co.nz">medals@devacademy.co.nz</a>.
+          </p>
+          <div className="tabs is-fullwidth is-boxed is-large">
+            <ul>
+              <li className={studentsTab} onClick={this.getTabSelector(STUDENTS)}>
+                <a>
+                  <span className="icon"><i className="fa fa-graduation-cap"></i></span>
+                  <span>Students</span>
+                </a>
+              </li>
+              <li className={adminTab} onClick={this.getTabSelector(ADMIN)}>
+                <a>
+                  <span className="icon"><i className="fa fa-user"></i></span>
+                  <span>Mārama Team</span>
+                </a>
+              </li>
+              <li className={orgsTab} onClick={this.getTabSelector(ORGS)}>
+                <a>
+                  <span className="icon"><i className="fa fa-building"></i></span>
+                  <span>Organisations and Institutions</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          {studentsTab && <StudentsRegistration />}
+          {adminTab && <AdminRegistration />}
+          {orgsTab && <OrgsRegistration />}
+        </section>
+      </div>
+    )
   }
 }
 
-export default Contact
+export default Register
