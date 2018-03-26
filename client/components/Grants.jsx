@@ -25,9 +25,10 @@ export class Grants extends React.Component {
                 <div className='grants-box-study-stuff'>
                   <div className='grants-box-title'>
                     <div className='type-course-link'>{grant.name}</div>
-                    <button className='grants-button'>
-                      <a href={grant.grant_link} target='_blank'>Full Grant Info</a>
-                    </button>
+                    <a href={grant.grant_link} target='_blank'>
+                      <button className='grants-button'>Full Grant Info
+                      </button>
+                    </a>
                   </div>
                   <div>
                     <div className='grants-page-description'>{grant.description}</div>
