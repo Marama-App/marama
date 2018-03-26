@@ -25,7 +25,7 @@ class Contact extends React.Component {
   handleSubmit (evt) {
     evt.preventDefault()
     request
-      .post(`http://www.marama.org.nz/api/v1/contact`)
+      .post(`${baseUrl}/api/v1/contact`)
       .send({
         name: this.state.name,
         email: this.state.email,
