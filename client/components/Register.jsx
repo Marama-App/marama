@@ -1,65 +1,48 @@
 import React from 'react'
-
-import AdminRegistration from './registration/Admin'
-import StudentsRegistration from './registration/Students'
-import OrgsRegistration from './registration/Orgs'
-
-const ADMIN = 'ADMIN'
-const STUDENTS = 'STUDENTS'
-const ORGS = 'ORGS'
+import {Link} from 'react-router-dom'
 
 class Register extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      activeTab: STUDENTS
-    }
-    this.getTabSelector = this.getTabSelector.bind(this)
-  }
-
-  getTabSelector (tab) {
-    return () => this.setState({activeTab: tab})
-  }
-
   render () {
-    const adminTab = this.state.activeTab === ADMIN ? 'is-active' : ''
-    const studentsTab = this.state.activeTab === STUDENTS ? 'is-active' : ''
-    const orgsTab = this.state.activeTab === ORGS ? 'is-active' : ''
     return (
-      <div className='register'>
-        <section className='section'>
-          <div className='content'>
-            <h1>Registration</h1>
+      <div>
+        <img src='/images/bg-stars.png' className='stars-background' />
+        <div className='page-section'>
+          <div className='page-heading-section'>
+            <div className='page-title-font'>Register</div>
+            <div className='page-title-blurb'>Register with Mārama to add courses and grants.</div>
           </div>
-          <p className='content'>
-            <span className='bold'>IMPORTANT:</span> All registrations must be approved by an admin. If you do not receive a welcome email within 24 hours, please contact us at <a href="mailto:medals@devacademy.co.nz">medals@devacademy.co.nz</a>.
-          </p>
-          <div className="tabs is-fullwidth is-boxed is-large">
-            <ul>
-              <li className={studentsTab} onClick={this.getTabSelector(STUDENTS)}>
-                <a>
-                  <span className="icon"><i className="fa fa-graduation-cap"></i></span>
-                  <span>Students</span>
-                </a>
-              </li>
-              <li className={adminTab} onClick={this.getTabSelector(ADMIN)}>
-                <a>
-                  <span className="icon"><i className="fa fa-user"></i></span>
-                  <span>Mārama Team</span>
-                </a>
-              </li>
-              <li className={orgsTab} onClick={this.getTabSelector(ORGS)}>
-                <a>
-                  <span className="icon"><i className="fa fa-building"></i></span>
-                  <span>Organisations and Institutions</span>
-                </a>
-              </li>
-            </ul>
+
+          <form className='submit-form' onSubmit={this.handleSubmit}>
+            <div className='form-orgname'>
+              Organisation Name: <br />
+              <input name='orgname' onChange={this.handleChange} required />
+            </div>
+
+            <div className='form-email'>
+              Email: <br />
+              <input name='email' placeholder='Enter Email' required />
+            </div>
+
+            <div className='form-psw'>
+              Password: <br />
+              <input name='psw' placeholder='Enter Password' required />
+            </div>
+
+            <div className='form-psw-repeat'>
+              Repeat Password: <br />
+              <input name='psw-repeat' placeholder='Repeat Password' required />
+            </div>
+
+            <div className='submit-flex'>
+              <button type="submit" value="Submit">Submit</button>
+            </div>
+          </form>
+          <div>
+            <Link to='/'>
+              <button className='previous-button'>Home</button>
+            </Link>
           </div>
-          {studentsTab && <StudentsRegistration />}
-          {adminTab && <AdminRegistration />}
-          {orgsTab && <OrgsRegistration />}
-        </section>
+        </div>
       </div>
     )
   }

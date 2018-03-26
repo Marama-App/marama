@@ -4,9 +4,9 @@ const bodyParser = require('body-parser')
 const passport = require('passport')
 
 const server = express()
-server.use(express.static(path.join(__dirname, 'public')))
 server.use(passport.initialize())
 server.use(bodyParser.json())
+server.use(express.static(path.join(__dirname, 'public')))
 
 const interestRoutes = require('./routes/interests')
 const typeRoutes = require('./routes/types')
