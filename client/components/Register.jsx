@@ -26,9 +26,9 @@ class Register extends React.Component {
   handleSubmit (evt) {
     evt.preventDefault()
     request
-      .post(`${baseUrl}/api/v1/auth`)
+      .post(`${baseUrl}/api/v1/register`)
       .send({
-        name: this.state.orgname,
+        orgname: this.state.orgname,
         email: this.state.email,
         psw: this.state.psw,
         pswrepeat: this.state.pswrepeat
@@ -58,17 +58,17 @@ class Register extends React.Component {
 
             <div className='form-email'>
               Email: <br />
-              <input name='email' placeholder='Enter Email' required />
+              <input name='email' required />
             </div>
 
             <div className='form-psw'>
               Password: <br />
-              <input name='psw' placeholder='Enter Password' required />
+              <input name='psw' required />
             </div>
 
             <div className='form-psw-repeat'>
               Repeat Password: <br />
-              <input name='pswrepeat' placeholder='Repeat Password' required />
+              <input name='pswrepeat' required />
             </div>
 
             <div className='submit-flex'>

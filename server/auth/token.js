@@ -1,11 +1,17 @@
 const jwt = require('jsonwebtoken')
-const db = require('../db/users')
+// const passport = require('passport') // for github
 const verifyJwt = require('express-jwt')
+
+const db = require('../db/users')
+// const baseUrl = require('../../client/lib/base-url') // for github
+const jwtTestSecret = require('../../test/server/routes/jwt-test-secret')
 
 module.exports = {
   issue,
-  createToken,
-  decode
+  decode,
+  createToken
+  // ^ exported for testing
+  // issueFromGitHub,
 }
 
 function issue (req, res) {
@@ -19,6 +25,32 @@ function issue (req, res) {
     })
 }
 
+// function issueFromGitHub (req, res, next) {
+//   passport.authenticate('github', (err, user, info) => {
+//     if (err) {
+//       return res.status(500).json({
+//         message: 'Authentication failed due to a server error',
+//         info: err.message
+//       })
+//     }
+
+//     if (!user) {
+//       return res.json({
+//         message: 'Authentication failed',
+//         info: info.message
+//       })
+//     }
+//     const token = createToken(user, process.env.JWT_SECRET)
+//     res.redirect(`${baseUrl}/?token=${token}`)
+//   })(req, res, next)
+// }
+
+function decode (req, res, next) {
+  verifyJwt({
+    secret: getSecret
+  })(req, res, next)
+}
+
 function createToken (user, secret) {
   return jwt.sign({
     id: user.id,
@@ -28,12 +60,10 @@ function createToken (user, secret) {
   })
 }
 
-function decode (req, res, next) {
-  verifyJwt({
-    secret: getSecret
-  })(req, res, next)
-}
-
 function getSecret (req, payload, done) {
-  done(null, process.env.JWT_SECRET)
+  const secret = process.env.JWT_SECRET || jwtTestSecret
+  if (secret === jwtTestSecret) {
+    // console.warn('ATTENTION: Using the JWT Test secret')
+  }
+  done(null, secret)
 }

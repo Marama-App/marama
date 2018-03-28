@@ -27,7 +27,7 @@ const App = () => {
           <Route path='/support' component={Support} />
           <Route path='/contact' component={Contact} />
           <Route path='/about' component={About} />
-          <Route path='/auth' component={Register} />
+          <Route path='/register' component={Register} />
           <Route path='/iwi-grants' component={IwiGrants} />
           <Route path='/pasifika-grants' component={PasifikaGrants} />
           <Route path='/not-sure' component={NoInterests} />
