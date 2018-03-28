@@ -19,7 +19,9 @@ const Nav = () => {
         <span className='nav-link-individual-styling'>
           <Link to='/contact'>contact</Link>
         </span>
-
+        <span className='nav-link-individual-styling'>
+          <Link to='/register'>register</Link>
+        </span>
       </div>
     </div>
   )

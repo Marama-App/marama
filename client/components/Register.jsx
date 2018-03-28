@@ -1,7 +1,45 @@
 import React from 'react'
+import request from 'superagent'
 import {Link} from 'react-router-dom'
+import baseUrl from '../lib/base-url'
 
 class Register extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      orgname: '',
+      email: '',
+      psw: '',
+      pswrepeat: '',
+      submitted: false
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleChange (evt) {
+    this.setState({
+      [evt.target.name]: evt.target.value
+    })
+  }
+
+  handleSubmit (evt) {
+    evt.preventDefault()
+    request
+      .post(`${baseUrl}/api/v1/auth`)
+      .send({
+        name: this.state.orgname,
+        email: this.state.email,
+        psw: this.state.psw,
+        pswrepeat: this.state.pswrepeat
+      })
+      .then(res => {
+        this.setState({
+          submitted: true
+        })
+      })
+  }
+
   render () {
     return (
       <div>
@@ -30,7 +68,7 @@ class Register extends React.Component {
 
             <div className='form-psw-repeat'>
               Repeat Password: <br />
-              <input name='psw-repeat' placeholder='Repeat Password' required />
+              <input name='pswrepeat' placeholder='Repeat Password' required />
             </div>
 
             <div className='submit-flex'>

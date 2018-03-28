@@ -2,20 +2,20 @@ import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 
 import Home from './Home'
-import Type from './Type'
-import Study from './Study'
-import Jobs from './Jobs'
-import About from './About'
-import Interest from './Interest'
-import Contact from './Contact'
 import Header from './Header'
-import Grants from './Grants'
-// import Add from './Add'
+import Support from './Support'
+import About from './About'
+import Contact from './Contact'
+import Register from './Register'
 import IwiGrants from './IwiGrants'
 import PasifikaGrants from './PasifikaGrants'
-import Footer from './Footer'
 import NoInterests from './NoInterests'
-import Support from './Support'
+import Grants from './Grants'
+import Study from './Study'
+import Jobs from './Jobs'
+import Type from './Type'
+import Interest from './Interest'
+import Footer from './Footer'
 
 const App = () => {
   return (
@@ -24,10 +24,10 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route path='/support' component={Support} />
           <Route path='/contact' component={Contact} />
           <Route path='/about' component={About} />
-          {/* <Route path='/admin' component={Add} /> */}
-          <Route path='/support' component={Support} />
+          <Route path='/auth' component={Register} />
           <Route path='/iwi-grants' component={IwiGrants} />
           <Route path='/pasifika-grants' component={PasifikaGrants} />
           <Route path='/not-sure' component={NoInterests} />

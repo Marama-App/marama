@@ -1,19 +1,15 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const router = express.Router()
 
 const {userExists, createUser} = require('../db/users')
 const token = require('../auth/token')
-const router = express.Router()
+
+module.exports = router
 
 router.use(bodyParser.json())
 
-router.post('/register', register)
-
-router.get('/username', token.decode, (req, res) => {
-  res.json({
-    username: req.user.username
-  })
-})
+router.post('/auth', register, token.issue)
 
 function register (req, res) {
   userExists(req.body.username).then(exists => {
@@ -28,4 +24,8 @@ function register (req, res) {
     })
 }
 
-module.exports = router
+router.get('/username', token.decode, (req, res) => {
+  res.json({
+    username: req.user.username
+  })
+})
