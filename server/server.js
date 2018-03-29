@@ -16,7 +16,7 @@ const iwiGrantRoutes = require('./routes/iwi-grants')
 const pasifikaRoutes = require('./routes/pasifika-grants')
 
 const contactRoutes = require('./routes/contact')
-const registerRoutes = require('./routes/register')
+const authRoutes = require('./routes/auth')
 const addRoutes = require('./routes/add')
 const adddbRoutes = require('./routes/adddb')
 
@@ -29,7 +29,7 @@ server.use('/api/v1/iwi-grants', iwiGrantRoutes)
 server.use('/api/v1/pasifika-grants', pasifikaRoutes)
 
 server.use('/api/v1/contact', contactRoutes)
-server.use('/api/v1/register', registerRoutes)
+server.use('/api/v1/auth', authRoutes)
 server.use('/api/v1/add', addRoutes)
 server.use('/api/v1/adddb', adddbRoutes)
 
