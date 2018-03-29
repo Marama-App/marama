@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Admin extends React.Component {
+class Marama extends React.Component {
 }
 
-export default Admin
+export default Marama

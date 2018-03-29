@@ -29,18 +29,18 @@ const receiveUserRegistration = (token) => {
   }
 }
 
-// const requestSignIn = () => {
-//   return {
-//     type: REQUEST_SIGNIN
-//   }
-// }
+const requestSignIn = () => {
+  return {
+    type: REQUEST_SIGNIN
+  }
+}
 
-// const receiveSignIn = (token) => {
-//   return {
-//     type: RECEIVE_SIGNIN,
-//     token
-//   }
-// }
+const receiveSignIn = (token) => {
+  return {
+    type: RECEIVE_SIGNIN,
+    token
+  }
+}
 
 // export const logOff = () => {
 //   logOffUser()
@@ -113,27 +113,27 @@ export function register (newUser) {
   }
 }
 
-// export function signIn (user, confirmSuccess) {
-//   return (dispatch) => {
-//     dispatch(requestSignIn())
-//     request('post', '/auth/signin', user)
-//       .then(res => {
-//         const token = saveAuthToken(res.body.token)
-//         dispatch(receiveSignIn(res.body))
-//         dispatch(getUserDetails(token.id))
-//         dispatch(clearError())
-//         confirmSuccess()
-//       })
-//       .catch(err => {
-//         const res = err.response.body
-//         const msg = 'Username and password don\'t match an existing user'
-//         if (res && res.errorType === 'INVALID_CREDENTIALS') {
-//           return dispatch(showError(msg))
-//         }
-//         dispatch(showError('An unexpected error has occurred.'))
-//       })
-//   }
-// }
+export function signIn (user, confirmSuccess) {
+  return (dispatch) => {
+    dispatch(requestSignIn())
+    request('post', '/auth/signin', user)
+      .then(res => {
+        const token = saveAuthToken(res.body.token)
+        dispatch(receiveSignIn(res.body))
+        dispatch(getUserDetails(token.id))
+        dispatch(clearError())
+        confirmSuccess()
+      })
+      .catch(err => {
+        const res = err.response.body
+        const msg = 'Username and password don\'t match an existing user'
+        if (res && res.errorType === 'INVALID_CREDENTIALS') {
+          return dispatch(showError(msg))
+        }
+        dispatch(showError('An unexpected error has occurred.'))
+      })
+  }
+}
 
 export function getUserDetails (userId) {
   return (dispatch) => {

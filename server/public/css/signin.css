@@ -1,0 +1,39 @@
+/* SIGN IN */
+
+.signinpg form {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.signinpg .submit-flex {
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+}
+
+.signinpg .form-username {
+  display: flex;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.signinpg .form-password {
+  display: flex;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.signinpg input {
+  height: 2em;
+  width: 18em;
+  border-radius: 4px;
+}

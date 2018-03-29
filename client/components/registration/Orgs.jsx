@@ -34,7 +34,7 @@ class Orgs extends React.Component {
         <div className='page-section'>
           <div className='page-heading-section'>
             <div className='page-title-font'>Register</div>
-            <div className='page-title-blurb'>Register with Mārama to add courses and grants.</div>
+            <div className='page-title-blurb'>Register with Mārama to get access to adding courses and grants.</div>
           </div>
           <form className='submit-form'>
             <div className='form-name'>

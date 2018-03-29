@@ -7,6 +7,7 @@ import Support from './Support'
 import About from './About'
 import Contact from './Contact'
 import Register from './Register'
+import SignIn from './SignIn'
 import IwiGrants from './IwiGrants'
 import PasifikaGrants from './PasifikaGrants'
 import NoInterests from './NoInterests'
@@ -37,9 +38,10 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/support' component={Support} />
-            <Route path='/contact' component={Contact} />
             <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
             <Route path='/register' component={Register} />
+            <Route path='/signin' component={SignIn} />
             <Route path='/iwi-grants' component={IwiGrants} />
             <Route path='/pasifika-grants' component={PasifikaGrants} />
             <Route path='/not-sure' component={NoInterests} />
