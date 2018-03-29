@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux'
+
 import interests from './interests'
 import interestType from './type'
 import typeDetails from './type-details'
@@ -7,6 +8,8 @@ import addTypes from './add-types'
 import iwiGrants from './iwi-grants'
 import pasifikaGrants from './pasifika-grants'
 
+import userDetails from './user-details'
+
 export default combineReducers({
   interests,
   interestType,
@@ -14,5 +17,6 @@ export default combineReducers({
   grants,
   iwiGrants,
   pasifikaGrants,
-  addTypes
+  addTypes,
+  userDetails
 })

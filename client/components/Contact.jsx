@@ -41,7 +41,7 @@ class Contact extends React.Component {
   render () {
     if (!this.state.submitted) {
       return (
-        <div>
+        <div className='contactpg'>
           <img src='/images/bg-stars.png' className='stars-background' />
           <div className='page-section'>
             <div className='page-heading-section'>

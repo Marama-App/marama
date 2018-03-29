@@ -1,6 +1,6 @@
 /* REGISTER */
 
-form {
+.orgspg form {
   width: 100%;
   display: inline-block;
   text-align: center;
@@ -8,19 +8,13 @@ form {
   margin-left:auto;
 }
 
-.submit-flex {
+.orgspg .submit-flex {
     display: flex;
     flex-direction: row;
     display: inline-block;
 }
-
-.name-email {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
   
-.form-name {
+.orgspg .form-companyname {
   display: flex;
   display: inline-block;
   text-align: center;
@@ -29,7 +23,7 @@ form {
   padding-bottom: 2em;
 }
 
-.form-email {
+.orgspg .form-email {
   display: flex;
   display: inline-block;
   text-align: center;
@@ -38,15 +32,33 @@ form {
   padding-bottom: 2em;
 }
 
-textarea {
+.orgspg .form-username {
+  display: flex;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.orgspg .form-password {
+  display: flex;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.orgspg textarea {
   margin: 0px;
   height: 8em;
   width: 50%;
   border-radius: 4px;
 }
 
-input {
+.orgspg input {
   height: 2em;
-  width: 50%;
+  width: 18em;
   border-radius: 4px;
 }

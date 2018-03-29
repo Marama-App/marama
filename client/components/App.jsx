@@ -18,17 +18,17 @@ import Interest from './Interest'
 import Footer from './Footer'
 
 class App extends React.Component {
-  componentDidMount () {
-    this.setToken()
-  }
+  // componentDidMount () {
+  //   this.setToken()
+  // }
 
-  setToken () {
-    const queryString = this.props.location.search
-    const token = new URLSearchParams(queryString).get('token')
-    if (token) {
-      localStorage.setItem('token', token)
-    }
-  }
+  // setToken () {
+  //   const queryString = this.props.location.search
+  //   const token = new URLSearchParams(queryString).get('token')
+  //   if (token) {
+  //     localStorage.setItem('token', token)
+  //   }
+  // }
   render () {
     return (
       <div className='app'>
