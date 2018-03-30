@@ -1,12 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
     <div className='nav-header'>
       <div className='nav-logo'>
         <Link to='/'>
-          <img src='/images/marama-logo.png' className='marama-logo'/>
+          <img src='/images/marama-logo.png' className='marama-logo' />
         </Link>
       </div>
       <div className='nav-links'>
@@ -19,9 +19,22 @@ const Nav = () => {
         <span className='nav-link-individual-styling'>
           <Link to='/contact'>contact</Link>
         </span>
-        <span className='nav-link-individual-styling'>
-          <Link to='/register'>register</Link>
+        <span className='dropdown'>
+          <p className='dropbtn'>
+            <img src='/images/menu-star.png' />
+          </p>
+          <div className='dropdown-content'>
+            <span className='nav-link-individual-styling'>
+              <Link to='/register'>register</Link>
+            </span>
+            <span className='nav-link-individual-styling'>
+              <Link to='/signin'>sign in</Link>
+            </span>
+          </div>
         </span>
+        {/* <span className='nav-link-individual-styling'>
+          <Link to='/register'>register</Link>
+        </span> */}
       </div>
     </div>
   )
