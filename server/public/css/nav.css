@@ -11,6 +11,11 @@
   /* Box around just the logo div in the Nav component*/
   .nav-logo {
     display: flex;
+    padding-top: 20px;
+  }
+
+  .nav-links {
+    height: 50px;
   }
   
   /* Logo div in the Nav component */
@@ -28,7 +33,7 @@
   /* Dropdown Button */
 .dropbtn {
   color: white;
-  padding: 15px;
+  padding: 10px;
   font-size: 13px;
   border: none;
   border-radius: 4px;
