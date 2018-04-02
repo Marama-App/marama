@@ -1,8 +1,6 @@
 const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
-const hash = require('../auth/hash')
-
 module.exports = {
   getInterests,
   getType,
@@ -17,13 +15,7 @@ module.exports = {
   addStudy,
   addInterestsToTypesJunction,
   addTypesStudyJunction,
-  getLocation,
-  createUser,
-  getAllUsers,
-  userExists,
-  getUserById,
-  updateUser,
-  getUserByName
+  getLocation
 }
 
 function getInterests (interests, testConn) {
@@ -130,52 +122,4 @@ function getPasifikaGrants (pasifikaGrants, testConn) {
   const conn = testConn || connection
   return conn('pasifika_grants')
     .select()
-}
-
-// Authorisation Functions
-
-function createUser (username, password, testConn) {
-  const db = testConn || connection
-  return userExists(username, db)
-    .then(exists => {
-      if (exists) {
-        return Promise.reject(new Error('User Exists'))
-      }
-    })
-    .then(() => {
-      const passwordHash = hash.generate(password)
-      return db('users')
-        .insert({username, hash: passwordHash})
-        .then(ids => {
-          return db('users')
-            .where('id', ids[0] || 0)
-            .first()
-        })
-    })
-}
-
-function getAllUsers () {
-
-}
-
-function userExists (username, testConn) {
-  const db = testConn || connection
-  return db('users')
-    .count('id as n')
-    .where('username', username)
-    .then(count => {
-      return count[0].n > 0
-    })
-}
-
-function getUserById () {
-
-}
-
-function updateUser () {
-
-}
-
-function getUserByName () {
-
 }
