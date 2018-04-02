@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const {
   userExists,
   getUserByName,
-  createUser} = require('../db/users')
+  createUser} = require('../db/db')
 const token = require('../auth/token')
 const hash = require('../auth/hash')
 

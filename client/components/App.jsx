@@ -8,6 +8,7 @@ import About from './About'
 import Contact from './Contact'
 import Register from './Register'
 import SignIn from './SignIn'
+import Add from './Add'
 import IwiGrants from './IwiGrants'
 import PasifikaGrants from './PasifikaGrants'
 import NoInterests from './NoInterests'
@@ -42,6 +43,7 @@ class App extends React.Component {
             <Route path='/contact' component={Contact} />
             <Route path='/register' component={Register} />
             <Route path='/signin' component={SignIn} />
+            <Route path='/add' component={Add} />
             <Route path='/iwi-grants' component={IwiGrants} />
             <Route path='/pasifika-grants' component={PasifikaGrants} />
             <Route path='/not-sure' component={NoInterests} />
