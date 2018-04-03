@@ -13,8 +13,8 @@ module.exports = {
 }
 
 function createUser (username, password, testConn) {
-  const db = testConn || connection
-  return userExists(username, db)
+  const conn = testConn || connection
+  return userExists(username, conn)
     .then(exists => {
       if (exists) {
         return Promise.reject(new Error('User Exists'))
@@ -22,10 +22,10 @@ function createUser (username, password, testConn) {
     })
     .then(() => {
       const passwordHash = hash.generate(password)
-      return db('users')
+      return conn('users')
         .insert({username, hash: passwordHash})
         .then(ids => {
-          return db('users')
+          return conn('users')
             .where('id', ids[0] || 0)
             .first()
         })
@@ -33,14 +33,14 @@ function createUser (username, password, testConn) {
 }
 
 function getAllUsers (testConn) {
-  const db = testConn || connection
-  return db('users')
+  const conn = testConn || connection
+  return conn('users')
     .select('id', 'username')
 }
 
 function userExists (username, testConn) {
-  const db = testConn || connection
-  return db('users')
+  const conn = testConn || connection
+  return conn('users')
     .count('id as n')
     .where('username', username)
     .then(count => {
@@ -49,24 +49,24 @@ function userExists (username, testConn) {
 }
 
 function getUserById (id, testConn) {
-  const db = testConn || connection
-  return db('users')
+  const conn = testConn || connection
+  return conn('users')
     .select('id', 'username')
     .where('id', id)
     .first()
 }
 
 function getUserByName (username, testConn) {
-  const db = testConn || connection
-  return db('users')
+  const conn = testConn || connection
+  return conn('users')
     .select('id', 'username')
     .where('username', username)
     .first()
 }
 
 // function updateUser (id, username, currentPassword, newPassword, conn) {
-//   const db = conn || connection
-//   return getUserByName(username, db)
+//   const conn = conn || connection
+//   return getUserByName(username, conn)
 //     .then(user => {
 //       if (!user || !hash.verify(user.hash, currentPassword)) {
 //         return Promise.reject(new Error('Username password match not found'))
@@ -76,7 +76,7 @@ function getUserByName (username, testConn) {
 //     .then(user => {
 //       const newPasswordHash = hash.generate(newPassword)
 //       if (id !== user.id) Promise.reject(new Error('Username and ID mismatch'))
-//       return db('users')
+//       return conn('users')
 //         .update({username, hash: newPasswordHash})
 //         .where('id', user.id)
 //     })
