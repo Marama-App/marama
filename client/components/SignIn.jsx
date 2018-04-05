@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { signIn } from '../actions/auth'
-import { clearError } from '../actions/error'
+import { showError, clearError } from '../actions/error'
 
 class SignIn extends React.Component {
   constructor (props) {
@@ -41,7 +41,9 @@ class SignIn extends React.Component {
             <br />
             <div className='form-password'>
               Password: <br />
-              <input name='password' onChange={this.handleChange} value={password} required />
+              <input name='password'
+                type='password'
+                onChange={this.handleChange} value={password} required />
             </div>
             <br />
             <div className='submit-flex'>

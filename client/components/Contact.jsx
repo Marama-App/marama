@@ -79,7 +79,9 @@ class Contact extends React.Component {
     }
     if (this.state.submitted) {
       return (
-        <div className='p-class'>Thanks for submitting!</div>
+        <div className='p-class'>
+          <br />
+        Thanks for submitting!</div>
       )
     }
   }

@@ -2,7 +2,7 @@ import request from 'superagent'
 
 import {isAuthenticated, getEncodedToken} from './auth'
 
-const baseUrl = '/api/v1'
+const url = '/api/v1/'
 
 export default function consume (method = 'get', endpoint, data = {}) {
   const payloadMethod = method.toLowerCase() === 'get' ? 'query' : 'send'
@@ -15,7 +15,7 @@ export default function consume (method = 'get', endpoint, data = {}) {
     headers['Authorization'] = `Bearer ${token}`
   }
 
-  return request[method](baseUrl + endpoint)
+  return request[method](url + endpoint)
     .set(headers)[payloadMethod](data)
     .then(res => res)
     .catch(err => {

@@ -1,4 +1,4 @@
-import { SHOW_ERROR, CLEAR_ERROR } from '../actions/error'
+import {SHOW_ERROR, CLEAR_ERROR} from '../actions/error'
 
 function errorMessage (state = '', action) {
   switch (action.type) {

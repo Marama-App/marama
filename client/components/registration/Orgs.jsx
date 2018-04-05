@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { register } from '../../actions/auth'
 import { showError, clearError } from '../../actions/error'
@@ -15,7 +15,8 @@ class Orgs extends React.Component {
       password: '',
       confirm: '',
       match: false,
-      showMatch: false
+      showMatch: false,
+      errorMessage: null
     }
     this.styles = {
       match: {
@@ -67,6 +68,7 @@ class Orgs extends React.Component {
               {showMatch && !match && <span style={this.styles.match}>*</span>}
             </div>
             <br />
+            {this.state.errorMessage && <div className='form-error'>{this.state.errorMessage}</div>}
             <div className='submit-flex'>
               <button className='button is-primary'
                 onClick={this.handleSubmit}>Register</button>

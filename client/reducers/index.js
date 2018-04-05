@@ -7,7 +7,8 @@ import grants from './grants'
 import addTypes from './add-types'
 import iwiGrants from './iwi-grants'
 import pasifikaGrants from './pasifika-grants'
-
+import allUsers from './all-users'
+import errorMessage from './error-message'
 import userDetails from './user-details'
 
 export default combineReducers({
@@ -18,5 +19,7 @@ export default combineReducers({
   iwiGrants,
   pasifikaGrants,
   addTypes,
-  userDetails
+  userDetails,
+  allUsers,
+  errorMessage
 })

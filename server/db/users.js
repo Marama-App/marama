@@ -1,41 +1,47 @@
+// server/db/users.js
 const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 const hash = require('../auth/hash')
 
+const jwt = require('jsonwebtoken')
+
+const db = require('../db/users')
+
 module.exports = {
   createUser,
-  getAllUsers,
   userExists,
-  getUserById,
-  getUserByName
-  // updateUser
+  getUserByName,
+  issue
+}
+
+// server/db/users.js
+
+function issue (req, res) {
+  db.getUserByName(req.body.username)
+    .then(user => {
+      const token = createToken(user, process.env.JWT_SECRET)
+      res.json({
+        message: 'Authentication successful.',
+        token
+      })
+    })
+}
+
+function createToken (user, secret) {
+  return jwt.sign({
+    id: user.id,
+    username: user.username
+  }, secret, {
+    expiresIn: '1d'
+  })
 }
 
 function createUser (username, password, testConn) {
-  const conn = testConn || connection
-  return userExists(username, conn)
-    .then(exists => {
-      if (exists) {
-        return Promise.reject(new Error('User Exists'))
-      }
-    })
-    .then(() => {
-      const passwordHash = hash.generate(password)
-      return conn('users')
-        .insert({username, hash: passwordHash})
-        .then(ids => {
-          return conn('users')
-            .where('id', ids[0] || 0)
-            .first()
-        })
-    })
-}
-
-function getAllUsers (testConn) {
+  const passwordHash = hash.generate(password)
   const conn = testConn || connection
   return conn('users')
-    .select('id', 'username')
+    .insert({username, hash: passwordHash})
 }
 
 function userExists (username, testConn) {
@@ -48,36 +54,10 @@ function userExists (username, testConn) {
     })
 }
 
-function getUserById (id, testConn) {
-  const conn = testConn || connection
-  return conn('users')
-    .select('id', 'username')
-    .where('id', id)
-    .first()
-}
-
 function getUserByName (username, testConn) {
   const conn = testConn || connection
   return conn('users')
-    .select('id', 'username')
+    .select()
     .where('username', username)
     .first()
 }
-
-// function updateUser (id, username, currentPassword, newPassword, conn) {
-//   const conn = conn || connection
-//   return getUserByName(username, conn)
-//     .then(user => {
-//       if (!user || !hash.verify(user.hash, currentPassword)) {
-//         return Promise.reject(new Error('Username password match not found'))
-//       }
-//       return Promise.resolve(user)
-//     })
-//     .then(user => {
-//       const newPasswordHash = hash.generate(newPassword)
-//       if (id !== user.id) Promise.reject(new Error('Username and ID mismatch'))
-//       return conn('users')
-//         .update({username, hash: newPasswordHash})
-//         .where('id', user.id)
-//     })
-// }

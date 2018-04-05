@@ -8,6 +8,7 @@ import About from './About'
 import Contact from './Contact'
 import Register from './Register'
 import SignIn from './SignIn'
+import ErrorMessage from './ErrorMessage'
 import Add from './Add'
 import IwiGrants from './IwiGrants'
 import PasifikaGrants from './PasifikaGrants'
@@ -31,6 +32,7 @@ class App extends React.Component {
   //     localStorage.setItem('token', token)
   //   }
   // }
+
   render () {
     return (
       <div className='app'>
@@ -43,6 +45,7 @@ class App extends React.Component {
             <Route path='/contact' component={Contact} />
             <Route path='/register' component={Register} />
             <Route path='/signin' component={SignIn} />
+            <Route path='/' component={ErrorMessage} />
             <Route path='/add' component={Add} />
             <Route path='/iwi-grants' component={IwiGrants} />
             <Route path='/pasifika-grants' component={PasifikaGrants} />

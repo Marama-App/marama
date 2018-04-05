@@ -4,7 +4,7 @@ import {
   RECEIVE_USER_DETAILS
 } from '../actions/auth'
 
-const allUsers = (state = null, action) => {
+const allUsers = (state = '', action) => {
   switch (action.type) {
     case RECEIVE_USER_DETAILS:
       return action.userDetails

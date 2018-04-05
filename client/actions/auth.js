@@ -1,4 +1,6 @@
 import request from '../lib/api'
+
+import baseUrl from '../lib/base-url'
 import {showError, clearError} from './error'
 import {saveAuthToken, logOff as logOffUser} from '../lib/auth'
 
@@ -73,28 +75,28 @@ export const requestAllUsers = () => {
   }
 }
 
-const requestUpdateProfile = () => {
-  return {
-    type: REQUEST_UPDATE_PROFILE
-  }
-}
+// const requestUpdateProfile = () => {
+//   return {
+//     type: REQUEST_UPDATE_PROFILE
+//   }
+// }
 
-const receiveUpdateProfile = () => {
-  return {
-    type: RECEIVE_UPDATE_PROFILE
-  }
-}
+// const receiveUpdateProfile = () => {
+//   return {
+//     type: RECEIVE_UPDATE_PROFILE
+//   }
+// }
 
-const requestApprovalUpdate = () => {
-  return {
-    type: REQUEST_APPROVAL_UPDATE
-  }
-}
+// const requestApprovalUpdate = () => {
+//   return {
+//     type: REQUEST_APPROVAL_UPDATE
+//   }
+// }
 
 export function register (newUser) {
   return (dispatch) => {
     dispatch(requestUserRegistration())
-    return request('post', '/auth/register', newUser)
+    return request('POST', `${baseUrl}/auth/register`, newUser)
       .then(res => {
         const token = saveAuthToken(res.body.token)
         dispatch(receiveUserRegistration(res.body))
@@ -115,7 +117,7 @@ export function register (newUser) {
 export function signIn (user, confirmSuccess) {
   return (dispatch) => {
     dispatch(requestSignIn())
-    request('post', '/auth/signin', user)
+    return request('get', `${baseUrl}/auth/signin`, user)
       .then(res => {
         const token = saveAuthToken(res.body.token)
         dispatch(receiveSignIn(res.body))
@@ -151,7 +153,7 @@ export function getUserDetails (userId) {
 export function getAllUsers () {
   return (dispatch) => {
     dispatch(requestAllUsers())
-    return request('get', `/users`)
+    return request('get', '/users')
       .then(res => {
         dispatch(receiveAllUsers(res.body))
         dispatch(clearError())
@@ -162,34 +164,34 @@ export function getAllUsers () {
   }
 }
 
-export function updateProfile (profile) {
-  return (dispatch) => {
-    dispatch(requestUpdateProfile())
-    request('put', `/users/${profile.id}`, profile)
-      .then(res => {
-        dispatch(receiveUpdateProfile())
-        dispatch(getUserDetails(profile.id))
-        dispatch(clearError())
-      })
-      .catch(() => {
-        dispatch(showError('An unexpected error has occurred.'))
-      })
-  }
-}
+// export function updateProfile (profile) {
+//   return (dispatch) => {
+//     dispatch(requestUpdateProfile())
+//     request('put', `/users/${profile.id}`, profile)
+//       .then(res => {
+//         dispatch(receiveUpdateProfile())
+//         dispatch(getUserDetails(profile.id))
+//         dispatch(clearError())
+//       })
+//       .catch(() => {
+//         dispatch(showError('An unexpected error has occurred.'))
+//       })
+//   }
+// }
 
-export function updateUserApprovals (updatedUsers) {
-  return (dispatch) => {
-    dispatch(requestApprovalUpdate)
-    request('put', '/users/approvals', updatedUsers)
-      .then(() => {
-        return request('get', `/users`)
-          .then(res => {
-            dispatch(receiveAllUsers(res.body))
-            dispatch(clearError())
-          })
-      })
-      .catch(() => {
-        dispatch(showError('An unexpected error has occurred. update'))
-      })
-  }
-}
+// export function updateUserApprovals (updatedUsers) {
+//   return (dispatch) => {
+//     dispatch(requestApprovalUpdate)
+//     request('put', '/users/approvals', updatedUsers)
+//       .then(() => {
+//         return request('get', `/users`)
+//           .then(res => {
+//             dispatch(receiveAllUsers(res.body))
+//             dispatch(clearError())
+//           })
+//       })
+//       .catch(() => {
+//         dispatch(showError('An unexpected error has occurred. update'))
+//       })
+//   }
+// }
