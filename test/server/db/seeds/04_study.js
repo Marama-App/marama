@@ -24,6 +24,54 @@ exports.seed = (knex, Promise) => {
     // MUSIC -- DJ/Sound Recording Courses
     {id: 17, course: 'Bachelor of Recording Arts', provider: 'SAE', link: 'http://auckland.sae.edu/courses/audio/bachelor-of-recording-arts/', domestic_price: 9683, international_price: 0, duration: 3, level: 7},
     {id: 18, course: 'Certificate in DJ Music', provider: 'Whitireia', link: 'https://www.whitireia.ac.nz/study-programmes/music/certificate-in-dj-music', domestic_price: 6217, international_price: 19950, duration: 1, level: 4},
-    {id: 19, course: 'DJ Mixing and Turntablism', provider: 'SIT', link: 'https://www.sit.ac.nz/programme/course/DJ%20Mixing%20and%20Turntablism', domestic_price: 250, international_price: 0, duration: 0.5, level: 0}
+    {id: 19, course: 'DJ Mixing and Turntablism', provider: 'SIT', link: 'https://www.sit.ac.nz/programme/course/DJ%20Mixing%20and%20Turntablism', domestic_price: 250, international_price: 0, duration: 0.5, level: 0},
+    // SPORT -- Personal Training
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // SPORT -- Nutrition
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // SPORT -- Sport Therapy
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // GADGETS -- Engineering
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // GADGETS -- Marketing
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // GADGETS -- Gaming
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // DANCING -- Theatre
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // DANCING -- Photographer
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // DANCING -- Choreographer
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // FOOD -- Hospitality
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // FOOD -- Cooking
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // FOOD -- Dietitian
+    {id: 17, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 18, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 19, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0}
   ])
 }
