@@ -4,7 +4,7 @@ const testConfig = require('../../../server/db/knexfile').test
 
 module.exports = {
   // Test database connection
-  getTestDb: () => getDbConn(testConfig),
+  getTestConn: () => getDbConn(testConfig),
 
   // Create a separate in-memory database before each test
   initialise: (db) => {

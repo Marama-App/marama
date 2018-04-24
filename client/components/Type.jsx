@@ -95,7 +95,7 @@ export class Type extends React.Component {
             <div className='p-class'>If you&apos;re of Māori or Pacific Island decent, take a look at the grants, scholarships and support available to you.</div>
           </div>
           <div>
-          <hr/>
+            <hr/>
             <Link to={`/interests/${this.props.match.params.interest}/`}>
               <button type='transparent' className='previous-button'>Previous</button>
             </Link>

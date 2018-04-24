@@ -1,6 +1,5 @@
 import request from '../lib/api'
 
-import baseUrl from '../lib/base-url'
 import {showError, clearError} from './error'
 import {saveAuthToken, logOff as logOffUser} from '../lib/auth'
 
@@ -96,7 +95,7 @@ export const requestAllUsers = () => {
 export function register (newUser) {
   return (dispatch) => {
     dispatch(requestUserRegistration())
-    return request('POST', `${baseUrl}/auth/register`, newUser)
+    return request('post', '/auth/register', newUser)
       .then(res => {
         const token = saveAuthToken(res.body.token)
         dispatch(receiveUserRegistration(res.body))
@@ -117,7 +116,7 @@ export function register (newUser) {
 export function signIn (user, confirmSuccess) {
   return (dispatch) => {
     dispatch(requestSignIn())
-    return request('get', `${baseUrl}/auth/signin`, user)
+    return request('get', '/auth/signin', user)
       .then(res => {
         const token = saveAuthToken(res.body.token)
         dispatch(receiveSignIn(res.body))

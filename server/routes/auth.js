@@ -5,9 +5,7 @@ const token = require('../auth/token')
 const hash = require('../auth/hash')
 
 const router = express.Router()
-
 router.use(bodyParser.json())
-
 // server/routes/auth.js
 
 const {userExists, createUser, getUserByName} = require('../db/users')

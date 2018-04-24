@@ -26,7 +26,7 @@ test('<Grants /> Displays list of grants When route is accessed', () => {
     grant_link: 'www.test.com'
   }]}
   const match = {params: {
-    interest: 'animtion'
+    interest: 'animation'
   }}
   const wrapper = mount(
     <Router>

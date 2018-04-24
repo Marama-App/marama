@@ -2,12 +2,12 @@ import React from 'react'
 // import request from 'superagent'
 import { Link } from 'react-router-dom'
 
-import Orgs from './registration/Orgs'
+import OrgsRegistration from './registration/Orgs'
 
 const Register = () => {
   return (
     <div>
-      <Orgs />
+      <OrgsRegistration />
       < div >
         <Link to='/'>
           <button className='previous-button'>Home</button>
