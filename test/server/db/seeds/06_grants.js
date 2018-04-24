@@ -41,6 +41,15 @@ exports.seed = (knex, Promise) => {
     // Music specific grants
     {id: 24, name: 'Clare Galambos-Winter Scholarships in Violin Performance', description: 'The purpose of these scholarships is to foster the performance careers of exceptionally talented musicians who have demonstrated a strong and clear commitment to a career in violin (or cello) performance. They are available at honours or undergraduate level.', grant_link: 'https://www.victoria.ac.nz/study/student-finance/scholarships/find-scholarship/scholarship-detail?detailCode=600542', conditions: '', amount: 0}, // only for victoria uni
     {id: 25, name: 'Marie DAlbini Scholarship', description: 'For the founding and carrying on of a musical and vocal Scholarship.', grant_link: 'https://www.victoria.ac.nz/study/student-finance/scholarships/find-scholarship/scholarship-detail?detailCode=100192', conditions: '', amount: 0}, // only victoria uni
-    {id: 26, name: 'Ngarimu VC & 28TH (Maori) Battalion Memorial Scholarship Fund', description: 'For undergraduate NZ Maori applicant must be able to  show the link between Maori and the benefit of their study. Applicant must describe contribution to whanau, hapu or iwi following successful completion of their study.', grant_link: 'https://www.sit.ac.nz/Scholarships#311729-mori-scholarships', conditions: '', amount: 1000} // non specific to school
+    {id: 26, name: 'Ngarimu VC & 28TH (Maori) Battalion Memorial Scholarship Fund', description: 'For undergraduate NZ Maori applicant must be able to  show the link between Maori and the benefit of their study. Applicant must describe contribution to whanau, hapu or iwi following successful completion of their study.', grant_link: 'https://www.sit.ac.nz/Scholarships#311729-mori-scholarships', conditions: '', amount: 1000}, // non specific to school
+    // Sports specific grants
+    {id: 100, name: '', description: '', grant_link: '', conditions: '', amount: 0},
+    // Gadgets specific grants
+    {id: 200, name: '', description: '', grant_link: '', conditions: '', amount: 0},
+    // Dancing specific grants
+    {id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0},
+    // Food specific grants
+    {id: 400, name: '', description: '', grant_link: '', conditions: '', amount: 0}
+    // CHANGE ID NUMBERS!!
   ])
 }
