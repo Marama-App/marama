@@ -43,9 +43,11 @@ exports.seed = (knex, Promise) => {
     {id: 25, name: 'Marie DAlbini Scholarship', description: 'For the founding and carrying on of a musical and vocal Scholarship.', grant_link: 'https://www.victoria.ac.nz/study/student-finance/scholarships/find-scholarship/scholarship-detail?detailCode=100192', conditions: '', amount: 0}, // only victoria uni
     {id: 26, name: 'Ngarimu VC & 28TH (Maori) Battalion Memorial Scholarship Fund', description: 'For undergraduate NZ Maori applicant must be able to  show the link between Maori and the benefit of their study. Applicant must describe contribution to whanau, hapu or iwi following successful completion of their study.', grant_link: 'https://www.sit.ac.nz/Scholarships#311729-mori-scholarships', conditions: '', amount: 1000}, // non specific to school
     // Sports specific grants
-    {id: 100, name: '', description: '', grant_link: '', conditions: '', amount: 0},
+    {id: 27, name: 'Philip Ashton Smithells Memorial Scholarship', description: 'For a student progressing to their third or fourth year in Physical Education.', grant_link: 'https://www.otago.ac.nz/study/scholarships/database/otago014657.html', conditions: '', amount: 3000},
+    {id: 28, name: 'Philippa Sweetman Scholarship ', description: 'For a student going into or in their third or final year of a University of Otago Bachelors degree majoring in one of the principal disciplines of the former Home Science/Consumer and Applied Science Programme i.e Human Nutrition.', grant_link: 'https://www.otago.ac.nz/study/scholarships/database/otago014658.html', conditions: '', amount: 850},
+    {id: 29, name: 'Bee Nilson Award', description: 'Funds to support final year honours or paper year masters students studying human nutrition and food science.', grant_link: 'https://www.otago.ac.nz/study/scholarships/database/otago025487.html', conditions: '', amount: 6000},
     // Gadgets specific grants
-    {id: 200, name: '', description: '', grant_link: '', conditions: '', amount: 0},
+    {id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0},
     // Dancing specific grants
     {id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0},
     // Food specific grants
