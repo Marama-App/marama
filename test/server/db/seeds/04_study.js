@@ -25,12 +25,12 @@ exports.seed = (knex, Promise) => {
     {id: 17, course: 'Bachelor of Recording Arts', provider: 'SAE', link: 'http://auckland.sae.edu/courses/audio/bachelor-of-recording-arts/', domestic_price: 9683, international_price: 0, duration: 3, level: 7},
     {id: 18, course: 'Certificate in DJ Music', provider: 'Whitireia', link: 'https://www.whitireia.ac.nz/study-programmes/music/certificate-in-dj-music', domestic_price: 6217, international_price: 19950, duration: 1, level: 4},
     {id: 19, course: 'DJ Mixing and Turntablism', provider: 'SIT', link: 'https://www.sit.ac.nz/programme/course/DJ%20Mixing%20and%20Turntablism', domestic_price: 250, international_price: 0, duration: 0.5, level: 0},
-    // SPORT -- Personal Training
-    {id: 20, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 21, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 22, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    // SPORT -- Personal Training and Coaching
+    {id: 20, course: 'Bachelor of Sport and Recreation, Majoring in Sport and Exercise Science', provider: 'AUT', link: 'https://autdev.aut.ac.nz/study/study-options/sport-and-recreation/courses/bachelor-of-sport-and-recreation/sport-and-exercise-science-major', domestic_price: 6000, international_price: 0, duration: 3, level: 7},
+    {id: 21, course: 'Bachelor of Sport Coaching', provider: 'University of Canterbury', link: 'http://www.canterbury.ac.nz/study/qualifications-and-courses/bachelors-degrees/bachelor-of-sport-coaching/', domestic_price: 5971, international_price: 0, duration: 3, level: 7},
+    {id: 22, course: 'Bachelor of Sport Coaching', provider: 'Unitec', link: 'https://www.unitec.ac.nz/career-and-study-options/sport/bachelor-of-sport-coaching', domestic_price: 7432, international_price: 0, duration: 3, level: 7},
     // SPORT -- Nutrition
-    {id: 23, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 23, course: 'Bachelor of Science, Majoring in Health Nutrition', provider: 'Otago University', link: 'https://www.otago.ac.nz/courses/qualifications/bsc.html', domestic_price: 8000, international_price: 0, duration: 3, level: 7},
     {id: 24, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 25, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     // SPORT -- Sport Therapy
