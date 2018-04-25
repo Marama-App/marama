@@ -31,8 +31,8 @@ exports.seed = (knex, Promise) => {
     {id: 22, course: 'Bachelor of Sport Coaching', provider: 'Unitec', link: 'https://www.unitec.ac.nz/career-and-study-options/sport/bachelor-of-sport-coaching', domestic_price: 7432, international_price: 0, duration: 3, level: 7},
     // SPORT -- Nutrition
     {id: 23, course: 'Bachelor of Science, Majoring in Health Nutrition', provider: 'Otago University', link: 'https://www.otago.ac.nz/courses/qualifications/bsc.html', domestic_price: 8000, international_price: 0, duration: 3, level: 7},
-    {id: 24, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 25, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 24, course: 'Bachelor of Science, Majoring in Human Nutrition', provider: 'Massey University', link: 'http://www.massey.ac.nz/massey/learning/programme-course/programme.cfm?major_code=PHMNT&prog_id=92411', domestic_price: 6632, international_price: 0, duration: 3, level: 7},
+    {id: 25, course: 'Bachelor of Sport and Recreation, Majoring in Exercise Science and Nutrition', provider: 'AUT', link: 'https://www.aut.ac.nz/study/study-options/sport-and-recreation/courses/bachelor-of-sport-and-recreation/exercise-science-and-nutrition-major', domestic_price: 6000, international_price: 0, duration: 3, level: 7},
     // SPORT -- Sport Therapy
     {id: 26, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 27, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
