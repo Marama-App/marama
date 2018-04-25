@@ -9,7 +9,7 @@ exports.seed = (knex, Promise) => {
     {id: 5, name: 'Singing/Songwriting', description: 'Write and create your own music to share.'},
     {id: 6, name: 'DJ/Sound Recording', description: 'Become part of the recording process to make hit music, and live the dream of travelling around the world as a DJ Artist.'},
     // Sport
-    {id: 7, name: 'Personal Training', description: 'Learn how to help people reach their health and fitness goals.'},
+    {id: 7, name: 'Personal Training and Coaching', description: 'Learn how to help people reach their health and fitness goals.'},
     {id: 8, name: 'Nutrition', description: 'Learning how to balance nutrition in order to help improve not only the performance of yourself, but others also.'},
     {id: 9, name: 'Sport Therapy', description: 'Become a therapist that specialises in sports injury rehab, ACC treatments, sports massage and many other areas.'},
     // Gadgets
