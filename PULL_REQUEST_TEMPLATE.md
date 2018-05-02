@@ -9,7 +9,9 @@ The same name as the issue it refers to, or a short description with more detail
 
 **Reviewers**
 Add Mārama-App/devs as the reviewer.
+
 **Assignees**
+Assign yourself to the PR.
 
 **Labels**
 Add any labels that apply to your issue.
