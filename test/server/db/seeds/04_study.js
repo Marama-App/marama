@@ -50,9 +50,9 @@ exports.seed = (knex, Promise) => {
     {id: 36, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 37, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     // DANCING -- Theatre
-    {id: 38, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 39, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 40, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 38, course: 'Bachelor of Creative Arts', provider: 'MIT', link: 'https://www.manukau.ac.nz/study/areas-of-study/creative-arts/performing-arts/bachelor-of-creative-arts-in-performing-arts-level-7', domestic_price: 6400, international_price: 0, duration: 3, level: 7},
+    {id: 39, course: 'Bachelor of Performing Arts', provider: 'Otago University', link: 'https://www.otago.ac.nz/courses/qualifications/bpa.html', domestic_price: 5793, international_price: 0, duration: 3, level: 7},
+    {id: 40, course: 'Bachelor of Performing Arts', provider: 'Toi Whakaari', link: 'http://toiwhakaari.ac.nz/acting/', domestic_price: 6000, international_price: 0, duration: 3, level: 7},
     // DANCING -- Photographer
     {id: 41, course: 'Bachelor of Creative Enterprise', provider: 'Unitec', link: 'https://www.unitec.ac.nz/career-and-study-options/transmedia/bachelor-of-creative-enterprise', domestic_price: 6736, international_price: 0, duration: 3, level: 7},
     {id: 42, course: 'Diploma in Photography', provider: 'MIT', link: 'https://www.manukau.ac.nz/study/areas-of-study/creative-arts/photography/new-zealand-diploma-in-photography-level-5', domestic_price: 5900, international_price: 0, duration: 0.5, level: 5},
