@@ -49,7 +49,7 @@ exports.seed = (knex, Promise) => {
     {id: 35, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 36, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 37, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    // DANING -- Theatre
+    // DANCING -- Theatre
     {id: 38, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 39, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 40, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
@@ -58,9 +58,9 @@ exports.seed = (knex, Promise) => {
     {id: 42, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 43, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     // DANCING -- Choreographer
-    {id: 44, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 45, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 46, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 44, course: 'Bachelor of Dance Studies', provider: 'University of Auckland', link: 'https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-dance-studies-bdancest.html', domestic_price: 6920, international_price: 0, duration: 3, level: 7},
+    {id: 45, course: 'Bachelor of Preforming and Screen Arts', provider: 'Unitec', link: 'https://www.unitec.ac.nz/career-and-study-options/contemporary-dance', domestic_price: 6000, international_price: 0, duration: 3, level: 7},
+    {id: 46, course: 'Diploma in Dance Preformance', provider: 'NZ School Of Dance', link: 'http://www.nzschoolofdance.ac.nz/diploma', domestic_price: 6155, international_price: 0, duration: 3, level: 7},
     // FOOD -- Hospitality
     {id: 47, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 48, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
