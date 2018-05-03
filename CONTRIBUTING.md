@@ -103,6 +103,9 @@ Fill in the required template:
 - Add any labels that apply to your issue.
 - Projects Add Mārama as the project.
 - Milestone if applicable, add the milestone that is on your issue, or that applies to your PR.
-- Reference the issue, please add a comment that references your issue like so: `ISSUE #111`.
+- Reference the issue, please add a comment that references your issue like so: `ISSUE #111`.  
 
 
+_Thanks for reading and happy contributing!_  
+
+[Mārama Team](https://github.com/Marama-App/marama-team)
