@@ -11,11 +11,7 @@ Our aim for Mārama is to inform and empower students to seek broader study and 
 *Email Mārama at info.marama.app@gmail.com*  
 *Find Mārama on [LinkedIn](https://www.linkedin.com/company/18569638/)*  
 
-*Want to contribute,*  
-*or*  
-*issue a bug report,*  
-*or*  
-*have a feature to suggest?*  
+*Want to contribute, or issue a bug report, or have a feature to suggest?*    
 *First please see the guidelines in [/github](https://github.com/Marama-App/marama/tree/master/.github)*
 
 ![](marama-logo.png)
