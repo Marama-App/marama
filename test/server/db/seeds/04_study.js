@@ -62,9 +62,9 @@ exports.seed = (knex, Promise) => {
     {id: 45, course: 'Bachelor of Preforming and Screen Arts', provider: 'Unitec', link: 'https://www.unitec.ac.nz/career-and-study-options/contemporary-dance', domestic_price: 6000, international_price: 0, duration: 3, level: 7},
     {id: 46, course: 'Diploma in Dance Preformance', provider: 'NZ School Of Dance', link: 'http://www.nzschoolofdance.ac.nz/diploma', domestic_price: 6155, international_price: 0, duration: 3, level: 7},
     // FOOD -- Hospitality
-    {id: 47, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 48, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 49, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 47, course: 'Bachelor of International Hospitality Management', provider: 'AUT', link: 'https://www.aut.ac.nz/study/study-options/hospitality-tourism-and-events/courses/bachelor-of-international-hospitality-management?gclid=CjwKCAjww6XXBRByEiwAM-ZUIJphhEfAGU2ShmhOlH891p8KhRuip1Bh9fIAk83o_a2Vbk_pVK9p3hoCUiQQAvD_BwE', domestic_price: 6760, international_price: 0, duration: 3, level: 7},
+    {id: 48, course: 'New Zealand Diploma in Hospitality Management', provider: 'NZMA', link: 'https://www.nzma.ac.nz/courses/hospitality-courses/new-zealand-diploma-in-hospitality-management-level-6', domestic_price: 6000, international_price: 0, duration: 1, level: 6},
+    {id: 49, course: 'New Zealand Diploma in Hospitality Management', provider: 'MIT', link: 'https://www.manukau.ac.nz/study/areas-of-study/culinary-hospitality-and-baking/hotel-reception-portering-and-concierge/new-zealand-diploma-in-hospitality-management-level-5', domestic_price: 7100, international_price: 0, duration: 1, level: 5},
     // FOOD -- Cooking
     {id: 50, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
     {id: 51, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
