@@ -11,9 +11,5 @@ exports.up = (knex, Promise) => {
 }
 
 exports.down = (knex, Promise) => {
-<<<<<<< HEAD
   return knex.schema.dropTable('location_study_junction')
-=======
-  return knex.schema.dropTableIfExists('location_study_junction')
->>>>>>> a24d88c6fd7693a6823a8d96cf2ed3aed5eeee94
 }
