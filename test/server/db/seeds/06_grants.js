@@ -46,12 +46,11 @@ exports.seed = (knex, Promise) => {
     {id: 27, name: 'Philip Ashton Smithells Memorial Scholarship', description: 'For a student progressing to their third or fourth year in Physical Education.', grant_link: 'https://www.otago.ac.nz/study/scholarships/database/otago014657.html', conditions: '', amount: 3000},
     {id: 28, name: 'Philippa Sweetman Scholarship ', description: 'For a student going into or in their third or final year of a University of Otago Bachelors degree majoring in one of the principal disciplines of the former Home Science/Consumer and Applied Science Programme i.e Human Nutrition.', grant_link: 'https://www.otago.ac.nz/study/scholarships/database/otago014658.html', conditions: '', amount: 850},
     {id: 29, name: 'Bee Nilson Award', description: 'Funds to support final year honours or paper year masters students studying human nutrition and food science.', grant_link: 'https://www.otago.ac.nz/study/scholarships/database/otago025487.html', conditions: '', amount: 6000},
-    // Gadgets specific grants
-    {id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0},
-    // Dancing specific grants
-    {id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0},
+    // University of Auckland specific grants
+    {id: 30, name: 'University of Auckland Māori Academic Excellence Scholarship', description: 'The main purpose of the scholarships is to recognise and reward exceptional academic performance combined with outstanding sporting, artistic, cultural and / or leadership achievements among Māori students.', grant_link: 'https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-maori-academic-excellence-scholarships-901-all.html', conditions: '', amount: 20000},
+    {id: 31, name: 'The University of Auckland Pacific Academic Excellence Scholarship', description: 'The main purpose of the Scholarships is to recognise and reward exceptional academic performance combined with outstanding sporting, artistic, cultural and / or leadership achievements among Pacific students. ', grant_link: 'https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-pacific-academic-excellence-scholarships-902-all.html', conditions: '', amount: 20000},
     // Food specific grants
-    {id: 400, name: '', description: '', grant_link: '', conditions: '', amount: 0}
+    {id: 32, name: 'Faculty of Science Entry Level Undergraduate Scholarship', description: 'The main purpose of the Scholarships is to encourage excellence in the study of subjects in the Faculty of Science and support students who reside outside the Auckland area.', grant_link: 'https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/faculty-of-science-entry-level-undergraduate-scholarships-622-sci.html', conditions: '', amount: 5000}
     // CHANGE ID NUMBERS!!
   ])
 }
