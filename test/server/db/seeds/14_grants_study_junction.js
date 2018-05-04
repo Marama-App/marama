@@ -67,6 +67,10 @@ exports.seed = (knex, Promise) => {
     // Music DJ/Sound Recording Courses
     {id: 60, study_id: 17, grants_id: 18},
     {id: 61, study_id: 18, grants_id: 18},
-    {id: 62, study_id: 19, grants_id: 18}
+    {id: 62, study_id: 19, grants_id: 18},
+    // Food Dietition Courses
+    {id: 63, study_id: 53, grants_id: 30},
+    {id: 64, study_id: 53, grants_id: 31},
+    {id: 65, study_id: 53, grants_id: 32}
   ])
 }
