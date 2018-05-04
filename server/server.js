@@ -17,6 +17,7 @@ const pasifikaRoutes = require('./routes/pasifika-grants')
 
 const contactRoutes = require('./routes/contact')
 const authRoutes = require('./routes/auth')
+const userRoutes = require('./routes/users')
 const addRoutes = require('./routes/add')
 const adddbRoutes = require('./routes/adddb')
 
@@ -30,6 +31,7 @@ server.use('/api/v1/pasifika-grants', pasifikaRoutes)
 
 server.use('/api/v1/contact', contactRoutes)
 server.use('/api/v1/auth', authRoutes)
+server.use('/api/v1/users', userRoutes)
 server.use('/api/v1/add', addRoutes)
 server.use('/api/v1/adddb', adddbRoutes)
 

@@ -1,3 +1,4 @@
+// server/auth/hash.js
 const sodium = require('sodium').api
 
 module.exports = {
