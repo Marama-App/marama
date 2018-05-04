@@ -7,3 +7,5 @@ Mārama’s primary focus is tech-based fields of study, as Māori and Pasifika 
 Our aim for Mārama is to inform and empower students to seek broader study and employment pathways, and to make available financial assistance more transparent. The outcome being more graduates moving into fields where their voices matter most.
 
 *Te kete Mārama — to understand, to learn*
+
+*Email Mārama at info.marama.app@gmail.com*
