@@ -50,13 +50,13 @@ exports.seed = (knex, Promise) => {
     { id: 30, name: 'University of Auckland Māori Academic Excellence Scholarship', description: 'The main purpose of the scholarships is to recognise and reward exceptional academic performance combined with outstanding sporting, artistic, cultural and / or leadership achievements among Māori students.', grant_link: 'https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-maori-academic-excellence-scholarships-901-all.html', conditions: '', amount: 20000 },
     { id: 31, name: 'The University of Auckland Pacific Academic Excellence Scholarship', description: 'The main purpose of the Scholarships is to recognise and reward exceptional academic performance combined with outstanding sporting, artistic, cultural and / or leadership achievements among Pacific students. ', grant_link: 'https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-pacific-academic-excellence-scholarships-902-all.html', conditions: '', amount: 20000 },
     // Food specific grants
-    { id: 32, name: 'Faculty of Science Entry Level Undergraduate Scholarship', description: 'The main purpose of the Scholarships is to encourage excellence in the study of subjects in the Faculty of Science and support students who reside outside the Auckland area.', grant_link: 'https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/faculty-of-science-entry-level-undergraduate-scholarships-622-sci.html', conditions: '', amount: 5000 },
-    // Dancing specific grants
-    { id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0 },
-    // Gadgets specific grants
-    { id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0 },
-    // Food specific grants
-    { id: 400, name: '', description: '', grant_link: '', conditions: '', amount: 0 }
-    // CHANGE ID NUMBERS!!
+    { id: 32, name: 'Faculty of Science Entry Level Undergraduate Scholarship', description: 'The main purpose of the Scholarships is to encourage excellence in the study of subjects in the Faculty of Science and support students who reside outside the Auckland area.', grant_link: 'https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/faculty-of-science-entry-level-undergraduate-scholarships-622-sci.html', conditions: '', amount: 5000 }
+    // // Dancing specific grants
+    // { id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0 },
+    // // Gadgets specific grants
+    // { id: 300, name: '', description: '', grant_link: '', conditions: '', amount: 0 },
+    // // Food specific grants
+    // { id: 400, name: '', description: '', grant_link: '', conditions: '', amount: 0 }
+    // // CHANGE ID NUMBERS!!
   ])
 }

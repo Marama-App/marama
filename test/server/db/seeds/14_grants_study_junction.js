@@ -73,21 +73,21 @@ exports.seed = (knex, Promise) => {
     {id: 64, study_id: 53, grants_id: 31},
     {id: 65, study_id: 53, grants_id: 32},
     // Sports/Personal Training and Coaching
-    {id: 63, study_id: 20, grants_id: 27},
-    {id: 64, study_id: 21, grants_id: 27},
-    {id: 65, study_id: 22, grants_id: 27},
+    {id: 66, study_id: 20, grants_id: 27},
+    {id: 67, study_id: 21, grants_id: 27},
+    {id: 68, study_id: 22, grants_id: 27},
     // Sports/Nutrition
-    {id: 66, study_id: 23, grants_id: 27},
-    {id: 67, study_id: 23, grants_id: 28},
-    {id: 68, study_id: 23, grants_id: 29},
-    {id: 69, study_id: 24, grants_id: 27},
-    {id: 70, study_id: 24, grants_id: 29},
-    {id: 71, study_id: 25, grants_id: 27},
-    {id: 72, study_id: 25, grants_id: 29},
+    {id: 69, study_id: 23, grants_id: 27},
+    {id: 70, study_id: 23, grants_id: 28},
+    {id: 71, study_id: 23, grants_id: 29},
+    {id: 72, study_id: 24, grants_id: 27},
+    {id: 73, study_id: 24, grants_id: 29},
+    {id: 74, study_id: 25, grants_id: 27},
+    {id: 75, study_id: 25, grants_id: 29},
     // Sports/Sport Therapy
-    {id: 73, study_id: 26, grants_id: 27},
-    {id: 74, study_id: 27, grants_id: 27},
-    {id: 75, study_id: 28, grants_id: 27}
+    {id: 76, study_id: 26, grants_id: 27},
+    {id: 77, study_id: 27, grants_id: 27},
+    {id: 78, study_id: 28, grants_id: 27}
     // Dancing/Theatre Courses
     // {id: 76, study_id: 38, grants_id: 00},
     // {id: 77, study_id: 39, grants_id: 00},

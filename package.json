@@ -13,6 +13,7 @@
     "e2e": "codeceptjs run -c ./test/e2e/codecept.json",
     "e2e:assert": "yarn e2e && yarn assert",
     "knex": "knex --knexfile ./server/db/knexfile.js",
+    "migrate": "yarn knex migrate:latest",
     "seed": "yarn knex seed:run",
     "lint": "eslint client server test --ignore-pattern 'bundle.js'",
     "lint:assert": "yarn lint && yarn assert",
