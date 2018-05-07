@@ -17,7 +17,7 @@
     "seed": "yarn knex seed:run",
     "lint": "eslint client server test --ignore-pattern 'bundle.js'",
     "lint:assert": "yarn lint && yarn assert",
-    "postinstall": "webpack && knex migrate:latest",
+    "postinstall": "build && knex migrate:latest",
     "test": "jest test/client test/server",
     "test:watch": "yarn test --watchAll",
     "test:assert": "yarn test && yarn assert",
