@@ -1,8 +1,11 @@
 {
   "name": "marama",
   "version": "0.2.0",
-  "description": "Redux exercise (without React)",
-  "author": "EDA",
+  "engines": {
+    "node": "8.11.1"
+  },
+  "description": "Mārama App",
+  "author": "Mārama Group Ltd",
   "license": "ISC",
   "scripts": {
     "assert": "exit 0",
