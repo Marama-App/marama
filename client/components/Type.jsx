@@ -23,7 +23,8 @@ export class Type extends React.Component {
         <img src='/images/bg-stars.png' className='stars-background' />
         <div className='page-section'>
           <div className='page-heading-section'>
-            <div className='page-title-font'>Break Into {this.props.match.params.type.replace(/-/g, ' ')}</div>
+            <div className='page-title-font'>Break Into {(this.props.match.params.type).replace(/-/g, ' ')}</div>
+            {/*  */}
             <div className='page-title-blurb'>Here&apos;s what you can study, cool companies hiring, and resources to help you!</div>
           </div>
           <div className='type-container-study'>

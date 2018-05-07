@@ -25,11 +25,12 @@ export class Interest extends React.Component {
 
               {this.props.interestType.map(type => (
                 <div key={type.type_id} className='interest-page-thumbnails'>
-                  <div className='h3-class'>{type.name}</div>
+                  <div className='h3-class'>{type.name.replace(/-/g, ' ')}</div>
                   <div>
                     <div className='thumbnail-p-text'>{type.description}</div>
                   </div>
-                  <Link to={`/interests/${this.props.match.params.interest}/${type.name.replace(/\s+/g, '-')}`}>
+                  <Link to={`/interests/${this.props.match.params.interest}/${type.name}`}>
+                    {/*  */}
                     <button className='interest-buttons'>
                       Find out more
                     </button>
