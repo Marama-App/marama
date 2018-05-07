@@ -10,7 +10,7 @@ export class Study extends React.Component {
         <img src='/images/bg-stars.png' className='stars-background'/>
         <div className='page-section'>
           <div className='page-heading-section'>
-            <div className='page-title-font'>Study {this.props.match.params.type}</div>
+            <div className='page-title-font'>Study {this.props.match.params.type.replace(/-/g, ' ')}</div>
             <div className='page-title-blurb'>Guess what? We&apos;ve picked out the top courses in New Zealand, and their available grants!</div>
           </div>
           <div className='study-section'>
