@@ -73,5 +73,6 @@ exports.seed = (knex, Promise) => {
     {id: 53, course: 'Bachelor of Science, Majoring in Food Science and Nutrition', provider: 'University of Auckland', link: 'http://www.science.auckland.ac.nz/en/about/subjects-and-specialisations/ug-majors/food-science-and-nutrition.html', domestic_price: 6920, international_price: 0, duration: 3, level: 7},
     {id: 54, course: 'Bachelor of Applied Science (Human Nutrition)', provider: 'Ara Institute of Canterbury', link: 'http://www.ara.ac.nz/study-options/qualifications-and-courses/programmes/Bachelor-of-Applied-Science-Human-Nutrition-.xml', domestic_price: 7100, international_price: 0, duration: 0, level: 7},
     {id: 55, course: 'Bachelor of Science, Majoring in Food Science', provider: 'Lincoln University', link: 'http://www.lincoln.ac.nz/Study/Qualifications/Qualification/?QualCode=b.science&major=foodsc', domestic_price: 6736, international_price: 0, duration: 3, level: 7}
+    // END OF STARTER SEED DATA
   ])
 }
