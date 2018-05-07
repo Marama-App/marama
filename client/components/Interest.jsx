@@ -1,8 +1,8 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-import {getType} from '../actions/type'
+import { getType } from '../actions/type'
 
 export class Interest extends React.Component {
   componentDidMount () {
@@ -12,7 +12,8 @@ export class Interest extends React.Component {
   render () {
     return (
       <div>
-        <img src='/images/bg-stars.png' className='stars-background'/>
+
+        <img src='/images/bg-stars.png' className='stars-background' />
         <div className='page-section'>
           <div className='page-heading-section'>
             <div className='page-title-font'>{this.props.match.params.interest}</div>
@@ -28,7 +29,7 @@ export class Interest extends React.Component {
                   <div>
                     <div className='thumbnail-p-text'>{type.description}</div>
                   </div>
-                  <Link to={`/interests/${this.props.match.params.interest}/${type.name}`}>
+                  <Link to={`/interests/${this.props.match.params.interest}/${type.name.replace(/\s+/g, '-')}`}>
                     <button className='interest-buttons'>
                       Find out more
                     </button>
