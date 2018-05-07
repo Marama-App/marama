@@ -5,12 +5,12 @@ exports.up = (knex, Promise) => {
         table.increments('id').primary()
         table.string('iwi')
         table.string('link')
-        table.string('description')
+        table.text('description')
       })
     }
   })
 }
 
 exports.down = (knex, Promise) => {
-  return knex.schema.dropTableIfExists('iwi_grants')
+  return knex.schema.dropTable('iwi_grants')
 }

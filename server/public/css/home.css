@@ -1,0 +1,58 @@
+/* HOME */
+
+/* This div is the the Home image */
+.home-background {
+    z-index: -1;
+    min-height: 0px;
+    min-width: 0px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Encompasses the home-blurb and buttons on the home page in the Home component */
+  .home-content-box {
+    padding: 50px;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Heading on the home page in the Home component */
+  .home-blurb {
+    font-size: 2.8em;
+    margin: 60px 0px 20px 0px;
+    text-shadow: 0 0 10px #7d018d;
+  }
+  
+  /* Sentence below the heading on the home page */
+  .home-sentence {
+    font-size: 1em;
+    text-shadow: 0 0 10px #7d018d;
+  }
+  
+  /* This is the container surrounding all buttons on the home page */
+  .home-button-container {
+    margin: 20px;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Home button styling only */
+  .home-buttons {
+    box-shadow: 0 0 2px #7d018d;
+    margin: 10px;
+    justify-content: center;
+    width: 12em;
+  }
+  
+  .home-buttons:hover {
+    background-color: #d64844;
+  }

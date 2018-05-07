@@ -10,7 +10,7 @@ import Interest from './Interest'
 import Contact from './Contact'
 import Header from './Header'
 import Grants from './Grants'
-import Add from './Add'
+// import Add from './Add'
 import IwiGrants from './IwiGrants'
 import PasifikaGrants from './PasifikaGrants'
 import Footer from './Footer'
@@ -26,7 +26,7 @@ const App = () => {
           <Route exact path='/' component={Home} />
           <Route path='/contact' component={Contact} />
           <Route path='/about' component={About} />
-          <Route path='/admin' component={Add} />
+          {/* <Route path='/admin' component={Add} /> */}
           <Route path='/support' component={Support} />
           <Route path='/iwi-grants' component={IwiGrants} />
           <Route path='/pasifika-grants' component={PasifikaGrants} />

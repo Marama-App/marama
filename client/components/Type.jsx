@@ -1,8 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-import {getTypeDetail} from '../actions/type-details'
+import { getTypeDetail } from '../actions/type-details'
 
 export class Type extends React.Component {
   constructor (props) {
@@ -20,10 +20,11 @@ export class Type extends React.Component {
     return (
 
       <div>
-        <img src='/images/bg-stars.png' className='stars-background'/>
+        <img src='/images/bg-stars.png' className='stars-background' />
         <div className='page-section'>
           <div className='page-heading-section'>
-            <div className='page-title-font'>Break Into {this.props.match.params.type}</div>
+            <div className='page-title-font'>Break Into {(this.props.match.params.type).replace(/-/g, ' ')}</div>
+            {/*  */}
             <div className='page-title-blurb'>Here&apos;s what you can study, cool companies hiring, and resources to help you!</div>
           </div>
           <div className='type-container-study'>
@@ -43,12 +44,12 @@ export class Type extends React.Component {
                   {this.props.typeDetails.location.filter(location => {
                     return (location.study_id === study.study_id)
                   }).map(location => (
-                    <span key = {location.location_id} className='type-section-study-location'>{location.location} </span>
+                    <span key={location.location_id} className='type-section-study-location'>{location.location} </span>
                   ))}
                 </div>
               ))}
             </div>
-            <hr/>
+            <hr />
           </div>
           <div className='type-container-employment'>
             <div className='type-container-employment-box'>
@@ -62,28 +63,28 @@ export class Type extends React.Component {
             <div className='type-section-employment'>
               <div className='type-section-employment-thumbnail'>
                 <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
-                  <img src='/images/gaming-pic-1.png' className='employment-thumbnail'/>
+                  <img src='/images/gaming-pic-1.png' className='employment-thumbnail' />
                 </Link>
               </div>
               <div className='type-section-employment-thumbnail'>
                 <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
-                  <img src='/images/gaming-pic-3.png' className='employment-thumbnail'/>
+                  <img src='/images/gaming-pic-3.png' className='employment-thumbnail' />
                 </Link>
               </div>
               <div className='type-section-employment-thumbnail'>
                 <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
-                  <img src='/images/gaming-pic-2.png' className='employment-thumbnail'/>
+                  <img src='/images/gaming-pic-2.png' className='employment-thumbnail' />
                 </Link>
               </div>
               <div className='type-section-employment-thumbnail'>
                 <Link to={`/interests/${this.props.match.params.interest}/${this.props.match.params.type}/jobs`}>
-                  <img src='/images/gaming-pic-4.png' className='employment-thumbnail'/>
+                  <img src='/images/gaming-pic-4.png' className='employment-thumbnail' />
                 </Link>
               </div>
             </div>
           </div>
 
-          <hr/>
+          <hr />
 
           <div className='type-container-support'>
             <div className='type-container-support-box'>
@@ -95,7 +96,7 @@ export class Type extends React.Component {
             <div className='p-class'>If you&apos;re of Māori or Pacific Island decent, take a look at the grants, scholarships and support available to you.</div>
           </div>
           <div>
-            <hr/>
+            <hr />
             <Link to={`/interests/${this.props.match.params.interest}/`}>
               <button type='transparent' className='previous-button'>Previous</button>
             </Link>

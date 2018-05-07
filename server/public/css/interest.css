@@ -1,0 +1,48 @@
+/* INTEREST */
+
+/* Surrounds three boxes on interest page */
+.three-container {
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; 
+    margin: 0 0 100px 0;
+  }
+  
+  /* Also surrounds 3 boxes on the interest page - might not be needed */
+  .interest-section {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  
+  /* This box goes around each of the content fields */
+  .interest-page-thumbnails {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px 0 50px 0; 
+    width: 250px;
+  }
+  
+  /* Text in the thumbnails */
+  .thumbnail-p-text {
+    font-size: 0.95em;
+    font-weight: lighter;
+    line-height: 1.5;
+  }
+  
+  .interest-buttons {
+    box-shadow: 0 0 2px #7d018d;
+    margin: 20px;
+    font-size: 0.7em;
+    justify-content: center;
+    width: 125px;
+  }

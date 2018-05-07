@@ -1,0 +1,11 @@
+/* FOOTER */
+
+.footer-content {
+    text-align: center;
+    font-size: 11px;
+    bottom: 0;
+  }
+  
+  .sticky-footer, .app-box:after {
+    height: 30px;
+  }
