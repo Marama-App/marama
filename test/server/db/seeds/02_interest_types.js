@@ -15,7 +15,7 @@ exports.seed = (knex, Promise) => {
     // Gadgets
     {id: 10, name: 'Engineering', description: 'Specialise in a certain aspect of engineering and potentially create the gadgets yourself.'},
     {id: 11, name: 'Marketing', description: 'Promoting and testing out all of the innovative and exciting new gadgets to consumers.'},
-    {id: 12, name: 'Gaming', description: 'Build the structure which makes each part of your favourite game work.'},
+    {id: 12, name: 'Innovation', description: 'Manage and lead teams to create new ideas for the world.'},
     // Dancing
     {id: 13, name: 'Theatre', description: 'Become involved with incorperating dancing, acting, and singing all in one.'},
     {id: 14, name: 'Photography', description: 'Experience dancing on a whole new level.'},

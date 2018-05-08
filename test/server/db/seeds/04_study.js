@@ -38,17 +38,17 @@ exports.seed = (knex, Promise) => {
     {id: 27, course: 'Bachelor of Physiotherapy', provider: 'Otago University', link: 'https://www.otago.ac.nz/courses/qualifications/bphty.html', domestic_price: 6923, international_price: 0, duration: 4, level: 7},
     {id: 28, course: 'Bachelor of Applied Science (Human Biology)', provider: 'Unitec', link: 'https://www.unitec.ac.nz/career-and-study-options/osteopathy/bachelor-of-applied-science-human-biology', domestic_price: 7404, international_price: 0, duration: 3, level: 7},
     // GADGETS -- Engineering
-    {id: 29, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 30, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 31, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 29, course: 'Bachelor of Engineering with Honours', provider: 'Massey University', link: 'http://www.massey.ac.nz/massey/learning/programme-course/programme.cfm?prog_id=93353', domestic_price: 9148, international_price: 0, duration: 4, level: 7},
+    {id: 30, course: 'Bachelor of Engineering (Civil)', provider: 'Unitec', link: 'https://www.unitec.ac.nz/career-and-study-options/civil-engineering/bachelor-of-engineering-technology-civil', domestic_price: 6270, international_price: 0, duration: 3, level: 7},
+    {id: 31, course: 'Bachelor of Engineering with Honours (Mechatronics)', provider: 'AUT', link: 'https://autdev.aut.ac.nz/study/study-options/engineering-computer-and-mathematical-sciences/courses/bachelor-of-engineering-honours/mechatronics-engineering-major', domestic_price: 8375, international_price: 0, duration: 4, level: 7},
     // GADGETS -- Marketing
-    {id: 32, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 33, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 34, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    // GADGETS -- Gaming
-    {id: 35, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 36, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
-    {id: 37, course: '', provider: '', link: '', domestic_price: 0, international_price: 0, duration: 0, level: 0},
+    {id: 32, course: 'Bachelor of Commerce, Majoring in Marketing', provider: 'Victoria University', link: 'https://www.victoria.ac.nz/explore/degrees/commerce/overview?major=marketing', domestic_price: 7212, international_price: 0, duration: 3, level: 7},
+    {id: 33, course: 'Bachelor of Business, Majoring in Marketing', provider: 'AUT', link: 'https://www.aut.ac.nz/study/study-options/business-and-economics/courses/bachelor-of-business/market-insights-marketing,-advertising,-retailing,-sales-major', domestic_price: 6785, international_price: 0, duration: 3, level: 7},
+    {id: 34, course: 'Bachelor of Commerce, Majoring in Marketing', provider: 'University of Auckland', link: 'https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-commerce-bcom.html', domestic_price: 6464, international_price: 0, duration: 3, level: 7},
+    // GADGETS -- Innovation
+    {id: 35, course: 'Bachelor of Business, Majoring in Entrepreneurship and Innovation', provider: 'AUT', link: 'https://www.aut.ac.nz/study/study-options/business-and-economics/courses/bachelor-of-business/entrepreneurship-and-innovation-major', domestic_price: 6785, international_price: 0, duration: 3, level: 7},
+    {id: 36, course: 'Bachelor of Commerce, Majoring in Innovation and Entrepreneurship', provider: 'University of Auckland', link: 'https://www.business.auckland.ac.nz/en/for/future-undergraduates/fu-study-options/our-degree-majors/innovation-and-entrepreneurship/why-study-innovation-and-entrepreneurship.html', domestic_price: 6464, international_price: 0, duration: 3, level: 7},
+    {id: 37, course: 'Bachelor of Business, Majoring in Entrepreneurship and Innovation', provider: 'Massey University', link: 'http://www.massey.ac.nz/massey/learning/programme-course/programme.cfm?prog_id=92711&major_code=PENSB&tab=plan', domestic_price: 5480, international_price: 0, duration: 3, level: 7},
     // DANCING -- Theatre
     {id: 38, course: 'Bachelor of Creative Arts', provider: 'MIT', link: 'https://www.manukau.ac.nz/study/areas-of-study/creative-arts/performing-arts/bachelor-of-creative-arts-in-performing-arts-level-7', domestic_price: 6400, international_price: 0, duration: 3, level: 7},
     {id: 39, course: 'Bachelor of Performing Arts', provider: 'Otago University', link: 'https://www.otago.ac.nz/courses/qualifications/bpa.html', domestic_price: 5793, international_price: 0, duration: 3, level: 7},
