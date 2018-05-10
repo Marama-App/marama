@@ -92,8 +92,8 @@ _When making an issue add the issue label `feature request`._
 ### Your First Code Contribution
 Unsure where to begin contributing to Mārama? You can start by looking through these beginner and help-wanted issues:
 
-Beginner issues - issues which should only require a few lines of code, and a test or two.  
-Help wanted issues - issues which should be a bit more involved than beginner issues.
+`Beginner issues` - issues which should only require a few lines of code, and a test or two.  
+`Help wanted issues` - issues which should be a bit more involved than beginner issues.
 
 ### Pull Requests
 Fill in the required template: 
