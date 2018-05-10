@@ -19,7 +19,7 @@ export class Grants extends React.Component {
             <div className='page-title-font'>Grants for {this.props.match.params.grants}</div>
             <div className='page-title-blurb'>Take a look at all available grants for this course.</div>
           </div>
-          <div className='grants-secton'>
+          <div className='grants-section'>
             {this.props.grants.result.map(grant => (
               <div key={grant.grants_id} className='grants-box'>
                 <div className='grants-box-study-stuff'>

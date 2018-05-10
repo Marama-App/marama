@@ -79,7 +79,23 @@ class Contact extends React.Component {
     }
     if (this.state.submitted) {
       return (
-        <div className='thanks-submit'>Thanks for submitting!</div>
+        <div>
+          <img src='/images/bg-stars.png' className='stars-background' />
+          <div className='page-section'>
+            <div className='page-heading-section'>
+              <div className='page-title-font'>Thanks for getting in touch!</div>
+              <div className='page-title-blurb'>We will get back to you as soon as we can.</div>
+            </div>
+            <div className='thanks-submit'>The Mārama Team</div>
+
+            <div className='previous'>
+              <Link to='/'>
+                <button className='submit-previous-button'>Home</button>
+              </Link>
+            </div>
+
+          </div>
+        </div>
       )
     }
   }
