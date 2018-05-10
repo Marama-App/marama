@@ -1,6 +1,7 @@
 import React from 'react'
 import request from 'superagent'
 import { Link } from 'react-router-dom'
+import { baseUrl } from '../lib/base-url'
 
 class Contact extends React.Component {
   constructor (props) {
@@ -24,7 +25,7 @@ class Contact extends React.Component {
   handleSubmit (evt) {
     evt.preventDefault()
     request
-      .post('https://www.marama.org.nz/api/v1/contact')
+      .post(`${baseUrl}/api/v1/contact`)
       .send({
         name: this.state.name,
         email: this.state.email,
@@ -78,7 +79,7 @@ class Contact extends React.Component {
     }
     if (this.state.submitted) {
       return (
-        <div className='p-class'>Thanks for submitting!</div>
+        <div className='thanks-submit'>Thanks for submitting!</div>
       )
     }
   }

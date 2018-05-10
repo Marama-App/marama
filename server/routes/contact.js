@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const router = express.Router()
 const apiKey = process.env.MAILGUN_API_KEY
 const DOMAIN = 'sandbox3c744cc282d64cda9998c505e2785b05.mailgun.org'
-const mailgun = require('mailgun-js')({apiKey: apiKey, domain: DOMAIN})
+const mailgun = require('mailgun-js')({ apiKey: apiKey, domain: DOMAIN })
 
 module.exports = router
 
