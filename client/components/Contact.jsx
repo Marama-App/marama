@@ -1,7 +1,7 @@
 import React from 'react'
 import request from 'superagent'
 import { Link } from 'react-router-dom'
-import { baseUrl } from '../lib/base-url'
+import baseUrl from '../lib/base-url'
 
 class Contact extends React.Component {
   constructor (props) {

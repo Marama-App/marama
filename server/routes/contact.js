@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
     if (error) {
       res.status(500).send(error)
     } else {
-      res.send('okay')
+      res.status(200).send()
     }
   })
 })
