@@ -20,7 +20,7 @@ The following is a set of guidelines for contributing to [Mārama](https://githu
 This project and everyone participating in it is governed by the [Mārama Code of Conduct](https://github.com/Marama-App/marama/blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. 
 
 ## I don't want to read this whole thing, I just have a question!
-If you have a question please do not create an issue or pull request, the best method to ask questions is to email us at info.marama.app@gmail.com.
+If you have a question please do not create an issue or pull request, the best method to ask questions is to email us at `info.marama.app@gmail.com` with the subject of the question in the subject line and then your question detailed in the email.
 
 
 ## How Can I Contribute?  
@@ -92,8 +92,8 @@ _When making an issue add the issue label `feature request`._
 ### Your First Code Contribution
 Unsure where to begin contributing to Mārama? You can start by looking through these beginner and help-wanted issues:
 
-Beginner issues - issues which should only require a few lines of code, and a test or two.  
-Help wanted issues - issues which should be a bit more involved than beginner issues.
+`Beginner issues` - issues which should only require a few lines of code, and a test or two.  
+`Help wanted issues` - issues which should be a bit more involved than beginner issues.
 
 ### Pull Requests
 Fill in the required template: 

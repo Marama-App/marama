@@ -23,6 +23,6 @@ exports.seed = (knex, Promise) => {
     // Food
     {id: 16, name: 'Hospitality', description: 'Learn the ins and outs of services in resturaunts, cafes etc.'},
     {id: 17, name: 'Culinary', description: 'If creating dishes is a passion of yours, why not turn it into a reality in the culinary industry'},
-    {id: 18, name: 'Dietitian', description: 'Become an expert on diet and nutrition.'}
+    {id: 18, name: 'Dietetics', description: 'Become an registered Dietitan with expert knowledge on diet and nutrition.'}
   ])
 }
