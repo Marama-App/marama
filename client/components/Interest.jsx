@@ -17,7 +17,7 @@ export class Interest extends React.Component {
         <div className='page-section'>
           <div className='page-heading-section'>
             <div className='page-title-font'>{this.props.match.params.interest}</div>
-            <div className='page-title-blurb'>If you love this, why not help create it? Here&apos;s what you can do to become the builder of your favourite hobby.</div>
+            <div className='page-title-blurb'>If you love this, why not be a part of it? Here&apos;s what you can do to be a part of creating the future of your favourite hobby.</div>
           </div>
 
           <div className='three-container'>
