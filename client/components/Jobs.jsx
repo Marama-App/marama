@@ -10,7 +10,7 @@ export class Jobs extends React.Component {
         <div className='page-section'>
           <div className='page-heading-section'>
             <div className='page-title-font'>Potential Employers in {this.props.match.params.type.replace(/-/g, ' ')}</div>
-            <div className='page-title-blurb'>Interested in a job? Check out what these amazing Kiwi companies are building.</div>
+            <div className='page-title-blurb'>Interested in a job? Check out what these amazing Kiwi companies are accomplishing.</div>
           </div>
           <div className='jobs'>
             <div>
