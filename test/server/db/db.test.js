@@ -91,12 +91,12 @@ test('addInterestsToTypesJunction returns id 20 when inserting a new row', () =>
     })
 })
 
-test('addTypesStudyJunction returns id 8 when inserting a new row', () => {
+test('addTypesStudyJunction returns id 57 when inserting a new row', () => {
   const formData = {interest_id: 1, type_id: 1}
   const id = 1
   return db.addTypesStudyJunction(id, formData, testDb)
     .then(junctionId => {
-      expect(junctionId[0]).toBe(20)
+      expect(junctionId[0]).toBe(57)
     })
 })
 
