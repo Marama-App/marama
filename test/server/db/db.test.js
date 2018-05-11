@@ -75,11 +75,11 @@ test('getAll returns id 1 in the first position', () => {
     })
 })
 
-test('addStudy returns id 20 when inserting a new row', () => {
+test('addStudy returns id 56 when inserting a new row', () => {
   const formData = {interest_id: 1, type_id: 1}
   return db.addStudy(formData, testDb)
     .then(id => {
-      expect(id[0]).toBe(20)
+      expect(id[0]).toBe(56)
     })
 })
 

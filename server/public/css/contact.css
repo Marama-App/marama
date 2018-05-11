@@ -37,6 +37,24 @@
     justify-content: center;
     padding-bottom: 2em;
   }
+
+  .thanks-submit {
+    text-align: center;
+  }
+
+  .submit-previous-button {
+    background-color: #f2b9ae;
+    box-shadow: 0 0 2px #af9894;
+    font-size: 10px;
+    margin-top: 150px;
+    padding: 10px 15px;
+    width: 10em;
+  }
+
+
+  .submit-previous-button:hover {
+    background-color: #f2a596;
+  }
   
   .contactpg textarea {
     margin: 0px;
