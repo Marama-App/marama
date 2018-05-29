@@ -8,6 +8,8 @@ Our aim for Mārama is to inform and empower students to seek broader study and 
 
 *Te kete Mārama — to understand, to learn*
 
+
+
 *Email Mārama at info.marama.app@gmail.com*  
 *Find Mārama on [LinkedIn](https://www.linkedin.com/company/18569638/)*  
 
