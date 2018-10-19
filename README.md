@@ -19,8 +19,3 @@ Our aim for Mārama is to inform and empower students to seek broader study and 
 *First please see the guidelines in [/github](https://github.com/Marama-App/marama/tree/master/.github)*
 
 ![](marama-logo.png)  
-
-
-
-### What are we working on?  
-The team are planning to solidify the future progress direction of Mārama and working towards completing the issues listed [here](https://github.com/Marama-App/marama/issues)  
