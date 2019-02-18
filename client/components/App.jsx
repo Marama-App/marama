@@ -36,6 +36,7 @@ const App = () => {
           <Route path='/interests/:interest/:type/jobs' component={Jobs}/>
           <Route path='/interests/:interest/:type' component={Type}/>
           <Route path='/interests/:interest' component={Interest}/>
+          {/* <Route path='/issue/:pullrequest' component={IssuePullRequest}/> */}
         </Switch>
       </div>
       <div className='sticky-footer'>
